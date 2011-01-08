@@ -7,6 +7,7 @@
   --green: #4D953A;
   --blue: #0000FF;
   --red: #FF0000;
+  --light-gray: #FAF6F6;
 }
 
 .green {
@@ -45,7 +46,7 @@ html {
   #footer {
     position: sticky;
     bottom: 0;
-    background-color: #FAF6F6;
+    background-color: var(--light-gray);
     border-top: 1px solid #C0C0C0;
     clear: both;
     padding-top: 15px;
@@ -86,6 +87,10 @@ html {
       left: 220px;
       bottom: 3px;
       cursor: pointer;
+    }
+
+    #nav-icon img::selection, #help-icon img::selection {
+      background: none;
     }
 
     #help-icon img, #nav-icon img {

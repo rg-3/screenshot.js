@@ -2,7 +2,7 @@
 
 **Next**
 
-* Nothing so far.
+* footer: do not highlight the footer images upon selection.
 
 **v0.16.2**
 
