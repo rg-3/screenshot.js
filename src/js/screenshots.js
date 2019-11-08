@@ -32,25 +32,25 @@ chrome.runtime.getBackgroundPage(function(page) {
   var root = document.getElementById('screenshots');
   var descendingBitmaps = bitmaps.slice().reverse();
   descendingBitmaps.forEach(function(bitmap) {
-    var div = document.createElement('div');
-    var screenshot = document.createElement('div');
-    var canvas = createCanvas(bitmap, 200, 200);
+    var rootDiv = document.createElement('div');
+    var screenshotDiv = document.createElement('div');
     var screenshotLink = createScreenshotLink();
-    var deleteLink = createDeleteLink(div, bitmap);
+    var deleteLink = createDeleteLink(rootDiv, bitmap);
     var dateSpan = document.createElement('span');
     dateSpan.innerText = bitmap.timestamp.toLocaleString();
     bitmap.getObjectURL().then((url) => {
+      var canvas = createCanvas(bitmap, 200, 200);
       screenshotLink.setAttribute('href', url);
       screenshotLink.innerText = '';
       screenshotLink.appendChild(canvas);
     });
-    screenshot.setAttribute('class', 'screenshot');
-    screenshot.appendChild(screenshotLink);
-    div.style.float = 'left';
-    div.style.marginBottom = '10px';
-    div.appendChild(screenshot);
-    div.appendChild(dateSpan);
-    div.appendChild(deleteLink);
-    root.appendChild(div);
+    screenshotDiv.setAttribute('class', 'screenshot');
+    screenshotDiv.appendChild(screenshotLink);
+    rootDiv.style.float = 'left';
+    rootDiv.style.marginBottom = '10px';
+    rootDiv.appendChild(screenshotDiv);
+    rootDiv.appendChild(dateSpan);
+    rootDiv.appendChild(deleteLink);
+    root.appendChild(rootDiv);
   });
 });
