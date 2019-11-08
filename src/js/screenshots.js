@@ -21,7 +21,7 @@ var createDeleteLink = (screenshotEl, bitmap) => {
     event.preventDefault();
     screenshotEl.remove();
     bitmap.freeObjectURL();
-    chrome.runtime.sendMessage({action: 'remove-bitmap', bitmap: bitmap});
+    chrome.runtime.sendMessage({action: 'remove-bitmap'});
   });
   root.appendChild(el);
   return root;

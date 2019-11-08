@@ -1,32 +1,33 @@
 var bitmaps = [];
 
 var Bitmap = function(imageBitmap) {
-  var objectURL;
 
+  this.objectURL = undefined;
   this.timestamp = new Date();
   this.native = imageBitmap;
   this.width = imageBitmap.width;
   this.height = imageBitmap.height;
 
   this.getObjectURL = () => {
-    if(objectURL) {
-      return new Promise((resolve, reject) => resolve(objectURL));
+    if(this.objectURL) {
+      return new Promise((resolve, reject) => resolve(this.objectURL));
     }
     var canvas = new OffscreenCanvas(this.width, this.height);
     var ctx = canvas.getContext('2d');
     ctx.drawImage(imageBitmap, 0, 0);
     return canvas.convertToBlob().then((blob) => {
-      objectURL = URL.createObjectURL(blob);
-      return objectURL;
+      this.objectURL = URL.createObjectURL(blob);
+      return this.objectURL;
     });
   };
 
   this.freeObjectURL = () => {
-    if(objectURL) {
-      URL.revokeObjectURL(objectURL);
-      objectURL = undefined;
+    if(this.objectURL) {
+      URL.revokeObjectURL(this.objectURL);
+      this.objectURL = null;
     }
   };
+
 
   return this;
 };
@@ -55,7 +56,11 @@ chrome.commands.onCommand.addListener((_command) => {
 
 chrome.runtime.onMessage.addListener((req) => {
   if(req.action === 'remove-bitmap') {
-    var index = bitmaps.indexOf(req.bitmap);
-    bitmaps.splice(index, 1);
+    bitmaps.forEach((bitmap) => {
+      if(bitmap.objectURL === null) {
+        var index = bitmaps.indexOf(bitmap);
+        bitmaps.splice(index, 1);
+      }
+    });
   }
 });
