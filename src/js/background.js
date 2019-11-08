@@ -1,7 +1,6 @@
 var bitmaps = [];
 
 var Bitmap = function(imageBitmap) {
-  var timestamp = new Date();
   var objectURL;
 
   this.timestamp = new Date();
