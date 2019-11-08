@@ -1,4 +1,4 @@
-### screenshot.js
+### Screenshot.js
 
 A browser extension that takes screenshots of the active tab. It doesn't make
 any network requests. Screenshots are kept temporarily and lost on browser exit
