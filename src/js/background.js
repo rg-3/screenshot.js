@@ -21,6 +21,13 @@ var Bitmap = function(imageBitmap) {
     });
   };
 
+  this.freeObjectURL = () => {
+    if(objectURL) {
+      URL.revokeObjectURL(objectURL);
+      objectURL = undefined;
+    }
+  };
+
   return this;
 };
 
@@ -33,6 +40,7 @@ var notify = (message) => {
   });
 };
 
+
 chrome.commands.onCommand.addListener((_command) => {
   chrome.tabCapture.capture({audio: false, video: true}, function(stream) {
     var track = stream.getVideoTracks()[0];
@@ -43,4 +51,11 @@ chrome.commands.onCommand.addListener((_command) => {
       notify("You took a screenshot");
     }).catch(() => track.stop);
   });
+});
+
+chrome.runtime.onMessage.addListener((req) => {
+  if(req.action === 'remove-bitmap') {
+    var index = bitmaps.indexOf(req.bitmap);
+    bitmaps.splice(index, 1);
+  }
 });

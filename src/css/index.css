@@ -14,8 +14,7 @@ html {
 
 .screenshot {
   width: 200px;
-  float: left;
   margin-right: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   border: 1px solid #CCC000;
 }
