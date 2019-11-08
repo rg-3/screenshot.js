@@ -1,7 +1,6 @@
 var bitmaps = [];
 
 var Bitmap = function(imageBitmap) {
-
   this.objectURL = undefined;
   this.timestamp = new Date();
   this.native = imageBitmap;
@@ -27,7 +26,6 @@ var Bitmap = function(imageBitmap) {
       this.objectURL = null;
     }
   };
-
 
   return this;
 };
