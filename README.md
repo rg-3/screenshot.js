@@ -1,4 +1,4 @@
-__screenshot.js__
+### screenshot.js
 
 A browser extension that takes screenshots of the active tab. It doesn't make
 any network requests. Screenshots are kept temporarily and lost on browser exit
@@ -8,11 +8,11 @@ unless you save them to disk. Screenshots are taken in response to a key click
 This extension should work on Chrome, Firefox, and Brave and any other Chromium
 fork.
 
-__Install__
+### Install
 
 Install as an unpacked extension in developer mode, or kindly wait for it to
 become available on the Chrome store.
 
-__License__
+### License
 
 MIT license. See [./LICENSE.txt](/.LICENSE.txt) for details.
