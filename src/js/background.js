@@ -45,7 +45,7 @@ chrome.commands.onCommand.addListener((_command) => {
     var track = stream.getVideoTracks()[0];
     var frame = new ImageCapture(track).grabFrame();
     frame.then((bitmap) => {
-      bitmaps.push(new Bitmap(bitmap));
+      bitmaps.unshift(new Bitmap(bitmap));
       track.stop();
       notify("You took a screenshot");
     }).catch(() => track.stop);

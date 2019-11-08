@@ -30,8 +30,7 @@ var createDeleteLink = (screenshotEl, bitmap) => {
 chrome.runtime.getBackgroundPage(function(page) {
   var bitmaps = page.bitmaps;
   var root = document.getElementById('screenshots');
-  var descendingBitmaps = bitmaps.slice().reverse();
-  descendingBitmaps.forEach(function(bitmap) {
+  bitmaps.forEach(function(bitmap) {
     var rootDiv = document.createElement('div');
     var screenshotDiv = document.createElement('div');
     var screenshotLink = createScreenshotLink();
