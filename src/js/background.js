@@ -14,7 +14,7 @@ var Bitmap = function(imageBitmap) {
     var canvas = new OffscreenCanvas(this.width, this.height);
     var ctx = canvas.getContext('2d');
     ctx.drawImage(imageBitmap, 0, 0);
-    return canvas.convertToBlob().then((blob) => {
+    return canvas.convertToBlob({type: "image/png"}).then((blob) => {
       this.objectURL = URL.createObjectURL(blob);
       return this.objectURL;
     });
