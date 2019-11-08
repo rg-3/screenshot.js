@@ -22,10 +22,11 @@ chrome.runtime.getBackgroundPage(function(page) {
     var hyperlink = createLink();
     bitmap.getObjectURL().then((url) => {
       hyperlink.setAttribute('href', url);
-      hyperlink.innerText = 'Open';
-    });
-    div.appendChild(canvas);
+      hyperlink.innerText = '';
+      hyperlink.appendChild(canvas);
+    });;
     div.appendChild(hyperlink);
     root.appendChild(div);
+    div.setAttribute('class', 'screenshot')
   });
 });
