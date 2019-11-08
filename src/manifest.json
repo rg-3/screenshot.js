@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "ytsnap",
+  "description": "Takes screenshots",
+  "version": "0.1.0",
+  "background": {"scripts": ["js/background.js"]},
+  "permissions": ["commands", "notifications", "tabCapture"],
+  "browser_action": {
+    "default_popup": "html/screenshots.html"
+  },
+  "commands": {
+    "take_screenshot": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+K",
+        "mac": "Command+Shift+K"
+      },
+      "description": "Takes a screenshot"
+    }
+  }
+}
