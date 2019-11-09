@@ -36,6 +36,16 @@ var notify = (message) => {
     type: "basic",
     title: "Screenshot",
     message: message
+  }, (notificationId) => {
+    var listener = (alarm) => {
+      chrome.notifications.clear(notificationId);
+      chrome.alarms.clear(alarm.name);
+      chrome.alarms.onAlarm.removeListener(listener);
+    };
+    var now = new Date();
+    var when = now.setSeconds(now.getSeconds() + 1).valueOf();
+    chrome.alarms.onAlarm.addListener(listener);
+    chrome.alarms.create({when});
   });
 };
 
