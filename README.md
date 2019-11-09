@@ -1,14 +1,16 @@
 ### Screenshot.js
 
-A browser extension that takes screenshots of the active tab. It is easy to use
-with little to no learning curve. It respects your privacy and doesn't make any
-network requests. Screenshots are kept for the duration of a browser session
-and then lost unless you save them to disk.
+A browser extension that takes screenshots of the active tab.
 
-The screenshots you take during a browser session can be viewed from
-the extension, they can also be deleted or saved to disk. Screenshots are taken
-in response to a key click (ctrl + shift + k), and a notification is shown every
-time a screenshot is taken.
+### Features
+
+* Screenshots are taken in response to a key click (ctrl + shift + K), this
+  can be changed to a custom set of keys.
+* Screenshots are kept for the duration of a browser session unless you save them to disk.
+* Screenshots are not uploaded anywhere, and the extension doesn't make any network requests.
+* Screenshots can be viewed, saved to disk or deleted from the extension popover.
+
+
 
 ### Install
 
