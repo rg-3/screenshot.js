@@ -1,3 +1,5 @@
+const MAX_BITMAPS_SIZE = 24;
+
 var bitmaps = [];
 
 var Bitmap = function(imageBitmap) {
@@ -55,6 +57,9 @@ chrome.commands.onCommand.addListener((_command) => {
     var track = stream.getVideoTracks()[0];
     var frame = new ImageCapture(track).grabFrame();
     frame.then((bitmap) => {
+      if(bitmaps.length === MAX_BITMAPS_SIZE) {
+        bitmaps.pop();
+      }
       bitmaps.unshift(new Bitmap(bitmap));
       track.stop();
       notify("You took a screenshot");

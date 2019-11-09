@@ -8,9 +8,7 @@ A browser extension that takes screenshots of the active tab.
   can be changed to a custom set of keys.
 * Screenshots are kept for the duration of a browser session unless you save them to disk.
 * Screenshots are not uploaded anywhere, and the extension doesn't make any network requests.
-* Screenshots can be viewed, saved to disk or deleted from the extension popover.
-
-
+* The 24 most recent screenshots can be viewed, saved to disk or deleted from the extension popover.
 
 ### Install
 
