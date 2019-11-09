@@ -1,18 +1,18 @@
-var createCanvas = (bitmap, width, height) => {
-  var el = document.createElement('canvas');
-  var ctx = el.getContext('2d');
+const createCanvas = (bitmap, width, height) => {
+  const el = document.createElement('canvas');
+  const ctx = el.getContext('2d');
   ctx.drawImage(bitmap.native, 0, 0, width, height);
   return el;
 };
 
-var createScreenshotLink = () => {
-  var el = document.createElement('a');
+const createScreenshotLink = () => {
+  const el = document.createElement('a');
   el.setAttribute('target', '_blank');
   el.innerText = 'Processing';
   return el;
 };
 
-var createDeleteLink = (screenshotEl, bitmap) => {
+const createDeleteLink = (screenshotEl, bitmap) => {
   const root = document.createElement('div')
   const el = document.createElement('a')
   el.innerText = 'Delete';
@@ -28,17 +28,17 @@ var createDeleteLink = (screenshotEl, bitmap) => {
 };
 
 chrome.runtime.getBackgroundPage(function(page) {
-  var bitmaps = page.bitmaps;
-  var root = document.getElementById('screenshots');
+  const bitmaps = page.bitmaps;
+  const root = document.getElementById('screenshots');
   bitmaps.forEach(function(bitmap) {
-    var rootDiv = document.createElement('div');
-    var screenshotDiv = document.createElement('div');
-    var screenshotLink = createScreenshotLink();
-    var deleteLink = createDeleteLink(rootDiv, bitmap);
-    var dateSpan = document.createElement('span');
+    const rootDiv = document.createElement('div');
+    const screenshotDiv = document.createElement('div');
+    const screenshotLink = createScreenshotLink();
+    const deleteLink = createDeleteLink(rootDiv, bitmap);
+    const dateSpan = document.createElement('span');
     dateSpan.innerText = bitmap.timestamp.toLocaleString();
     bitmap.getObjectURL().then((url) => {
-      var canvas = createCanvas(bitmap, 200, 200);
+      const canvas = createCanvas(bitmap, 200, 200);
       screenshotLink.setAttribute('href', url);
       screenshotLink.innerText = '';
       screenshotLink.appendChild(canvas);

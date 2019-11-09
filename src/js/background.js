@@ -1,8 +1,8 @@
 const MAX_BITMAPS_SIZE = 24;
 
-var bitmaps = [];
+const bitmaps = [];
 
-var Bitmap = function(imageBitmap) {
+const Bitmap = function(imageBitmap) {
   this.objectURL = undefined;
   this.timestamp = new Date();
   this.native = imageBitmap;
@@ -32,20 +32,20 @@ var Bitmap = function(imageBitmap) {
   return this;
 };
 
-var notify = (message) => {
+const notify = (message) => {
   chrome.notifications.create("screenshot", {
     iconUrl: "/logo.png",
     type: "basic",
     title: "Screenshot",
     message: message
   }, (notificationId) => {
-    var listener = (alarm) => {
+    const listener = (alarm) => {
       chrome.notifications.clear(notificationId);
       chrome.alarms.clear(alarm.name);
       chrome.alarms.onAlarm.removeListener(listener);
     };
-    var now = new Date();
-    var when = now.setSeconds(now.getSeconds() + 1).valueOf();
+    const now  = new Date();
+    const when = now.setSeconds(now.getSeconds() + 1).valueOf();
     chrome.alarms.onAlarm.addListener(listener);
     chrome.alarms.create({when});
   });
@@ -54,8 +54,8 @@ var notify = (message) => {
 
 chrome.commands.onCommand.addListener((_command) => {
   chrome.tabCapture.capture({audio: false, video: true}, function(stream) {
-    var track = stream.getVideoTracks()[0];
-    var frame = new ImageCapture(track).grabFrame();
+    const track = stream.getVideoTracks()[0];
+    const frame = new ImageCapture(track).grabFrame();
     frame.then((bitmap) => {
       if(bitmaps.length === MAX_BITMAPS_SIZE) {
         bitmaps.pop();
@@ -71,9 +71,11 @@ chrome.runtime.onMessage.addListener((req) => {
   if(req.action === 'remove-bitmap') {
     bitmaps.forEach((bitmap) => {
       if(bitmap.objectURL === null) {
-        var index = bitmaps.indexOf(bitmap);
+        const index = bitmaps.indexOf(bitmap);
         bitmaps.splice(index, 1);
       }
     });
   }
 });
+
+window.bitmaps = bitmaps;
