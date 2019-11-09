@@ -48,7 +48,7 @@ chrome.commands.onCommand.addListener((_command) => {
       bitmaps.unshift(new Bitmap(bitmap));
       track.stop();
       notify("You took a screenshot");
-    }).catch(() => track.stop);
+    }).catch(track.stop);
   });
 });
 
