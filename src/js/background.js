@@ -1,7 +1,7 @@
 import ImageBitmap from './lib/background/image-bitmap.js';
 import notify from './lib/background/notify.js';
 
-const MAX_BITMAPS_SIZE = 16;
+const MAX_BITMAPS_SIZE = 6;
 const bitmaps = [];
 
 chrome.commands.onCommand.addListener((command) => {
