@@ -15,6 +15,10 @@ A browser extension that takes screenshots of the active tab.
 Install as an unpacked extension in developer mode, or kindly wait for it to
 become available on the Chrome store.
 
+### Credit
+
+For the camera icons credit to [Double-J Design](http://www.iconarchive.com/artist/double-j-design.html).
+
 ### License
 
 MIT license. See [./LICENSE.txt](/.LICENSE.txt) for details.

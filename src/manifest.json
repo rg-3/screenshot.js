@@ -8,6 +8,12 @@
   "browser_action": {
     "default_popup": "html/screenshots.html"
   },
+  "icons": {
+    "48":  "images/camera48.png",
+    "64":  "images/camera64.png",
+    "96":  "images/camera96.png",
+    "128": "images/camera128.png"
+  },
   "commands": {
     "take_screenshot": {
       "suggested_key": {
