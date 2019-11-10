@@ -27,7 +27,7 @@ const createDeleteLink = (screenshot, bitmap) => {
   return root;
 };
 
-export default function(page) {
+const drawScreenshots = function(page) {
   const bitmaps = page.bitmaps;
   const screenshotCount = page.SCREENSHOT_COUNT;
   const root = document.getElementById('screenshots');
@@ -64,3 +64,5 @@ export default function(page) {
     })
   }, 100);
 };
+
+export default drawScreenshots;
