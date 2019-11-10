@@ -39,7 +39,7 @@ const notify = (message) => {
     title: "Screenshot",
     message: message
   }, (notifID) => {
-    setTimeout(() => chrome.notifications.clear(notifID), 750);
+    setTimeout(() => chrome.notifications.clear(notifID), 900);
   });
 };
 
