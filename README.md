@@ -21,4 +21,4 @@ For the camera icons credit to [Double-J Design](http://www.iconarchive.com/arti
 
 ### License
 
-MIT license. See [./LICENSE.txt](/.LICENSE.txt) for details.
+MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
