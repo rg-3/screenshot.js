@@ -34,7 +34,7 @@ const Bitmap = function(imageBitmap) {
 
 const notify = (message) => {
   chrome.notifications.create("screenshot", {
-    iconUrl: "/logo.png",
+    iconUrl: "/images/camera48.png",
     type: "basic",
     title: "Screenshot",
     message: message
