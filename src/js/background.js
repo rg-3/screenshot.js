@@ -1,4 +1,4 @@
-const MAX_BITMAPS_SIZE = 24;
+const MAX_BITMAPS_SIZE = 16;
 
 const bitmaps = [];
 
@@ -38,16 +38,8 @@ const notify = (message) => {
     type: "basic",
     title: "Screenshot",
     message: message
-  }, (notificationId) => {
-    const listener = (alarm) => {
-      chrome.notifications.clear(notificationId);
-      chrome.alarms.clear(alarm.name);
-      chrome.alarms.onAlarm.removeListener(listener);
-    };
-    const now  = new Date();
-    const when = now.setSeconds(now.getSeconds() + 1).valueOf();
-    chrome.alarms.onAlarm.addListener(listener);
-    chrome.alarms.create({when});
+  }, (notifID) => {
+    setTimeout(() => chrome.notifications.clear(notifID), 750);
   });
 };
 
@@ -62,6 +54,7 @@ chrome.commands.onCommand.addListener((_command) => {
       }
       bitmaps.unshift(new Bitmap(bitmap));
       track.stop();
+      window.SCREENSHOT_COUNT += 1;
       notify("You took a screenshot");
     }).catch(track.stop);
   });
@@ -78,4 +71,6 @@ chrome.runtime.onMessage.addListener((req) => {
   }
 });
 
+window.SCREENSHOT_COUNT = 0;
+window.MAX_BITMAPS_SIZE = MAX_BITMAPS_SIZE;
 window.bitmaps = bitmaps;

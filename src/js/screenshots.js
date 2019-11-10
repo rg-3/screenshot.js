@@ -12,14 +12,14 @@ const createScreenshotLink = () => {
   return el;
 };
 
-const createDeleteLink = (screenshotEl, bitmap) => {
+const createDeleteLink = (screenshot, bitmap) => {
   const root = document.createElement('div')
   const el = document.createElement('a')
   el.innerText = 'Delete';
   el.href = '#';
   el.addEventListener('click', (event) => {
     event.preventDefault();
-    screenshotEl.remove();
+    screenshot.remove();
     bitmap.freeObjectURL();
     chrome.runtime.sendMessage({action: 'remove-bitmap'});
   });
@@ -27,9 +27,11 @@ const createDeleteLink = (screenshotEl, bitmap) => {
   return root;
 };
 
-chrome.runtime.getBackgroundPage(function(page) {
+const drawScreenshots = (page) => {
   const bitmaps = page.bitmaps;
+  const screenshotCount = page.SCREENSHOT_COUNT;
   const root = document.getElementById('screenshots');
+  root.innerHTML = '';
   bitmaps.forEach(function(bitmap) {
     const rootDiv = document.createElement('div');
     const screenshotDiv = document.createElement('div');
@@ -52,4 +54,15 @@ chrome.runtime.getBackgroundPage(function(page) {
     rootDiv.appendChild(deleteLink);
     root.appendChild(rootDiv);
   });
-});
+  const id = setInterval(() => {
+    /* Redraw screenshots when a screenshot is taken while the popover is open.*/
+    chrome.runtime.getBackgroundPage((page) => {
+      if(screenshotCount < page.SCREENSHOT_COUNT) {
+        drawScreenshots(page);
+        clearInterval(id);
+      }
+    })
+  }, 100);
+};
+
+chrome.runtime.getBackgroundPage(drawScreenshots);
