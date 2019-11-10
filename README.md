@@ -1,4 +1,4 @@
-### Screenshot.js
+### ![logo](src/images/camera48.png) screenshot.js
 
 A browser extension that takes screenshots of the active tab.
 
