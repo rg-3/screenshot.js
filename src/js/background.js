@@ -1,4 +1,4 @@
-import Bitmap from './lib/background/bitmap.js';
+import ImageBitmap from './lib/background/image-bitmap.js';
 import notify from './lib/background/notify.js';
 
 const MAX_BITMAPS_SIZE = 16;
@@ -14,7 +14,7 @@ chrome.commands.onCommand.addListener((command) => {
           if(bitmaps.length === MAX_BITMAPS_SIZE) {
             bitmaps.pop();
           }
-          bitmaps.unshift(new Bitmap(bitmap));
+          bitmaps.unshift(new ImageBitmap(bitmap));
           track.stop();
           notify("You took a screenshot");
           window.SCREENSHOT_COUNT += 1;

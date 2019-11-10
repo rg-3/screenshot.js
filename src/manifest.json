@@ -6,7 +6,7 @@
   "background": {"page": "html/background.html"},
   "permissions": ["commands", "notifications", "tabCapture"],
   "browser_action": {
-    "default_popup": "html/screenshots.html"
+    "default_popup": "html/popover.html"
   },
   "icons": {
     "48":  "images/camera48.png",
