@@ -58,8 +58,8 @@ const drawScreenshots = function(page) {
     /* Redraw screenshots when a screenshot is taken while the popover is open.*/
     chrome.runtime.getBackgroundPage((page) => {
       if(screenshotCount < page.SCREENSHOT_COUNT) {
-        drawScreenshots(page);
         clearInterval(id);
+        drawScreenshots(page);
       }
     })
   }, 100);
