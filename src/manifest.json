@@ -3,7 +3,7 @@
   "name": "ytsnap",
   "description": "Takes screenshots",
   "version": "0.1.0",
-  "background": {"scripts": ["js/background.js"]},
+  "background": {"page": "html/background.html"},
   "permissions": ["commands", "notifications", "tabCapture"],
   "browser_action": {
     "default_popup": "html/screenshots.html"
