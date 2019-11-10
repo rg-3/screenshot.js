@@ -2,15 +2,28 @@ html {
   width: 650px;
 }
 
+#header {
+  width: 450px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .tip {
+  width: 450px;
+  margin: 0 auto;
+  text-align: center;
   margin-bottom: 10px;
+  clear: both;
+  font-weight: bold;
 }
 
 #screenshots {
   margin: 0 auto;
   width: 450px;
+  min-height: 200px;
   text-align: center;
 }
+
 
 .screenshot {
   height: 160px;
