@@ -3,32 +3,40 @@ html {
 }
 
 #header {
-  width: 450px;
   margin: 0 auto;
+  width: 450px;
   text-align: center;
+  margin-bottom: 20px;
+}
+
+#header h2 {
+  margin-bottom: 5px;
+}
+
+#header img {
+  vertical-align: bottom;
+}
+
+#header a, #header a:visited, #header a:active {
+  color: #000;
+  text-decoration: none;
 }
 
 .tip {
-  width: 450px;
-  margin: 0 auto;
-  text-align: center;
-  margin-bottom: 10px;
   clear: both;
-  font-weight: bold;
+  padding-top: 20px;
+  margin-bottom: 10px;
 }
 
 #screenshots {
-  margin: 0 auto;
-  width: 450px;
   min-height: 200px;
   text-align: center;
 }
 
-
 .screenshot {
   height: 160px;
   width: 200px;
-  margin-right: 20px;
+  margin-right: 5px;
   margin-bottom: 5px;
   border: 1px solid #CCC000;
 }

@@ -1,4 +1,4 @@
-### ![logo](src/images/camera24.png) screenshot.js
+### ![logo](src/images/camera24.png) Screenshot
 
 A browser extension that takes screenshots of the active tab.
 
