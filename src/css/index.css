@@ -55,10 +55,18 @@ html {
   height: 16px;
 }
 
-.red-color {
+.red {
   color: red;
 }
 
-.delete {
+.green {
+  color: green;
+}
+
+.delete, .save {
   float: right;
+}
+
+.action-bar a {
+  margin-left: 5px;
 }

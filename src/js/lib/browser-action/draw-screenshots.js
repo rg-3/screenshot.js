@@ -25,6 +25,8 @@ const drawScreenshots = function(page) {
     bitmap.getObjectURL().then((url) => {
       el.querySelector('.image').prepend(createCanvas(bitmap, 200, 200));
       el.querySelector('.image').setAttribute('href', url);
+      el.querySelector('.save').setAttribute('href', url);
+      el.querySelector('.save').setAttribute('download', `${page.SCREENSHOT_COUNT}.png`);
       el.querySelector('.loading-text').remove();
       el.querySelectorAll('.hidden').forEach((el) => el.classList.remove('hidden'));
     });
