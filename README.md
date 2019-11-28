@@ -30,7 +30,7 @@ Coming soon...
 
 * In your browser, open `chrome://extensions`.
 
-* Enable the 'Developer mode' checkbox.
+* Enable the `Developer mode` checkbox.
 
 * Click the `Load unpacked extension` button and point it at the `src/`
   directory in the cloned repository.
