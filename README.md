@@ -17,6 +17,14 @@ by default `ctrl + shift + k`.
   in temporary browser memory (with the option to save them to disk or copy
   them to the clipboard).
 
+### Screenshots
+
+#### Nov, 28, 2019
+
+* Hovering over the `Copy screenshot to clipboard` icon.
+
+  ![screenshot](./screenshots/2019-11-28.png)
+
 ### Install
 
 #### Chrome webstore
