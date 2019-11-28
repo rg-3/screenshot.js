@@ -1,19 +1,40 @@
 ### ![logo](src/images/camera24.png) Screenshot
 
-A browser extension that takes screenshots of the active tab.
+A browser extension that takes screenshots of the active tab with
 
 ### Features
 
-* Screenshots are taken in response to a key click (ctrl + shift + K), this
-  can be changed to a custom set of keys.
-* Screenshots are kept for the duration of a browser session unless you save them to disk.
-* Screenshots are not uploaded anywhere, and the extension doesn't make any network requests.
-* The 6 most recent screenshots can be viewed, saved to disk or deleted from the extension popover.
+* Takes a screenshot in response to a key stroke (ctrl + shift + k).
+
+* Displays the six most recent screenshots by clicking on the extensions
+  browser action (icon).
+
+* Allows screenshots to be previewed, saved to disk and deleted from
+  temporary browser memory.
+
+* Respects your privacy by not making network requests and storing screenshots
+  in temporary browser memory (with the option to save them to disk).
 
 ### Install
 
-Install as an unpacked extension in developer mode, or kindly wait for it to
-become available on the Chrome store.
+#### Chrome webstore
+
+Coming soon...
+
+#### Source
+
+* Grab a copy of the extension:
+
+      git clone https://github.com/rg-3/screenshot.js
+
+* In your browser, open `chrome://extensions`.
+
+* Enable the 'Developer mode' checkbox.
+
+* Click the `Load unpacked extension` button and point it at the `src/`
+  directory in the cloned repository.
+
+* Done!
 
 ### Credit
 
