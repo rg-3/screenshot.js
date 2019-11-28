@@ -2,6 +2,10 @@ html {
   width: 650px;
 }
 
+.hidden {
+  display: none;
+}
+
 #header {
   margin: 0 auto;
   width: 450px;
@@ -34,9 +38,10 @@ html {
 }
 
 .screenshot {
+  float: left;
   height: 160px;
   width: 200px;
   margin-right: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   border: 1px solid #CCC000;
 }

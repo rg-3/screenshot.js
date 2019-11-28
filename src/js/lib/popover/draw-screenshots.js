@@ -5,58 +5,39 @@ const createCanvas = (bitmap, width, height) => {
   return el;
 };
 
-const createScreenshotLink = () => {
-  const el = document.createElement('a');
-  el.setAttribute('target', '_blank');
-  el.innerText = 'Processing';
-  return el;
-};
-
-const createDeleteLink = (screenshot, bitmap) => {
-  const root = document.createElement('div')
-  const el = document.createElement('a')
-  el.innerText = 'Delete';
-  el.href = '#';
+const onDeleteClick = (screenshotEl, bitmap) => {
+  const el = screenshotEl.querySelector('.delete');
   el.addEventListener('click', (event) => {
     event.preventDefault();
-    screenshot.remove();
+    screenshotEl.remove();
     bitmap.freeObjectURL();
     chrome.runtime.sendMessage({action: 'remove-bitmap'});
   });
-  root.appendChild(el);
-  return root;
 };
 
 const drawScreenshots = function(page) {
-  const bitmaps = page.bitmaps;
-  const screenshotCount = page.SCREENSHOT_COUNT;
-  const root = document.getElementById('screenshots');
-  root.innerHTML = '';
-  bitmaps.forEach(function(bitmap) {
-    const rootDiv = document.createElement('div');
-    const screenshotDiv = document.createElement('div');
-    const screenshotLink = createScreenshotLink();
-    const deleteLink = createDeleteLink(rootDiv, bitmap);
-    const dateSpan = document.createElement('span');
-    dateSpan.innerText = bitmap.timestamp.toLocaleString();
+  const count = page.SCREENSHOT_COUNT;
+  const container = document.getElementById('screenshots');
+
+  page.bitmaps.forEach(function(bitmap) {
+    const el = document.querySelector('.screenshot-template').cloneNode(true);
+    onDeleteClick(el, bitmap);
     bitmap.getObjectURL().then((url) => {
-      const canvas = createCanvas(bitmap, 200, 200);
-      screenshotLink.setAttribute('href', url);
-      screenshotLink.innerText = '';
-      screenshotLink.appendChild(canvas);
+      el.querySelector('.date').innerHTML = bitmap.timestamp.toLocaleString();
+      el.querySelector('.image').prepend(createCanvas(bitmap, 200, 200));
+      el.querySelector('.image').setAttribute('href', url);
+      el.querySelector('.loading-text').remove();
+      el.querySelectorAll('.hidden').forEach((el) => el.classList.remove('hidden'));
     });
-    screenshotDiv.setAttribute('class', 'screenshot');
-    screenshotDiv.appendChild(screenshotLink);
-    rootDiv.style.float = 'left';
-    rootDiv.style.marginBottom = '10px';
-    rootDiv.appendChild(screenshotDiv);
-    rootDiv.appendChild(dateSpan);
-    rootDiv.appendChild(deleteLink);
-    root.appendChild(rootDiv);
+    el.classList.remove('hidden');
+    container.appendChild(el);
   });
+
   const id = setInterval(() => {
-    /* Redraw screenshots when a screenshot is taken while the popover is open.*/
-    if(screenshotCount < page.SCREENSHOT_COUNT) {
+    /* Redraw screenshots when a screenshot is taken while the popover
+       is open.*/
+    if(count < page.SCREENSHOT_COUNT) {
+      container.innerHTML = '';
       clearInterval(id);
       drawScreenshots(page);
     }
