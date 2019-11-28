@@ -43,5 +43,22 @@ html {
   width: 200px;
   margin-right: 5px;
   margin-bottom: 10px;
-  border: 1px solid #CCC000;
+}
+
+.action-bar {
+  position: relative;
+  top: 3px;
+}
+
+.feather-16 {
+  width: 16px;
+  height: 16px;
+}
+
+.red-color {
+  color: red;
+}
+
+.delete {
+  float: right;
 }

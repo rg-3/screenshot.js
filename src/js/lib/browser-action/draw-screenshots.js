@@ -23,7 +23,6 @@ const drawScreenshots = function(page) {
     const el = document.querySelector('.screenshot-template').cloneNode(true);
     onDeleteClick(el, bitmap);
     bitmap.getObjectURL().then((url) => {
-      el.querySelector('.date').innerHTML = bitmap.timestamp.toLocaleString();
       el.querySelector('.image').prepend(createCanvas(bitmap, 200, 200));
       el.querySelector('.image').setAttribute('href', url);
       el.querySelector('.loading-text').remove();
@@ -31,6 +30,7 @@ const drawScreenshots = function(page) {
     });
     el.classList.remove('hidden');
     container.appendChild(el);
+    feather.replace();
   });
 
   const id = setInterval(() => {

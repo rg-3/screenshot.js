@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Screenshot</title>
+    <script src="/js/vendor/feather.min.js"></script>
     <script src="/js/browser-action.js" type='module'></script>
     <link rel="stylesheet" href="/css/index.css"></link>
   </head>
@@ -25,8 +26,11 @@
     <div class='screenshot screenshot-template hidden'>
       <a class='image' target='_blank'>
         <span class='loading-text'>Please wait...</a>
-        <span class='date hidden'></span>
-        <a href='#' class='delete hidden'>Delete</span>
+        <div class='action-bar'>
+          <a href='#' title='Delete this screenshot' class='delete hidden'>
+            <i class='feather-16 red-color' data-feather="trash"></i>
+          </a>
+        </div>
       </a>
     </div>
   </body>
