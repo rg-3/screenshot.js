@@ -1,3 +1,9 @@
+const removeWithFadeOut = (el, speed) => {
+  const seconds = speed/1000;
+  el.style.cssText = `transition: opacity ${seconds}s ease; opacity: 0`;
+  setTimeout(() => el.remove(), speed);
+}
+
 const createCanvas = (bitmap, width, height) => {
   const el = document.createElement('canvas');
   const ctx = el.getContext('2d');
@@ -9,7 +15,7 @@ const onDeleteClick = (screenshotEl, bitmap) => {
   const el = screenshotEl.querySelector('.delete');
   el.addEventListener('click', (event) => {
     event.preventDefault();
-    screenshotEl.remove();
+    removeWithFadeOut(screenshotEl, 500);
     bitmap.freeObjectURL();
     chrome.runtime.sendMessage({action: 'remove-bitmap'});
   });
