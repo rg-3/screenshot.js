@@ -1,7 +1,7 @@
 ### ![logo](src/images/camera24.png) Screenshot
 
-Takes screenshots of the current tab with a key stroke, by default
-ctrl + shift + k.
+A browser extension that takes screenshots of the current tab with a key stroke,
+by default `ctrl + shift + k`.
 
 ### Features
 
