@@ -1,5 +1,5 @@
 const removeWithFadeOut = (el, speed) => {
-  const seconds = speed/1000;
+  const seconds = speed / 1000;
   el.style.cssText = `transition: opacity ${seconds}s ease; opacity: 0`;
   setTimeout(() => el.remove(), speed);
 }
