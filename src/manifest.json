@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Screenshot",
-  "description": "Takes screenshots with a key stroke, by default Ctrl + Shift + K.",
+  "description": "Takes screenshots of the current tab with a key stroke, by default ctrl + shift + k.",
   "version": "0.1.0",
   "background": {"page": "html/background.html"},
   "permissions": ["commands", "notifications", "tabCapture"],
