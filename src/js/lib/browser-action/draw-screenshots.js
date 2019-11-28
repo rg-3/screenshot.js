@@ -2,7 +2,7 @@ const removeWithFadeOut = (el, speed) => {
   const seconds = speed / 1000;
   el.style.cssText = `transition: opacity ${seconds}s ease; opacity: 0`;
   setTimeout(() => el.remove(), speed);
-}
+};
 
 const createCanvas = (bitmap, width, height) => {
   const el = document.createElement('canvas');
@@ -21,13 +21,23 @@ const onDeleteClick = (screenshotEl, bitmap) => {
   });
 };
 
+const onCopyClick = (screenshotEl, bitmap) => {
+  const el = screenshotEl.querySelector('.copy');
+  el.addEventListener('click', (event) => {
+    const clipItem = new ClipboardItem({"image/png": bitmap.blob});
+    navigator.clipboard.write([clipItem]);
+  });
+};
+
 const drawScreenshots = function(page) {
   const count = page.SCREENSHOT_COUNT;
   const container = document.getElementById('screenshots');
 
+  /* Draw screenshots grid */
   page.bitmaps.forEach(function(bitmap) {
     const el = document.querySelector('.screenshot-template').cloneNode(true);
     onDeleteClick(el, bitmap);
+    onCopyClick(el, bitmap);
     bitmap.getObjectURL().then((url) => {
       el.querySelector('.image').prepend(createCanvas(bitmap, 200, 200));
       el.querySelector('.image').setAttribute('href', url);
@@ -41,15 +51,33 @@ const drawScreenshots = function(page) {
     feather.replace();
   });
 
+  /* Redraw screenshots grid when a screenshot is taken while browser_action.html
+     is open.*/
   const id = setInterval(() => {
-    /* Redraw screenshots when a screenshot is taken while the popover
-       is open.*/
     if(count < page.SCREENSHOT_COUNT) {
       container.innerHTML = '';
       clearInterval(id);
       drawScreenshots(page);
     }
   }, 100);
+
+  /* Tooltips */
+  tippy('.copy', {
+    content: 'Copied screenshot',
+    trigger: 'click',
+    placement: 'top',
+    multiple: true,
+    ignoreAttributes: true,
+    onShow(tip) {
+      setTimeout(tip.hide, 500);
+    }
+  });
+
+  tippy('a[data-tippy-content]', {
+    placement: 'bottom',
+    trigger: 'mouseenter',
+    multiple: true
+  });
 };
 
 export default drawScreenshots;

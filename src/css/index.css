@@ -64,6 +64,10 @@ html {
   color: green;
 }
 
+.blue {
+  color: blue;
+}
+
 .action-bar a, .action-bar a:visited, .action-bar a:active {
   text-decoration: none;
 }

@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Screenshot</title>
+    <script src="/js/vendor/popper.min.js"></script>
+    <script src="/js/vendor/tippy.min.js"></script>
     <script src="/js/vendor/feather.min.js"></script>
     <script src="/js/browser-action.js" type='module'></script>
     <link rel="stylesheet" href="/css/index.css"></link>
@@ -27,11 +29,14 @@
       <a class='image' target='_blank'>
         <span class='loading-text'>Please wait...</a>
         <div class='action-bar hidden'>
-          <a href='#' title='Delete screenshot' class='delete'>
-            <i class='feather-16 red' data-feather="trash"></i>
-          </a>
-          <a href='#' title='Save screenshot' class='save'>
+          <a href='#' data-tippy-content='Save screenshot' class='save'>
             <i class='feather-16 green' data-feather='save'></i>
+          </a>
+          <a href='#' data-tippy-content='Copy screenshot to clipboard' class='copy'>
+            <i class='feather-16 blue' data-feather='copy'></i>
+          </a>
+          <a href='#' data-tippy-content='Delete screenshot' class='delete'>
+            <i class='feather-16 red' data-feather="trash"></i>
           </a>
         </div>
       </a>
