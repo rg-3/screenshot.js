@@ -20,7 +20,7 @@ export default function(imageBitmap) {
     });
   };
 
-  this.freeObjectURL = () => {
+  this.free = () => {
     if(this.objectURL) {
       URL.revokeObjectURL(this.objectURL);
       this.objectURL = null;

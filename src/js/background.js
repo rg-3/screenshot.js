@@ -11,8 +11,7 @@ chrome.commands.onCommand.addListener((command) => {
       const grabFrame = new ImageCapture(track).grabFrame();
       grabFrame.then((bitmap) => {
         if(bitmaps.length === MAX_BITMAPS_SIZE) {
-          const bitmap = bitmaps.pop();
-          bitmap.freeObjectURL();
+          bitmaps.pop().free();
         }
         bitmaps.unshift(new BitmapImage(bitmap));
         track.stop();

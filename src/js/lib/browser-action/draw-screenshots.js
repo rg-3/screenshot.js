@@ -16,7 +16,7 @@ const onDeleteClick = (screenshotEl, bitmap) => {
   el.addEventListener('click', (event) => {
     event.preventDefault();
     removeWithFadeOut(screenshotEl, 500);
-    bitmap.freeObjectURL();
+    bitmap.free();
     chrome.runtime.sendMessage({action: 'remove-bitmap'});
   });
 };
