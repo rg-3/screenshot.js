@@ -65,7 +65,7 @@ const drawScreenshots = function(page) {
   tippy('.copy', {
     content: 'Copied screenshot',
     trigger: 'click',
-    placement: 'top',
+    placement: 'bottom',
     multiple: true,
     ignoreAttributes: true,
     onShow(tip) {
