@@ -29,25 +29,25 @@ const onCopyClick = (screenshotEl, bitmap) => {
   });
 };
 
-const draw = function(page) {
+const drawGrid = function(page) {
   const count = page.SCREENSHOT_COUNT;
-  const container = document.getElementById('screenshots');
+  const grid = document.getElementById('screenshot-grid');
 
   /* Draw screenshots grid */
   page.bitmaps.forEach(function(bitmap) {
-    const el = document.querySelector('.screenshot-template').cloneNode(true);
-    onDeleteClick(el, bitmap);
-    onCopyClick(el, bitmap);
+    const screenshot = document.querySelector('.screenshot-template').cloneNode(true);
+    onDeleteClick(screenshot, bitmap);
+    onCopyClick(screenshot, bitmap);
     bitmap.getObjectURL().then((url) => {
-      el.querySelector('.image').prepend(createCanvas(bitmap, 200, 200));
-      el.querySelector('.image').setAttribute('href', url);
-      el.querySelector('.save').setAttribute('href', url);
-      el.querySelector('.save').setAttribute('download', `${page.SCREENSHOT_COUNT}.png`);
-      el.querySelector('.loading-text').remove();
-      el.querySelectorAll('.hidden').forEach((el) => el.classList.remove('hidden'));
+      screenshot.querySelector('.image').prepend(createCanvas(bitmap, 200, 200));
+      screenshot.querySelector('.image').setAttribute('href', url);
+      screenshot.querySelector('.save').setAttribute('href', url);
+      screenshot.querySelector('.save').setAttribute('download', `${page.SCREENSHOT_COUNT}.png`);
+      screenshot.querySelector('.loading-text').remove();
+      screenshot.querySelectorAll('.hidden').forEach((screenshot) => screenshot.classList.remove('hidden'));
     });
-    el.classList.remove('hidden');
-    container.appendChild(el);
+    screenshot.classList.remove('hidden');
+    grid.appendChild(screenshot);
     feather.replace();
   });
 
@@ -55,9 +55,9 @@ const draw = function(page) {
      is open.*/
   const id = setInterval(() => {
     if(count < page.SCREENSHOT_COUNT) {
-      container.innerHTML = '';
+      grid.innerHTML = '';
       clearInterval(id);
-      draw(page);
+      drawGrid(page);
     }
   }, 100);
 
@@ -80,4 +80,4 @@ const draw = function(page) {
   });
 };
 
-export default draw
+export default drawGrid

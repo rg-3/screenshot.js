@@ -1,2 +1,2 @@
-import drawScreenshots from './lib/browser-action/draw-screenshots.js';
-chrome.runtime.getBackgroundPage(drawScreenshots);
+import drawGrid from './lib/browser-action/draw-grid.js';
+chrome.runtime.getBackgroundPage(drawGrid);

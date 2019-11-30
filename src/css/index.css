@@ -26,13 +26,7 @@ html {
   text-decoration: none;
 }
 
-.tip {
-  clear: both;
-  padding-top: 20px;
-  margin-bottom: 10px;
-}
-
-#screenshots {
+#screenshot-grid {
   min-height: 200px;
   text-align: center;
 }
@@ -43,6 +37,12 @@ html {
   width: 200px;
   margin-right: 5px;
   margin-bottom: 25px;
+}
+
+.tip {
+  clear: both;
+  padding-top: 20px;
+  margin-bottom: 10px;
 }
 
 .action-bar {
