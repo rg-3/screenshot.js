@@ -29,7 +29,7 @@ const onCopyClick = (screenshotEl, bitmap) => {
   });
 };
 
-const drawScreenshots = function(page) {
+const draw = function(page) {
   const count = page.SCREENSHOT_COUNT;
   const container = document.getElementById('screenshots');
 
@@ -51,13 +51,13 @@ const drawScreenshots = function(page) {
     feather.replace();
   });
 
-  /* Redraw screenshots grid when a screenshot is taken while browser_action.html
+  /* Redraw screenshots grid when screenshot is taken while browser_action.html
      is open.*/
   const id = setInterval(() => {
     if(count < page.SCREENSHOT_COUNT) {
       container.innerHTML = '';
       clearInterval(id);
-      drawScreenshots(page);
+      draw(page);
     }
   }, 100);
 
@@ -80,4 +80,4 @@ const drawScreenshots = function(page) {
   });
 };
 
-export default drawScreenshots;
+export default draw
