@@ -4,13 +4,6 @@ const removeWithFadeOut = (el, speed) => {
   setTimeout(() => el.remove(), speed);
 };
 
-const createCanvas = (screenshot, width, height) => {
-  const el = document.createElement('canvas');
-  const ctx = el.getContext('2d');
-  ctx.drawImage(screenshot.image, 0, 0, width, height);
-  return el;
-};
-
 const onDeleteClick = (screenshotEl, screenshot) => {
   const el = screenshotEl.querySelector('.delete');
   el.addEventListener('click', (event) => {
@@ -33,16 +26,18 @@ const createFilename = (screenshot) => {
 };
 
 const drawGrid = function(page) {
-  const count = page.SCREENSHOT_COUNT;
+  const app = page.app;
+  const count = app.screenshotCount;
   const grid = document.getElementById('screenshot-grid');
 
   /* Draw screenshots grid */
-  page.screenshots.forEach(function(screenshot) {
+  app.screenshots.forEach(function(screenshot) {
     const screenshotEl = document.querySelector('.screenshot-template').cloneNode(true);
     screenshot.createBlob().then(([_, urlToBlob]) => {
       onDeleteClick(screenshotEl, screenshot);
       onCopyClick(screenshotEl, screenshot);
-      screenshotEl.querySelector('.image').prepend(createCanvas(screenshot, 200, 200));
+      const canvas = app.canvas.createCanvas(screenshot.image, 200, 200);
+      screenshotEl.querySelector('.image').prepend(canvas);
       screenshotEl.querySelector('.image').setAttribute('href', urlToBlob);
       screenshotEl.querySelector('.save').setAttribute('href', urlToBlob);
       screenshotEl.querySelector('.save').setAttribute('download', createFilename(screenshot));
@@ -57,7 +52,7 @@ const drawGrid = function(page) {
   /* Redraw screenshots grid when screenshot is taken while browser_action.html
      is open.*/
   const id = setInterval(() => {
-    if(count < page.SCREENSHOT_COUNT) {
+    if(count < app.screenshotCount) {
       grid.innerHTML = '';
       clearInterval(id);
       drawGrid(page);

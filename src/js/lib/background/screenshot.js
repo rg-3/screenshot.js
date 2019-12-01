@@ -6,7 +6,7 @@ const createHTMLImage = (url) => {
   });
 }
 
-export default function(dataUrl) {
+export default function(app, dataUrl) {
   /* Blob-related properties */
   this.id = null;
   this.urlToBlob = null;
@@ -18,14 +18,14 @@ export default function(dataUrl) {
   this.height = null;
   this.timestamp = new Date();
 
+
+
   this.createBlob = () => {
     if(this.blob && this.urlToBlob) {
       return new Promise((resolve, reject) => resolve([this.blob, this.urlToBlob]));
     }
     return createHTMLImage(dataUrl).then((image) => {
-      const canvas = new OffscreenCanvas(image.width, image.height);
-      const ctx = canvas.getContext('2d');
-      ctx.drawImage(image, 0, 0);
+      const canvas = app.canvas.createOffscreenCanvas(image);
       return canvas.convertToBlob({type: "image/png"}).then((blob) => {
         this.image = image;
         this.width = image.width;

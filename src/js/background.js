@@ -1,8 +1,15 @@
 import Screenshot from './lib/background/screenshot.js';
+import Canvas from './lib/background/canvas.js';
 import notify from './lib/background/notify.js';
 
 const MAX_SCREENSHOTS_SIZE = 6;
 const screenshots = [];
+
+const app = {
+  screenshotCount: 0,
+  canvas: new Canvas(),
+  screenshots
+};
 
 chrome.commands.onCommand.addListener((command) => {
   if(command === "take_screenshot") {
@@ -10,9 +17,9 @@ chrome.commands.onCommand.addListener((command) => {
       if(screenshots.length >= MAX_SCREENSHOTS_SIZE) {
         screenshots.pop().revokeBlob();
       }
-      screenshots.unshift(new Screenshot(dataUrl));
+      screenshots.unshift(new Screenshot(app, dataUrl));
       notify("You took a screenshot");
-      window.SCREENSHOT_COUNT += 1;
+      app.screenshotCount += 1;
     });
   }
 });
@@ -29,7 +36,6 @@ chrome.runtime.onMessage.addListener((message) => {
 });
 
 /* Exports
- * getBackgroundPage((page) => page.SCREENSHOT_COUNT)
+ * getBackgroundPage((page) => page.app.screenshotCount)
 */
-window.SCREENSHOT_COUNT = 0;
-window.screenshots = screenshots;
+window.app = app;
