@@ -1,9 +1,8 @@
 const createHTMLImage = (url) => {
   return new Promise((resolve, reject) => {
     const image = new Image();
-    image.onload = resolve(image);
+    image.onload = () => resolve(image);
     image.src = url;
-    return image;
   });
 }
 
