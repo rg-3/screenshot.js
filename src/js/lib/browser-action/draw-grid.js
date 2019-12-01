@@ -29,6 +29,11 @@ const onCopyClick = (screenshotEl, bitmap) => {
   });
 };
 
+const createFilename = (bitmap, url) => {
+  const basename = url.split('/').pop();
+  return `screenshot_${bitmap.width}x${bitmap.height}_${basename}.png`
+};
+
 const drawGrid = function(page) {
   const count = page.SCREENSHOT_COUNT;
   const grid = document.getElementById('screenshot-grid');
@@ -38,11 +43,11 @@ const drawGrid = function(page) {
     const screenshot = document.querySelector('.screenshot-template').cloneNode(true);
     onDeleteClick(screenshot, bitmap);
     onCopyClick(screenshot, bitmap);
-    bitmap.getObjectURL().then((url) => {
+    bitmap.getUrl().then((url) => {
       screenshot.querySelector('.image').prepend(createCanvas(bitmap, 200, 200));
       screenshot.querySelector('.image').setAttribute('href', url);
       screenshot.querySelector('.save').setAttribute('href', url);
-      screenshot.querySelector('.save').setAttribute('download', `${page.SCREENSHOT_COUNT}.png`);
+      screenshot.querySelector('.save').setAttribute('download', createFilename(bitmap, url));
       screenshot.querySelector('.loading-text').remove();
       screenshot.querySelectorAll('.hidden').forEach((screenshot) => screenshot.classList.remove('hidden'));
     });
