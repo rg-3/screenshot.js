@@ -16,8 +16,7 @@ const onDeleteClick = (screenshotEl, bitmap) => {
   el.addEventListener('click', (event) => {
     event.preventDefault();
     removeWithFadeOut(screenshotEl, 500);
-    bitmap.free();
-    chrome.runtime.sendMessage({action: 'remove-bitmap'});
+    chrome.runtime.sendMessage({action: 'remove-bitmap', removedId: bitmap.id});
   });
 };
 
@@ -29,9 +28,8 @@ const onCopyClick = (screenshotEl, bitmap) => {
   });
 };
 
-const createFilename = (bitmap, url) => {
-  const basename = url.split('/').pop();
-  return `screenshot_${bitmap.width}x${bitmap.height}_${basename}.png`
+const createFilename = (bitmap) => {
+  return `screenshot_${bitmap.width}x${bitmap.height}_${bitmap.id}.png`
 };
 
 const drawGrid = function(page) {
@@ -41,13 +39,13 @@ const drawGrid = function(page) {
   /* Draw screenshots grid */
   page.bitmaps.forEach(function(bitmap) {
     const screenshot = document.querySelector('.screenshot-template').cloneNode(true);
-    onDeleteClick(screenshot, bitmap);
-    onCopyClick(screenshot, bitmap);
-    bitmap.getUrl().then((url) => {
+    bitmap.createBlob().then(([_, urlToBlob]) => {
+      onDeleteClick(screenshot, bitmap);
+      onCopyClick(screenshot, bitmap);
       screenshot.querySelector('.image').prepend(createCanvas(bitmap, 200, 200));
-      screenshot.querySelector('.image').setAttribute('href', url);
-      screenshot.querySelector('.save').setAttribute('href', url);
-      screenshot.querySelector('.save').setAttribute('download', createFilename(bitmap, url));
+      screenshot.querySelector('.image').setAttribute('href', urlToBlob);
+      screenshot.querySelector('.save').setAttribute('href', urlToBlob);
+      screenshot.querySelector('.save').setAttribute('download', createFilename(bitmap));
       screenshot.querySelector('.loading-text').remove();
       screenshot.querySelectorAll('.hidden').forEach((screenshot) => screenshot.classList.remove('hidden'));
     });

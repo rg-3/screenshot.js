@@ -11,7 +11,7 @@ chrome.commands.onCommand.addListener((command) => {
       const grabFrame = new ImageCapture(track).grabFrame();
       grabFrame.then((bitmap) => {
         if(bitmaps.length === MAX_BITMAPS_SIZE) {
-          bitmaps.pop().free();
+          bitmaps.pop().revokeBlob();
         }
         bitmaps.unshift(new BitmapImage(bitmap));
         track.stop();
@@ -22,10 +22,10 @@ chrome.commands.onCommand.addListener((command) => {
   }
 });
 
-chrome.runtime.onMessage.addListener((req) => {
-  if(req.action === 'remove-bitmap') {
+chrome.runtime.onMessage.addListener((message) => {
+  if(message.action === 'remove-bitmap') {
     bitmaps.forEach((bitmap) => {
-      if(bitmap.objectURL === null) {
+      if(message.removedId === bitmap.id) {
         const index = bitmaps.indexOf(bitmap);
         bitmaps.splice(index, 1);
       }

@@ -1,32 +1,36 @@
 export default function(imageBitmap) {
-  let url;
+  /* Blob-related properties */
+  this.id = null;
+  this.urlToBlob = null;
+  this.blob = null;
 
-  this.blob = undefined;
   this.timestamp = new Date();
   this.native = imageBitmap;
   this.width = imageBitmap.width;
   this.height = imageBitmap.height;
 
-  this.getUrl = () => {
-    if(url) {
-      return new Promise((resolve, reject) => resolve(url));
+  this.createBlob = () => {
+    if(this.blob && this.urlToBlob) {
+      return new Promise((resolve, reject) => resolve([this.blob, this.urlToBlob]));
     }
     var canvas = new OffscreenCanvas(this.width, this.height);
     var ctx = canvas.getContext('2d');
     ctx.drawImage(imageBitmap, 0, 0);
     return canvas.convertToBlob({type: "image/png"}).then((blob) => {
       this.blob = blob;
-      url = URL.createObjectURL(blob);
-      return url;
+      this.urlToBlob = URL.createObjectURL(blob);
+      this.id = this.urlToBlob.split('/').pop();
+      return [this.blob, this.urlToBlob];
     });
   };
 
-  this.free = () => {
-    if(url) {
-      URL.revokeObjectURL(url);
-      url = null;
-      this.blob = null;
+  this.revokeBlob = () => {
+    if(this.urlToBlob) {
+      URL.revokeObjectURL(this.urlToBlob);
     }
+    this.id = null;
+    this.urlToBlob = null;
+    this.blob = null;
   };
 
   return this;
