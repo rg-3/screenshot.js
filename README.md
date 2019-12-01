@@ -10,8 +10,8 @@ by default `ctrl + shift + k`.
 * Displays the six most recent screenshots by clicking on the extensions
   browser action (icon).
 
-* Allows screenshots to be previewed, saved to disk, copied to the clipboard
-  and deleted from temporary browser memory.
+* Screenshots can be previewed, saved to disk, copied to the clipboard and
+  deleted from temporary browser memory.
 
 * Respects your privacy by not making network requests and by storing screenshots
   in temporary browser memory (with the option to save them to disk or copy
@@ -19,7 +19,7 @@ by default `ctrl + shift + k`.
 
 ### Screenshots
 
-#### Dec, 1, 2019
+#### v0.1.0
 
 * Hovering over the `Copy screenshot to clipboard` icon.
 
@@ -48,7 +48,14 @@ Coming soon...
 
 ### Credit
 
-For the camera icons credit to [Double-J Design](http://www.iconarchive.com/artist/double-j-design.html).
+  * Special thanks and credit to
+    [Double-J Design](http://www.iconarchive.com/artist/double-j-design.html)
+    or providing the green camera icon.
+
+
+### Similar projects
+
+  * [Take webpage screenshots](https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg)
 
 ### License
 
