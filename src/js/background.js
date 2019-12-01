@@ -6,18 +6,10 @@ const bitmaps = [];
 
 chrome.commands.onCommand.addListener((command) => {
   if(command === "take_screenshot") {
-    chrome.tabCapture.capture({audio: false, video: true}, (stream) => {
-      const track = stream.getVideoTracks()[0];
-      const grabFrame = new ImageCapture(track).grabFrame();
-      grabFrame.then((bitmap) => {
-        if(bitmaps.length === MAX_BITMAPS_SIZE) {
-          bitmaps.pop().revokeBlob();
-        }
-        bitmaps.unshift(new BitmapImage(bitmap));
-        track.stop();
-        notify("You took a screenshot");
-        window.SCREENSHOT_COUNT += 1;
-      }).catch(track.stop);
+    chrome.tabs.captureVisibleTab({format: "png"}, (dataUrl) => {
+      bitmaps.unshift(new BitmapImage(dataUrl));
+      notify("You took a screenshot");
+      window.SCREENSHOT_COUNT += 1;
     });
   }
 });

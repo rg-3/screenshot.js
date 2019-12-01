@@ -7,7 +7,7 @@ const removeWithFadeOut = (el, speed) => {
 const createCanvas = (bitmap, width, height) => {
   const el = document.createElement('canvas');
   const ctx = el.getContext('2d');
-  ctx.drawImage(bitmap.native, 0, 0, width, height);
+  ctx.drawImage(bitmap.image, 0, 0, width, height);
   return el;
 };
 
@@ -29,7 +29,7 @@ const onCopyClick = (screenshotEl, bitmap) => {
 };
 
 const createFilename = (bitmap) => {
-  return `screenshot_${bitmap.width}x${bitmap.height}_${bitmap.id}.png`
+  return `screenshot_${bitmap.id}.png`
 };
 
 const drawGrid = function(page) {
