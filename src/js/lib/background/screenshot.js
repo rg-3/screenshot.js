@@ -18,8 +18,6 @@ export default function(app, dataUrl) {
   this.height = null;
   this.timestamp = new Date();
 
-
-
   this.createBlob = () => {
     if(this.blob && this.urlToBlob) {
       return new Promise((resolve, reject) => resolve([this.blob, this.urlToBlob]));
