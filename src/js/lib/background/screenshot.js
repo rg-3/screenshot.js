@@ -46,5 +46,11 @@ export default function(app, dataUrl) {
     this.image = null;
   };
 
+  this.getFilename = () => {
+    if(this.id) {
+      return `screenshot_${this.width}x${this.height}_${this.id}`;
+    }
+  }
+
   return this;
 };

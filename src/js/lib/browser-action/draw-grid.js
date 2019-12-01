@@ -21,10 +21,6 @@ const onCopyClick = (screenshotEl, screenshot) => {
   });
 };
 
-const createFilename = (screenshot) => {
-  return `screenshot_${screenshot.id}.png`
-};
-
 const drawGrid = function(page) {
   const app = page.app;
   const count = app.screenshotCount;
@@ -40,7 +36,7 @@ const drawGrid = function(page) {
       screenshotEl.querySelector('.image').prepend(canvas);
       screenshotEl.querySelector('.image').setAttribute('href', urlToBlob);
       screenshotEl.querySelector('.save').setAttribute('href', urlToBlob);
-      screenshotEl.querySelector('.save').setAttribute('download', createFilename(screenshot));
+      screenshotEl.querySelector('.save').setAttribute('download', screenshot.getFilename());
       screenshotEl.querySelector('.loading-text').remove();
       screenshotEl.querySelectorAll('.hidden').forEach((screenshot) => screenshot.classList.remove('hidden'));
     });
