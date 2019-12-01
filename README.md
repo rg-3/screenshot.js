@@ -23,7 +23,7 @@ by default `ctrl + shift + k`.
 
 * Hovering over the `Copy screenshot to clipboard` icon.
 
-  ![screenshot](./screenshots/01-12-2019_640x400.png)
+  ![screenshot](./webstore-assets/v0.1.0_copy_screenshot_640x400.png)
 
 ### Install
 
