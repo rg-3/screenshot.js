@@ -19,11 +19,11 @@ by default `ctrl + shift + k`.
 
 ### Screenshots
 
-#### Nov, 28, 2019
+#### Dec, 1, 2019
 
 * Hovering over the `Copy screenshot to clipboard` icon.
 
-  ![screenshot](./screenshots/2019-11-28.png)
+  ![screenshot](./screenshots/01-12-2019_640x400.png)
 
 ### Install
 
