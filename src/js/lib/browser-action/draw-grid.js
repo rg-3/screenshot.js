@@ -4,32 +4,32 @@ const removeWithFadeOut = (el, speed) => {
   setTimeout(() => el.remove(), speed);
 };
 
-const createCanvas = (bitmap, width, height) => {
+const createCanvas = (screenshot, width, height) => {
   const el = document.createElement('canvas');
   const ctx = el.getContext('2d');
-  ctx.drawImage(bitmap.image, 0, 0, width, height);
+  ctx.drawImage(screenshot.image, 0, 0, width, height);
   return el;
 };
 
-const onDeleteClick = (screenshotEl, bitmap) => {
+const onDeleteClick = (screenshotEl, screenshot) => {
   const el = screenshotEl.querySelector('.delete');
   el.addEventListener('click', (event) => {
     event.preventDefault();
     removeWithFadeOut(screenshotEl, 500);
-    chrome.runtime.sendMessage({action: 'remove-bitmap', removedId: bitmap.id});
+    chrome.runtime.sendMessage({action: 'remove-screenshot', removedId: screenshot.id});
   });
 };
 
-const onCopyClick = (screenshotEl, bitmap) => {
+const onCopyClick = (screenshotEl, screenshot) => {
   const el = screenshotEl.querySelector('.copy');
   el.addEventListener('click', (event) => {
-    const clipItem = new ClipboardItem({"image/png": bitmap.blob});
+    const clipItem = new ClipboardItem({"image/png": screenshot.blob});
     navigator.clipboard.write([clipItem]);
   });
 };
 
-const createFilename = (bitmap) => {
-  return `screenshot_${bitmap.id}.png`
+const createFilename = (screenshot) => {
+  return `screenshot_${screenshot.id}.png`
 };
 
 const drawGrid = function(page) {
@@ -37,20 +37,20 @@ const drawGrid = function(page) {
   const grid = document.getElementById('screenshot-grid');
 
   /* Draw screenshots grid */
-  page.bitmaps.forEach(function(bitmap) {
-    const screenshot = document.querySelector('.screenshot-template').cloneNode(true);
-    bitmap.createBlob().then(([_, urlToBlob]) => {
-      onDeleteClick(screenshot, bitmap);
-      onCopyClick(screenshot, bitmap);
-      screenshot.querySelector('.image').prepend(createCanvas(bitmap, 200, 200));
-      screenshot.querySelector('.image').setAttribute('href', urlToBlob);
-      screenshot.querySelector('.save').setAttribute('href', urlToBlob);
-      screenshot.querySelector('.save').setAttribute('download', createFilename(bitmap));
-      screenshot.querySelector('.loading-text').remove();
-      screenshot.querySelectorAll('.hidden').forEach((screenshot) => screenshot.classList.remove('hidden'));
+  page.screenshots.forEach(function(screenshot) {
+    const screenshotEl = document.querySelector('.screenshot-template').cloneNode(true);
+    screenshot.createBlob().then(([_, urlToBlob]) => {
+      onDeleteClick(screenshotEl, screenshot);
+      onCopyClick(screenshotEl, screenshot);
+      screenshotEl.querySelector('.image').prepend(createCanvas(screenshot, 200, 200));
+      screenshotEl.querySelector('.image').setAttribute('href', urlToBlob);
+      screenshotEl.querySelector('.save').setAttribute('href', urlToBlob);
+      screenshotEl.querySelector('.save').setAttribute('download', createFilename(screenshot));
+      screenshotEl.querySelector('.loading-text').remove();
+      screenshotEl.querySelectorAll('.hidden').forEach((screenshot) => screenshot.classList.remove('hidden'));
     });
-    screenshot.classList.remove('hidden');
-    grid.appendChild(screenshot);
+    screenshotEl.classList.remove('hidden');
+    grid.appendChild(screenshotEl);
     feather.replace();
   });
 
