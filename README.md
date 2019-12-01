@@ -24,10 +24,14 @@ by default `ctrl + shift + k`.
 * Hovering over the `Save screenshot` icon.
 
   ![screenshot](./webstore-assets/v0.1.0_save_screenshot_640x400.png)
-  
+
 * Hovering over the `Copy screenshot to clipboard` icon.
 
   ![screenshot](./webstore-assets/v0.1.0_copy_screenshot_640x400.png)
+
+* Hovering over the `Delete screenshot` icon.
+
+  ![screenshot](./webstore-assets/v0.1.0_delete_screenshot_640x400.png)
 
 ### Install
 
