@@ -13,9 +13,8 @@ by default `ctrl + shift + k`.
 * Screenshots can be previewed, saved to disk, copied to the clipboard and
   deleted from temporary browser memory.
 
-* Respects your privacy by not making network requests and by storing screenshots
-  in temporary browser memory (with the option to save them to disk or copy
-  them to the clipboard).
+* Does not make network requests and stores screenshots in temporary browser
+  memory (with the option to save them to disk or copy them to the clipboard).
 
 ### Screenshots
 
