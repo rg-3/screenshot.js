@@ -14,8 +14,8 @@ A browser extension that takes screenshots.
 * Screenshots can be previewed, saved to disk, copied to the clipboard and
   deleted from temporary browser memory.
 
-* Does not make network requests and stores screenshots in temporary browser
-  memory (with the option to save them to disk or copy them to the clipboard).
+* Stores screenshots in temporary browser memory and does not make network
+  requests.  
 
 ### Screenshots
 
