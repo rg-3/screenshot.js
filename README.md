@@ -58,7 +58,7 @@ Coming soon...
 
   * Special thanks and credit to
     [Double-J Design](http://www.iconarchive.com/artist/double-j-design.html)
-    for providing the green camera icon.
+    for providing the green camera icons.
 
 
 ### Similar projects
