@@ -5,7 +5,7 @@ A browser extension that takes screenshots.
 ### Features
 
 * Takes a screenshot of the visible area on the current tab in response to
-  a key stroke (`Ctrl + Shift + k` or on Macs `Command + Shift + k`).
+  a key stroke (`Ctrl + Shift + k` on PCs and  `Command + Shift + k` on Macs).
 
 * Displays the six most recent screenshots by clicking on the extensions
   browser action (icon).
