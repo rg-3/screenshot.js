@@ -29,6 +29,7 @@ chrome.runtime.onMessage.addListener((message) => {
     screenshots.forEach((screenshot) => {
       if(message.removedId === screenshot.id) {
         const index = screenshots.indexOf(screenshot);
+        screenshot.revokeBlob();
         screenshots.splice(index, 1);
       }
     });
