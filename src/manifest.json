@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Screenshot",
-  "description": "Takes a screenshot of the current tab in response to a key stroke (ctrl + shift + k).",
+  "description": "Takes a screenshot of the visible area on the current tab in response to a key stroke (ctrl + shift + k).",
   "version": "0.1.0",
   "background": {"page": "html/background.html"},
   "permissions": ["commands", "notifications", "activeTab"],
@@ -21,6 +21,13 @@
         "mac": "Command+Shift+K"
       },
       "description": "Takes a screenshot"
+    },
+    "take_screenshot_and_copy_to_clipboard": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+L",
+        "mac": "Command+Shift+L"
+      },
+      "description": "Takes a screenshot and copies it to the clipboard"
     }
   }
 }
