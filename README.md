@@ -14,8 +14,8 @@ A browser extension that takes screenshots.
 * Screenshots can be previewed, saved to disk, copied to the clipboard and
   deleted from temporary browser memory.
 
-* Stores screenshots in temporary browser memory and does not make network
-  requests.  
+* Stores screenshots in temporary browser memory (unless you save them to disk
+  or copy them to the clipboard) and does not make network requests.
 
 ### Screenshots
 
@@ -35,11 +35,13 @@ A browser extension that takes screenshots.
 
 ### Install
 
-#### Chrome webstore
+#### Web stores
 
-Coming soon...
+* [Google Chrome webstore](https://chrome.google.com/webstore/detail/screenshot/ehmcpclingghgidajkpodncclbginiak)
 
-#### Source
+* Firefox ... Coming soon.
+
+#### From source
 
 * Grab a copy of the extension:
 
