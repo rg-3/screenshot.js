@@ -8,7 +8,10 @@ const screenshots = [];
 const app = {
   screenshotCount: 0,
   canvas: new Canvas(),
-  screenshots
+  screenshots,
+  getKeyboardCommands: () => {
+    return new Promise((resolve, reject) => chrome.commands.getAll(resolve));
+  }
 };
 
 chrome.commands.onCommand.addListener((command) => {

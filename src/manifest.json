@@ -17,8 +17,8 @@
   "commands": {
     "take_screenshot": {
       "suggested_key": {
-        "default": "Ctrl+Shift+K",
-        "mac": "Command+Shift+K"
+        "default": "Ctrl + Shift + K",
+        "mac": "Command + Shift + K"
       },
       "description": "Take a screenshot"
     }

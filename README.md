@@ -62,7 +62,6 @@ A browser extension that takes screenshots.
     [Double-J Design](http://www.iconarchive.com/artist/double-j-design.html)
     for providing the green camera icons.
 
-
 ### Similar projects
 
   * [Take webpage screenshots](https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg)
@@ -70,3 +69,11 @@ A browser extension that takes screenshots.
 ### License
 
 MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
+
+### ChangeLog
+
+__UNRELEASED__
+
+* Insert `Press <shortcut> to take a screenshot` text after reading what
+  shortcut the `take_screenshot` keyboard command is bound to (it can be changed
+  to a custom shortcut by the user via the `chrome://extensions/shortcuts` page)

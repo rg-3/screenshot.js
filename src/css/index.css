@@ -26,9 +26,17 @@ html {
   text-decoration: none;
 }
 
+#container {
+  min-height: 300px;
+}
+
 #screenshot-grid {
-  min-height: 200px;
+  min-height: 215px;
   text-align: center;
+}
+
+.shortcut {
+  font-weight: bold;
 }
 
 .screenshot {
