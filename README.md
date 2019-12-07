@@ -5,21 +5,20 @@ A browser extension that takes screenshots.
 ### Features
 
 * Takes a screenshot of the visible area on the current tab in response to
-  a key stroke.  
+  a key stroke  
   (`Ctrl + Shift + k` on PCs and  `Command + Shift + k` on Macs).
 
 * Takes a screenshot of the video on the current tab in response to
-  a key stroke.  
+  a key stroke  
   (`Ctrl + Shift + v` on PCs and  `Command + Shift + v` on Macs).
 
-* Displays the six most recent screenshots by clicking on the extensions
-  browser action (icon).
+* Stores the last 6 screenshots in temporary browser memory  
+  (With the option to save them to disk or copy them to the clipboard)
 
 * Screenshots can be previewed, saved to disk, copied to the clipboard and
   deleted from temporary browser memory.
 
-* Stores screenshots in temporary browser memory (unless you save them to disk
-  or copy them to the clipboard) and does not make network requests.
+* Does not make network requests.
 
 ### Screenshots
 
