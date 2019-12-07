@@ -15,12 +15,19 @@
     "128": "images/camera128.png"
   },
   "commands": {
-    "take_screenshot": {
+    "capture-visible-tab": {
       "suggested_key": {
         "default": "Ctrl + Shift + K",
         "mac": "Command + Shift + K"
       },
-      "description": "Take a screenshot"
+      "description": "Takes a screenshot of the visible area on the current tab"
+    },
+    "capture-html5-video": {
+      "suggested_key": {
+        "default": "Ctrl + Shift + V",
+        "mac": "Command + Shift + V"
+      },
+      "description": "Takes a screenshot of the video on the current tab"
     }
   }
 }
