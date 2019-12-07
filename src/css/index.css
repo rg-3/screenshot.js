@@ -31,8 +31,12 @@ html {
 }
 
 #screenshot-grid {
-  min-height: 215px;
+  min-height: 235px;
   text-align: center;
+}
+
+#help-container {
+  clear: both;
 }
 
 .shortcut {
@@ -47,12 +51,6 @@ html {
   margin-bottom: 25px;
 }
 
-.tip {
-  clear: both;
-  padding-top: 20px;
-  margin-bottom: 10px;
-}
-
 .action-bar {
   position: relative;
   top: 5px;
@@ -62,6 +60,11 @@ html {
 .feather-16 {
   width: 16px;
   height: 16px;
+}
+
+.feather-20 {
+  width: 20px;
+  height: 20px;
 }
 
 .red {
@@ -83,4 +86,8 @@ html {
 
 .action-bar a, .action-bar a:visited, .action-bar a:active {
   text-decoration: none;
+}
+
+.command-help:not(:last-child) {
+  margin-bottom: 10px;
 }

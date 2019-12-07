@@ -75,6 +75,11 @@ MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
 
 __UNRELEASED__
 
+* Add a help icon that opens a popover with information about how to take
+  screenshots.
+
+* Remove arrow from tooltips and popovers.
+
 * Change default `capture-visible-tab` shortcut from `Ctrl + Shift + K` to
   `Ctrl + Shift + X`.
 

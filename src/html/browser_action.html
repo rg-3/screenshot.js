@@ -7,6 +7,7 @@
     <script src="/js/vendor/feather.min.js"></script>
     <script src="/js/browser-action.js" type='module'></script>
     <link rel="stylesheet" href="/css/index.css"></link>
+    <link rel="stylesheet" href="/css/tippy-themes/light-border.css"></link>
   </head>
   <body>
     <div id='container'>
@@ -20,8 +21,23 @@
       </div>
       <div id='screenshot-grid'>
       </div>
-      <div id='commands-help' class='tip hidden'>
-        Press <span class='shortcut'></span> to take a screenshot.
+      <div id='help-container'>
+        <a title="Help" href='#'>
+          <i id='help-icon' class='feather-20 green' data-feather='help-circle'></i>
+        </a>
+        <div id='popover-help-content' class='hidden'>
+          <div id='capture-visible-tab' class='command-help'>
+            <span class='shortcut'></span>
+            <br>
+            <span class='description'></a>
+          </div>
+
+          <div id='capture-html5-video' class='command-help'>
+            <span class='shortcut'></span>
+            <br>
+            <span class='description'></a>
+          </div>
+        </div>
       </div>
     </div>
 

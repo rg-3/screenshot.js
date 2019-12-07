@@ -61,6 +61,7 @@ const drawGrid = function(page) {
     trigger: 'click',
     placement: 'bottom',
     multiple: true,
+    arrow: false,
     ignoreAttributes: true,
     onShow(tip) {
       setTimeout(tip.hide, 500);
@@ -70,7 +71,8 @@ const drawGrid = function(page) {
   tippy('a[data-tippy-content]', {
     placement: 'bottom',
     trigger: 'mouseenter',
-    multiple: true
+    multiple: true,
+    arrow: false
   });
 };
 
