@@ -20,6 +20,7 @@ chrome.commands.onCommand.addListener((command) => {
 });
 
 chrome.runtime.onMessage.addListener((message) => {
+  const screenshots = app.screenshots;
   if(message.action === 'remove-screenshot') {
     screenshots.forEach((screenshot) => {
       if(message.removedId === screenshot.id) {
