@@ -1,8 +1,11 @@
 export default function() {
-  this.createCanvas = (image, width=image.width, height=image.height) => {
+  this.createPreviewCanvas = (image, width=image.width, height=image.height) => {
     const canvas = document.createElement('canvas');
-    const ctx = canvas.getContext('2d');
-    ctx.drawImage(image, 0, 0, width, height);
+    const context = canvas.getContext('2d');
+    context.drawImage(image, 0, 0, width, height);
+    context.lineWidth = 1;
+    context.strokeStyle = "#A9A9A9";
+    context.strokeRect(0,0, width, height);
     return canvas
   };
 
