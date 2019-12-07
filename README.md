@@ -13,10 +13,8 @@ A browser extension that takes screenshots.
   (`Ctrl + Shift + v` on PCs and  `Command + Shift + v` on Macs).
 
 * Stores the last 6 screenshots in temporary browser memory  
-  (With the option to save them to disk or copy them to the clipboard)
-
-* Screenshots can be previewed, saved to disk, copied to the clipboard and
-  deleted from temporary browser memory.
+  (With the option to save them to disk, copy them to the clipboard and delete
+   them from memory)
 
 * Does not make network requests.
 
