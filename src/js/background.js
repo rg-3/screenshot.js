@@ -37,16 +37,19 @@ chrome.commands.onCommand.addListener((command) => {
     }
     case "capture-html5-video": {
       chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
-        chrome.tabs.executeScript(tabs[0].id, {file: "js/lib/content-scripts/html5-video.js"}, (result) => {
-          const dataUrl = result[0];
-          if(dataUrl === "no_video") {
-            app.notify("No video on page");
-          } else {
-            app.insertScreenshot(new Screenshot(app, dataUrl));
-            app.notify("You took a screenshot");
-            app.screenshotCount += 1;
+        chrome.tabs.executeScript(
+          tabs[0].id,
+          {file: "js/lib/content-scripts/capture-html5-video.js"},
+          ([dataUrl, _]) => {
+            if(dataUrl === "no_video") {
+              app.notify("No video on page");
+            } else {
+              app.insertScreenshot(new Screenshot(app, dataUrl));
+              app.notify("You took a screenshot");
+              app.screenshotCount += 1;
+            }
           }
-        });
+        );
       });
       break;
     }
