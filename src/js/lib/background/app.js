@@ -15,7 +15,7 @@ const notify = (message, timeout=950)  => {
 export default function() {
   this.max_screenshots = 6;
   this.screenshots = [];
-  this.screenshotsCount = 0;
+  this.screenshotCount = 0;
   this.canvas = new Canvas();
 
   this.receiveScreenshot = (payload) => {
@@ -32,6 +32,7 @@ export default function() {
         this.screenshots.pop().revokeBlob();
       }
       this.screenshots.unshift(new Screenshot(this, dataUrl));
+      this.screenshotCount += 1;
       notify("You took a screenshot");
     }
   };
