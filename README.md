@@ -38,7 +38,7 @@ A browser extension that takes screenshots.
 
   ![screenshot](./webstore-assets/v0.2.0/v0.2.0_help_screenshot_640x400.png)
 
-### Older versions
+#### Older versions
 
 [Available in ./webstore-assets/](./webstore-assets/)
 
@@ -81,7 +81,7 @@ MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
 
 ### ChangeLog
 
-__UNRELEASED__
+__v0.2.0__
 
 * Add a help icon that opens a popover with information about how to take
   screenshots.
