@@ -6,11 +6,11 @@ A browser extension that takes screenshots.
 
 * Takes a screenshot of the visible area on the current tab in response to
   a key stroke  
-  (`Ctrl + Shift + k` on PCs and  `Command + Shift + k` on Macs).
+  (`Ctrl + Shift + X` on PCs and  `Command + Shift + X` on Macs).
 
 * Takes a screenshot of the video on the current tab in response to
   a key stroke  
-  (`Ctrl + Shift + v` on PCs and  `Command + Shift + v` on Macs).
+  (`Ctrl + Shift + V` on PCs and  `Command + Shift + V` on Macs).
 
 * Stores the last 6 screenshots in temporary browser memory  
   (With the option to save them to disk, copy them to the clipboard and delete
@@ -74,6 +74,9 @@ MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
 ### ChangeLog
 
 __UNRELEASED__
+
+* Change default `capture-visible-tab` shortcut from `Ctrl + Shift + K` to
+  `Ctrl + Shift + X`.
 
 * Add ability to take a screenshot of the video on the current tab.  
   (Works on YouTube, etc).
