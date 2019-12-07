@@ -1,14 +1,17 @@
-const removeWithFadeOut = (el, speed) => {
+const removeWithFadeOut = (el, speed, page) => {
   const seconds = speed / 1000;
   el.style.cssText = `transition: opacity ${seconds}s ease; opacity: 0`;
-  setTimeout(() => el.remove(), speed);
+  setTimeout(() => {
+    clearInterval(page.app.pollId);
+    drawGrid(page);
+  }, speed);
 };
 
-const onDeleteClick = (screenshotEl, screenshot) => {
+const onDeleteClick = (screenshotEl, screenshot, page) => {
   const el = screenshotEl.querySelector('.delete');
   el.addEventListener('click', (event) => {
     event.preventDefault();
-    removeWithFadeOut(screenshotEl, 500);
+    removeWithFadeOut(screenshotEl, 500, page);
     chrome.runtime.sendMessage({action: 'remove-screenshot', removedId: screenshot.id});
   });
 };
@@ -26,11 +29,14 @@ const drawGrid = function(page) {
   const count = app.screenshotCount;
   const grid = document.getElementById('screenshot-grid');
 
+  /* Reset the grid (drawGrid can be called multiple times) */
+  grid.innerHTML = '';
+
   /* Draw screenshots grid */
   app.screenshots.forEach(function(screenshot) {
     const screenshotEl = document.querySelector('.screenshot-template').cloneNode(true);
     screenshot.createBlob().then(([_, urlToBlob]) => {
-      onDeleteClick(screenshotEl, screenshot);
+      onDeleteClick(screenshotEl, screenshot, page);
       onCopyClick(screenshotEl, screenshot);
       const canvas = app.canvas.createCanvas(screenshot.image, 200, 200);
       screenshotEl.querySelector('.image').prepend(canvas);
@@ -45,12 +51,17 @@ const drawGrid = function(page) {
     feather.replace();
   });
 
+  if(app.screenshots.length > 3) {
+    grid.style.cssText = "min-height: 380px !important;";
+  } else {
+    grid.style.cssText = "min-height: 235px !important;";
+  }
+
   /* Redraw screenshots grid when screenshot is taken while browser_action.html
      is open.*/
-  const id = setInterval(() => {
+  app.pollId = setInterval(() => {
     if(count < app.screenshotCount) {
-      grid.innerHTML = '';
-      clearInterval(id);
+      clearInterval(app.pollId);
       drawGrid(page);
     }
   }, 100);

@@ -81,6 +81,11 @@ MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
 
 ### ChangeLog
 
+__v0.2.1__
+
+* Fix bug where icon tooltips for screenshots 4 to 6 would have `top` placement
+  instead of `bottom` placement.
+
 __v0.2.0__
 
 * Add a help icon that opens a popover with information about how to take
