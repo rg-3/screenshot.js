@@ -83,10 +83,11 @@ MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
 
 __v0.2.1__
 
-* Add light border around preview of screenshots.
+* Reduce (visual) size of screenshot previews.
 
-* Fix bug where preview of a screenshot had the bottom part of the image cut
-  off.
+* Add light border around screenshot previews.
+
+* Fix bug where screenshot previews had the bottom part cut off.
 
 * Fix bug where icon tooltips for screenshots 4 to 6 would have `top` placement
   instead of `bottom` placement.
