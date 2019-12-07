@@ -28,12 +28,12 @@ export default function() {
         For now we do nothing.
       */
     } else {
+      notify("You took a screenshot");
       if(this.screenshots.length >= this.max_screenshots) {
         this.screenshots.pop().revokeBlob();
       }
       this.screenshots.unshift(new Screenshot(this, dataUrl));
       this.screenshotCount += 1;
-      notify("You took a screenshot");
     }
   };
 
