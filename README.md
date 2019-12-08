@@ -24,19 +24,19 @@ A browser extension that takes screenshots.
 
 * Hovering over the `Save screenshot` icon.
 
-  ![screenshot](./webstore-assets/v0.2.1/v0.2.1_save_screenshot.png_640x400.png)
+  ![screenshot](./webstore-assets/v0.2.1/v0.2.1_save_screenshot_1280x800.png)
 
 * Hovering over the `Copy screenshot to clipboard` icon.
 
-  ![screenshot](./webstore-assets/v0.2.1/v0.2.1_copy_screenshot.png_640x400.png)
+  ![screenshot](./webstore-assets/v0.2.1/v0.2.1_copy_screenshot_1280x800.png)
 
 * Hovering over the `Delete screenshot` icon.
 
-  ![screenshot](./webstore-assets/v0.2.1/v0.2.1_delete_screenshot.png_640x400.png)
+  ![screenshot](./webstore-assets/v0.2.1/v0.2.1_delete_screenshot_1280x800.png)
 
 * Displaying help.
 
-  ![screenshot](./webstore-assets/v0.2.1/v0.2.1_help_screenshot.png_640x400.png)
+  ![screenshot](./webstore-assets/v0.2.1/v0.2.1_help_screenshot_1280x800.png)
 
 #### Older versions
 
