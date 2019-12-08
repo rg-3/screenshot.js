@@ -20,7 +20,7 @@ A browser extension that takes screenshots.
 
 ### Screenshots
 
-#### v0.2.1
+#### v0.2.2
 
 * Hovering over the `Save screenshot` icon.
 
@@ -38,7 +38,7 @@ A browser extension that takes screenshots.
 
   ![screenshot](./webstore-assets/v0.2.1/v0.2.1_help_screenshot_1280x800.png)
 
-#### Older versions
+#### Older screenshots
 
 [Available in ./webstore-assets/](./webstore-assets/)
 
