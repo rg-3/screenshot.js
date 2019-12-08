@@ -1,19 +1,22 @@
 import drawGrid from './lib/browser-action/draw-grid.js';
 
-chrome.runtime.getBackgroundPage((page) => {
-  drawGrid(page);
-  const app = page.app;
-  app.getKeyboardCommands().then((commands) => {
-    commands.forEach((command) => {
-      const container = document.getElementById(command.name);
-      if(container) {
-        const shortcut = container.querySelector('.shortcut');
-        const description = container.querySelector('.description');
-        shortcut.innerHTML = command.shortcut.split('+').join(' + ');
-        description.innerHTML = command.description;
-      }
-    })
+const drawCommandHelp = (command) => {
+  const container = document.getElementById(command.name);
+  if(container) {
+    const shortcut = container.querySelector('.shortcut');
+    const description = container.querySelector('.description');
+    shortcut.innerHTML = command.shortcut.split('+').join(' + ');
+    description.innerHTML = command.description;
+  }
+};
 
+chrome.runtime.getBackgroundPage((page) => {
+  const app = page.app;
+  drawGrid(page);
+
+  app.getKeyboardCommands().then((commands) => {
+    commands.forEach(drawCommandHelp);
+    feather.replace();
     tippy(document.getElementById('help-icon'), {
       theme: 'light-border',
       trigger: 'click',
@@ -26,5 +29,4 @@ chrome.runtime.getBackgroundPage((page) => {
       }
     });
   });
-  feather.replace();
 });
