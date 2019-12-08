@@ -81,6 +81,17 @@ MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
 
 ### ChangeLog
 
+__v0.2.3__
+
+* Skip videos the browser considers "tainted", as it does allow them to be
+  exported.
+
+* Improve the experience on websites like Twitter where there can be multiple
+  videos on a page. When this happens we choose the first video that is visible
+  and/or playing or the first that is visible and paused.  Otherwise we alert the
+  user we couldn't find a video. This logic also applies to pages with a single
+  video.
+
 __v0.2.2__
 
 * In `browser_action.html`, load JavaScript at the end of the document to let
