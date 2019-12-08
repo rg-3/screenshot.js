@@ -81,6 +81,11 @@ MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
 
 ### ChangeLog
 
+__v0.2.2__
+
+* In `browser_action.html`, load JavaScript at the end of the document to let
+ the browser parse the HTML first.
+
 __v0.2.1__
 
 * Reduce (visual) size of screenshot previews.
