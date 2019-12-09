@@ -1,5 +1,5 @@
 export default function(options = {}) {
-  const {screenshotHasScrollbar} = options;
+  const {hasVerticalScrollbar, hasHorizontalScrollbar} = options;
 
   this.createPreviewScreenshot = (image, width=image.width, height=image.height) => {
     const canvas = document.createElement('canvas');
@@ -12,10 +12,11 @@ export default function(options = {}) {
   };
 
   this.createScreenshot = (image, width=image.width, height=image.height) => {
+    width  -=  hasVerticalScrollbar   ? 15 : 0;
+    height -=  hasHorizontalScrollbar ? 15 : 0;
     const canvas  = new OffscreenCanvas(width, height);
     const context = canvas.getContext('2d');
-    const dwidth  = screenshotHasScrollbar ? width + 15 : width;
-    context.drawImage(image, 0, 0, width, height, 0, 0, dwidth, height);
+    context.drawImage(image, 0, 0, width, height, 0, 0, width, height);
     return canvas;
   };
 

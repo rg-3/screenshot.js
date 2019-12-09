@@ -9,8 +9,6 @@ const createHTMLImage = (url) => {
 }
 
 export default function(app, dataUrl, options = {}) {
-  const {screenshotHasScrollbar} = options;
-
   /* Blob-related properties */
   this.id = null;
   this.urlToBlob = null;
@@ -21,7 +19,7 @@ export default function(app, dataUrl, options = {}) {
   this.width = null;
   this.height = null;
   this.timestamp = new Date();
-  this.canvas = new Canvas({screenshotHasScrollbar});
+  this.canvas = new Canvas(options);
 
   this.createBlob = () => {
     if(this.blob && this.urlToBlob) {
