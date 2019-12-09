@@ -1,3 +1,5 @@
+import Canvas from './canvas.js';
+
 const createHTMLImage = (url) => {
   return new Promise((resolve, reject) => {
     const image = new Image();
@@ -6,7 +8,9 @@ const createHTMLImage = (url) => {
   });
 }
 
-export default function(app, dataUrl) {
+export default function(app, dataUrl, options = {}) {
+  const {screenshotHasScrollbar} = options;
+
   /* Blob-related properties */
   this.id = null;
   this.urlToBlob = null;
@@ -17,13 +21,14 @@ export default function(app, dataUrl) {
   this.width = null;
   this.height = null;
   this.timestamp = new Date();
+  this.canvas = new Canvas({screenshotHasScrollbar});
 
   this.createBlob = () => {
     if(this.blob && this.urlToBlob) {
       return new Promise((resolve, reject) => resolve([this.blob, this.urlToBlob]));
     }
     return createHTMLImage(dataUrl).then((image) => {
-      const canvas = app.canvas.createOffscreenCanvas(image);
+      const canvas = this.canvas.createScreenshot(image, image.width, image.height);
       return canvas.convertToBlob({type: "image/png"}).then((blob) => {
         this.image = image;
         this.width = image.width;

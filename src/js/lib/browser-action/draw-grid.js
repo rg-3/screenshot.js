@@ -38,7 +38,7 @@ const drawGrid = function(page) {
     screenshot.createBlob().then(([_, urlToBlob]) => {
       onDeleteClick(screenshotEl, screenshot, page);
       onCopyClick(screenshotEl, screenshot);
-      const canvas = app.canvas.createPreviewCanvas(screenshot.image, 200, 150);
+      const canvas = screenshot.canvas.createPreviewScreenshot(screenshot.image, 200, 150);
       screenshotEl.querySelector('.image').prepend(canvas);
       screenshotEl.querySelector('.image').setAttribute('href', urlToBlob);
       screenshotEl.querySelector('.save').setAttribute('href', urlToBlob);

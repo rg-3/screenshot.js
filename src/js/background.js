@@ -3,17 +3,20 @@ import App from './lib/background/app.js';
 chrome.commands.onCommand.addListener((command) => {
   switch(command) {
     case "capture-visible-tab": {
-      chrome.tabs.captureVisibleTab({format: "png"}, app.receiveScreenshot);
+      app.runScript({code: "window.innerWidth > document.documentElement.clientWidth"})
+        .then((results) => {
+          chrome.tabs.captureVisibleTab({format: "png"}, (dataUrl) => {
+            app.receiveScreenshot(dataUrl, {screenshotHasScrollbar: results[0]})
+          });
+        }).catch(() => {
+          chrome.tabs.captureVisibleTab({format: "png"}, app.receiveScreenshot)
+        });
       break;
     }
     case "capture-html5-video": {
-      chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
-        chrome.tabs.executeScript(
-          tabs[0].id,
-          {file: "js/lib/content-scripts/capture-html5-video.js"},
-          app.receiveScreenshot
-        );
-      });
+      app.runScript({file: "js/lib/content-scripts/capture-html5-video.js"})
+        .then(app.receiveScreenshot)
+        .catch(() => app.receiveScreenshot("no_video"));
       break;
     }
   }
