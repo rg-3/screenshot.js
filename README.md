@@ -25,7 +25,7 @@ A browser extension that takes screenshots.
 * Displaying help.
 
   ![screenshot](./webstore-assets/v0.2.5/v0.2.5_help_screenshot_1280x800.png)
-  
+
 * Hovering over the `Save screenshot` icon.
 
   ![screenshot](./webstore-assets/v0.2.1/v0.2.1_save_screenshot_1280x800.png)
@@ -93,7 +93,7 @@ __v0.2.4__
 
 __v0.2.3__
 
-* Skip videos the browser considers "tainted", as it does allow them to be
+* Skip videos the browser considers "tainted", as it does not allow them to be
   exported.
 
 * Improve the experience on websites like Twitter where there can be multiple
