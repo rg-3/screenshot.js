@@ -21,7 +21,7 @@ export default function() {
   this.receiveScreenshot = (payload) => {
     const dataUrl = typeof(payload) === "string" ? payload : payload[0];
     if(dataUrl === "no_video" || dataUrl === "no_suitable_videos") {
-      notify("No video found", 1250);
+      notify("A playing video wasn't found", 1250);
     } else if(!dataUrl) {
       /*
         "dataUrl" can be null because of an error in a content script.

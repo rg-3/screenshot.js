@@ -27,7 +27,7 @@
         "default": "Ctrl + Shift + V",
         "mac": "Command + Shift + V"
       },
-      "description": "Takes a screenshot of the video on the current tab."
+      "description": "Takes a screenshot of the video being played on the current tab."
     }
   }
 }

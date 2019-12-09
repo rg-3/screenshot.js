@@ -68,17 +68,8 @@
     return "no_video";
   } else {
     const playing = Array.from(videos).filter((video) => (isVisible(video) && isPlaying(video)) || isPlaying(video));
-    const paused  = Array.from(videos).filter((video) => isVisible(video) && isPaused(video));
     for(let i = 0; i < playing.length; i++) {
       const dataUrl = getDataUrl(playing[i]);
-      if(dataUrl === null) {
-        continue;
-      } else {
-        return dataUrl;
-      }
-    }
-    for(let i = 0; i < paused.length; i++) {
-      const dataUrl = getDataUrl(paused[i]);
       if(dataUrl === null) {
         continue;
       } else {

@@ -5,10 +5,10 @@ A browser extension that takes screenshots.
 ### Features
 
 * Takes a screenshot of the visible area on the current tab in response to
-  a key stroke  
+  a key stroke
   (`Ctrl + Shift + X` on PCs and  `Command + Shift + X` on Macs).
 
-* Takes a screenshot of the video on the current tab in response to
+* Takes a screenshot of the video being played on the current tab in response to
   a key stroke  
   (`Ctrl + Shift + V` on PCs and  `Command + Shift + V` on Macs).
 
@@ -80,6 +80,11 @@ A browser extension that takes screenshots.
 MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
 
 ### ChangeLog
+
+__v0.2.4__
+
+* Don't take screenshots of videos that are visible and paused  
+  (A video must be either visible and playing, or just playing to be captured).
 
 __v0.2.3__
 
