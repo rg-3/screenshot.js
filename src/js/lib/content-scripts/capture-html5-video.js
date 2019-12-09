@@ -28,13 +28,6 @@
           elem.readyState > 2
   };
 
-  const isPaused = (elem) => {
-    return elem.currentTime > 0 &&
-           elem.paused &&
-           !elem.ended &&
-           elem.readyState > 2
-  };
-
   /*
     Credit to Ohad Navan for the original implementation.
     (Source: https://stackoverflow.com/a/41698614).
