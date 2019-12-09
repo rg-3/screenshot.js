@@ -1,5 +1,5 @@
 (function() {
-  const videos  = document.querySelectorAll('video');
+  const videos  = Array.from(document.querySelectorAll('video'));
 
   const getWidth = (video) => {
     return video.getBoundingClientRect().width;
@@ -67,7 +67,16 @@
   if (videos.length === 0) {
     return "no_video";
   } else {
-    const playing = Array.from(videos).filter((video) => (isVisible(video) && isPlaying(video)) || isPlaying(video));
+    const visibleAndPlaying = videos.filter((video) => isVisible(video) && isPlaying(video));
+    const playing = videos.filter(isPlaying);
+    for(let i = 0; i < visibleAndPlaying.length; i++) {
+      const dataUrl = getDataUrl(visibleAndPlaying[i]);
+      if(dataUrl === null) {
+        continue;
+      } else {
+        return dataUrl;
+      }
+    }
     for(let i = 0; i < playing.length; i++) {
       const dataUrl = getDataUrl(playing[i]);
       if(dataUrl === null) {

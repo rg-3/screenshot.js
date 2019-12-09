@@ -20,7 +20,7 @@ A browser extension that takes screenshots.
 
 ### Screenshots
 
-#### v0.2.4
+#### v0.2.5
 
 * Hovering over the `Save screenshot` icon.
 
@@ -81,6 +81,11 @@ MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
 
 ### ChangeLog
 
+__v0.2.5__
+
+* Give preference to videos that visible and playing over videos that are just
+  playing.
+  
 __v0.2.4__
 
 * Don't take screenshots of videos that are visible and paused  
