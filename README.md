@@ -90,7 +90,7 @@ __v0.3.0__
 * Remove vertical scroll bar from screenshots of the visible tab.
 
 * Display a failure message when a video screenshot is attempted on a
-  protected page that extensions can't inject into (eg `chrome://*` pages).
+  protected page that extensions can't inject code into (eg `chrome://*` pages).
   Prior to this a user wouldn't get a response.
 
 __v0.2.5__
