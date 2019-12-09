@@ -81,6 +81,11 @@ MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
 
 ### ChangeLog
 
+__v0.4.0__
+
+* Remove horizontal scrollbar from screenshots of the visible tab, and restore
+  image quality of visible tab screenshots.
+
 __v0.3.1__
 
 * Fix silly typo in last release.
