@@ -22,6 +22,10 @@ A browser extension that takes screenshots.
 
 #### v0.2.5
 
+* Displaying help.
+
+  ![screenshot](./webstore-assets/v0.2.5/v0.2.5_help_screenshot_1280x800.png)
+  
 * Hovering over the `Save screenshot` icon.
 
   ![screenshot](./webstore-assets/v0.2.1/v0.2.1_save_screenshot_1280x800.png)
@@ -33,10 +37,6 @@ A browser extension that takes screenshots.
 * Hovering over the `Delete screenshot` icon.
 
   ![screenshot](./webstore-assets/v0.2.1/v0.2.1_delete_screenshot_1280x800.png)
-
-* Displaying help.
-
-  ![screenshot](./webstore-assets/v0.2.1/v0.2.1_help_screenshot_1280x800.png)
 
 #### Older screenshots
 
@@ -85,7 +85,7 @@ __v0.2.5__
 
 * Give preference to videos that visible and playing over videos that are just
   playing.
-  
+
 __v0.2.4__
 
 * Don't take screenshots of videos that are visible and paused  
