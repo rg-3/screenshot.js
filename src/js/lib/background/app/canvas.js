@@ -1,5 +1,5 @@
-export default function(options) {
-  const screenshotHasScrollbar = {options}
+export default function(options = {}) {
+  const {screenshotHasScrollbar} = options;
 
   this.createPreviewScreenshot = (image, width=image.width, height=image.height) => {
     const canvas = document.createElement('canvas');
