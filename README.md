@@ -83,9 +83,11 @@ MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
 
 __v0.4.0__
 
-* Remove horizontal scrollbar from screenshots of the visible tab, and restore
-  image quality of visible tab screenshots.
+* Remove horizontal scrollbar from screenshots of the visible tab.
 
+* Restore the quality of visible tab screenshots.  
+  (Bad quality screenshots were introduced in v0.3.0)
+  
 __v0.3.1__
 
 * Fix silly typo in last release.
