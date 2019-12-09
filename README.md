@@ -5,7 +5,7 @@ A browser extension that takes screenshots.
 ### Features
 
 * Takes a screenshot of the visible area on the current tab in response to
-  a key stroke
+  a key stroke  
   (`Ctrl + Shift + X` on PCs and  `Command + Shift + X` on Macs).
 
 * Takes a screenshot of the video being played on the current tab in response to
