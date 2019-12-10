@@ -83,9 +83,11 @@ MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
 
 __v0.5.0__
 
-* Add support for taking a screenshot of a video on Instagram.
+* Add support for taking a screenshot of a video on sites like Instagram.
   Instagram delivers video through another host, that means its videos are
-  cross origin and require some extra work.
+  cross origin and require some extra work.  
+  (This change should see better support for other sites who work in a similar way
+   as well.)
 
 __v0.4.0__
 
