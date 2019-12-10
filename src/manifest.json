@@ -14,6 +14,13 @@
     "96":  "images/camera96.png",
     "128": "images/camera128.png"
   },
+  "content_scripts": [
+    {
+      "matches": ["https://www.instagram.com/*"],
+      "js": ["js/lib/content-scripts/set-cross-origin.js"],
+      "run_at": "document_start"
+    }
+  ],
   "commands": {
     "capture-visible-tab": {
       "suggested_key": {

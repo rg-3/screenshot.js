@@ -81,13 +81,19 @@ MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
 
 ### ChangeLog
 
+__v0.5.0__
+
+* Add support for taking a screenshot of a video on Instagram.
+  Instagram delivers video through another host, that means its videos are
+  cross origin and require some extra work.
+
 __v0.4.0__
 
 * Remove horizontal scrollbar from screenshots of the visible tab.
 
 * Restore the quality of visible tab screenshots.  
   (Bad quality screenshots were introduced in v0.3.0)
-  
+
 __v0.3.1__
 
 * Fix silly typo in last release.
