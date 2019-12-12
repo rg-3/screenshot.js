@@ -83,7 +83,7 @@ MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
 
 __v0.5.0__
 
-* Add support for taking a screenshot of playing video(s) loaded through an
+* Add support for taking a screenshot of a playing video loaded through an
   iframe.
 
 * Add support for taking a screenshot of a playing video on sites like Instagram.
