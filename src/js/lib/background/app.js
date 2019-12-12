@@ -55,7 +55,7 @@ export default function() {
     }
   };
 
-  this.createScreenshot = (dataUrl, screenshotOptions, onMiss) => {
+  this.createScreenshot = (dataUrl, screenshotOptions) => {
     notify("You took a screenshot", 1500);
     this.screenshots.unshift(new Screenshot(this, dataUrl, screenshotOptions));
     this.screenshotCount += 1;
