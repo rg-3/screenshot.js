@@ -33,6 +33,20 @@ export default function() {
       if(captureFail(dataUrls[i])) {
          misses += 1;
          if(misses === dataUrls.length) {
+           /* This is specific to the Brave browser and when its fingerprint
+              protection blocks the export of a canvas through 'toDataURL'.
+              Firefox has the same protections, but I don't know if it behaves
+              the same as Brave and returns an empty string from to toDataURL().
+
+              Brave github issue about this:
+              https://github.com/brave/brave-browser/issues/6081
+           */
+           for(let i = 0; i < dataUrls.length; i++) {
+             if(dataUrls[i] === "") {
+               notify("Fingerprint protection settings didn't allow a screenshot to be taken", 3000);
+               return;
+             }
+           }
            notify("A playing video wasn't found", 1250);
          }
       } else {
