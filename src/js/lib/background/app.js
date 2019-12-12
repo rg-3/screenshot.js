@@ -1,7 +1,7 @@
 import Screenshot from './app/screenshot.js';
 import runScript from './app/run-script.js';
 
-const notify = (message, timeout=950)  => {
+const notify = (message, timeout)  => {
   chrome.notifications.create({
     iconUrl: "/images/camera48.png",
     type: "basic",
@@ -47,7 +47,7 @@ export default function() {
                return;
              }
            }
-           notify("A playing video wasn't found", 1250);
+           notify("A playing video wasn't found", 1500);
          }
       } else {
         this.createScreenshot(dataUrls[i], screenshotOptions);
@@ -56,7 +56,7 @@ export default function() {
   };
 
   this.createScreenshot = (dataUrl, screenshotOptions, onMiss) => {
-    notify("You took a screenshot");
+    notify("You took a screenshot", 1500);
     this.screenshots.unshift(new Screenshot(this, dataUrl, screenshotOptions));
     this.screenshotCount += 1;
     if(this.screenshots.length > this.max_screenshots) {
