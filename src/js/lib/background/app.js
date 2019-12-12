@@ -12,6 +12,13 @@ const notify = (message, timeout=950)  => {
   });
 };
 
+const captureFail = (dataUrl) => {
+  return !dataUrl ||
+         dataUrl === "" ||
+         dataUrl === "no_video" ||
+         dataUrl === "no_suitable_videos"
+};
+
 export default function() {
   this.max_screenshots = 6;
   this.screenshots = [];
@@ -23,28 +30,23 @@ export default function() {
     }
     let misses = 0;
     for(let i = 0; i < dataUrls.length; i++) {
-      this.createScreenshot(dataUrls[i], screenshotOptions, (missReason) => {
-        misses += 1;
-        if(misses === dataUrls.length) {
-          notify("A playing video wasn't found", 1250);
-        }
-      });
+      if(captureFail(dataUrls[i])) {
+         misses += 1;
+         if(misses === dataUrls.length) {
+           notify("A playing video wasn't found", 1250);
+         }
+      } else {
+        this.createScreenshot(dataUrls[i], screenshotOptions);
+      }
     }
   };
 
   this.createScreenshot = (dataUrl, screenshotOptions, onMiss) => {
-    if(!dataUrl                ||
-       dataUrl === ""          ||
-       dataUrl === "no_video"  ||
-       dataUrl === "no_suitable_videos") {
-      onMiss(dataUrl)
-    } else {
-      notify("You took a screenshot");
-      this.screenshots.unshift(new Screenshot(this, dataUrl, screenshotOptions));
-      this.screenshotCount += 1;
-      if(this.screenshots.length > this.max_screenshots) {
-        this.screenshots.pop().revokeBlob();
-      }
+    notify("You took a screenshot");
+    this.screenshots.unshift(new Screenshot(this, dataUrl, screenshotOptions));
+    this.screenshotCount += 1;
+    if(this.screenshots.length > this.max_screenshots) {
+      this.screenshots.pop().revokeBlob();
     }
   };
 
