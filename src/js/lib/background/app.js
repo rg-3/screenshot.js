@@ -2,7 +2,7 @@ import Screenshot from './app/screenshot.js';
 import runScript from './app/run-script.js';
 
 const notify = (message, timeout=950)  => {
-  chrome.notifications.create("screenshot", {
+  chrome.notifications.create({
     iconUrl: "/images/camera48.png",
     type: "basic",
     title: "Screenshot",
