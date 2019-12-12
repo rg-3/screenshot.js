@@ -83,6 +83,13 @@ MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
 
 __v0.5.0__
 
+* On the Brave browser, when a screenshot of a video can't be captured because
+  Brave is blocking all possible device recognition attempts or all possible
+  cross-origin device recognition attempts, the extension will tell the user
+  that's why a screenshot can't be captured.  
+  (Firefox has the same fingerprint protections but I haven't tested if it behaves
+   the same as Brave so I'm not sure if this change works on Firefox yet)
+
 * Add support for taking a screenshot of a playing video loaded through an
   iframe.
 
