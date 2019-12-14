@@ -96,6 +96,12 @@ __v0.5.0__
 * Add support for taking a screenshot of a playing video loaded through an
   iframe.
 
+*  Add support for websites like DailyMail.co.uk who load videos from another
+   origin without setting the `Access-Control-Allow-Origin` header.
+   It must be set or the video won't play when `crossorigin="anonymous"` is set
+   on the video and that can be the case because of
+   `src/js/content-scripts/set-cross-origin.js`.
+
 * Add support for taking a screenshot of a playing video on sites like Instagram.
   Instagram delivers video through another host, that means its videos are
   cross origin and require some extra work.  
