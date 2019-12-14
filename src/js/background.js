@@ -44,9 +44,8 @@ chrome.webRequest.onHeadersReceived.addListener(
 
        This adds support for websites like DailyMail.co.uk who load videos from another
        origin without setting the `Access-Control-Allow-Origin` header.
-       It must be set or the video won't play when `crossorigin="anonymous"` is set
-       on the video and that can be the case because of
-       `src/js/content-scripts/set-cross-origin.js`.
+       It must be set or the video won't play because `crossorigin="anonymous"`
+       is set by `src/js/content-scripts/set-cross-origin.js`.
     */
     const headers = details.responseHeaders;
     const header = headers.find((h) => h.name.toLowerCase() === 'access-control-allow-origin');
