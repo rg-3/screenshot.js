@@ -46,12 +46,12 @@ chrome.webRequest.onHeadersReceived.addListener(
        origin without setting the `Access-Control-Allow-Origin` header.
        It must be set or the video won't play when `crossorigin="anonymous"` is set
        on the video and that can be the case because of
-       `src/js/content-scripts/set-cross-origin.js`. 
+       `src/js/content-scripts/set-cross-origin.js`.
     */
     const headers = details.responseHeaders
     const header = headers.find((h) => h.name.toLowerCase() === 'access-control-allow-origin');
     if(!header) {
-      details.responseHeaders.push({name: 'access-control-allow-origin', value: '*'});
+      headers.push({name: 'access-control-allow-origin', value: '*'});
     }
     return {responseHeaders: headers}
   },
