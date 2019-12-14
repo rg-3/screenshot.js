@@ -19,11 +19,18 @@
   };
 
   const videos = document.getElementsByTagName('video');
+  const audios = document.getElementsByTagName('audio');
   const setCrossOrigin = () => {
     for(let i = 0; i < videos.length; i++) {
       const video = videos[i];
       if(isCrossOrigin(video)) {
         video.crossOrigin = "anonymous";
+      }
+    }
+    for(let i = 0; i < audios.length; i++) {
+      const audio = audios[i];
+      if(isCrossOrigin(audio)) {
+        audio.crossOrigin = "anonymous";
       }
     }
   }
@@ -33,13 +40,13 @@
     mutations.forEach((mutation) => {
       if(mutation.type === "attributes"      &&
          mutation.attributeName === "src"    &&
-         mutation.target.tagName === "VIDEO" &&
+         (mutation.target.tagName === "VIDEO" || mutation.target.tagName === "AUDIO") &&
          isCrossOrigin(mutation.target)) {
            mutation.target.crossOrigin = "anonymous";
       } else {
         for(let i = 0; i < mutation.addedNodes.length; i++) {
           const node = mutation.addedNodes[i];
-          if(node.tagName === "VIDEO" && isCrossOrigin(node)) {
+          if((node.tagName === "VIDEO" || node.tagName === "AUDIO") && isCrossOrigin(node)) {
             node.crossOrigin = "anonymous";
           }
         }

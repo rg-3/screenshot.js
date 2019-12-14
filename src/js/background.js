@@ -34,7 +34,7 @@ chrome.webRequest.onHeadersReceived.addListener(
   (details) => {
     if(new URL(details.initiator).origin === new URL(details.url).origin) {
       /* We're not interested in same-origin requests. */
-      return
+      return;
     }
     /* From this point we know this is a cross origin request for a media
        item (<audio> / <video>). We insert the access-control-allow-origin
@@ -48,12 +48,12 @@ chrome.webRequest.onHeadersReceived.addListener(
        on the video and that can be the case because of
        `src/js/content-scripts/set-cross-origin.js`.
     */
-    const headers = details.responseHeaders
+    const headers = details.responseHeaders;
     const header = headers.find((h) => h.name.toLowerCase() === 'access-control-allow-origin');
     if(!header) {
       headers.push({name: 'access-control-allow-origin', value: '*'});
     }
-    return {responseHeaders: headers}
+    return {responseHeaders: headers};
   },
   {urls: ["<all_urls>"], types: ["media"]},
   ["blocking", "responseHeaders"]
