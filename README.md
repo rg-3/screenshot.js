@@ -83,11 +83,12 @@ MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
 
 __v0.5.2__
 
-* Fix cross origin audio
+* Fix cross origin audio.
 
 __v0.5.1__
 
-* Fix typo in last release
+* Update `background.js` to push onto `headers` instead of
+ `details.responseHeaders` (typo fix).
 
 __v0.5.0__
 
@@ -96,23 +97,21 @@ __v0.5.0__
 
 * On the Brave browser, when a screenshot of a video can't be captured because
   Brave is blocking all possible device recognition attempts or all possible
-  cross-origin device recognition attempts, the extension will tell the user
+  cross-origin device recognition attempts, the extension will notify the user
   that's why a screenshot can't be captured.  
-  (Firefox has the same fingerprint protections but I haven't tested if it behaves
-   the same as Brave so I'm not sure if this change works on Firefox yet)
 
 * Add support for taking a screenshot of a playing video loaded through an
   iframe.
 
-*  Add support for websites like DailyMail.co.uk who load videos from another
-   origin without setting the `Access-Control-Allow-Origin` header.
-   It must be set or the video won't play when `crossorigin="anonymous"` is set
-   on the video and that can be the case because of
-   `src/js/content-scripts/set-cross-origin.js`.
+*  Add support for taking a screenshot of a playing video on websites like `dailymail.co.uk`.
+   The daily mail website loads video from another origin without setting the
+   `Access-Control-Allow-Origin` header. It must be set to `*` or the video
+   won't play because `crossorigin="anonymous"` has been set by
+   `src/js/content-scripts/set-cross-origin.js`, which was introduced for Instagram support.
 
 * Add support for taking a screenshot of a playing video on sites like Instagram.
-  Instagram delivers video through another host, that means its videos are
-  cross origin and require some extra work.  
+  Instagram delivers video through another origin using CORS access controls,
+  which require some extra work to support.
   (This change should see better support for other sites who work in a similar way
    as well.)
 
