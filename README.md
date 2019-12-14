@@ -81,6 +81,10 @@ MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
 
 ### ChangeLog
 
+__v0.5.1__
+
+* Fix typo in last release
+
 __v0.5.0__
 
 * Improve the display of notifications.  
