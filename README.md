@@ -79,6 +79,11 @@ MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
 
 ### ChangeLog
 
+__v0.7.0__
+
+* Change the tool tip on the `Delete` icon from "Delete screenshot" to
+  "Delete screenshot from memory".
+
 __v0.6.0__
 
 * Store and preview up to 8 screenshots instead of 6.
