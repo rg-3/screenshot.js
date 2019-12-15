@@ -20,23 +20,23 @@ A browser extension that takes screenshots.
 
 ### Screenshots
 
-#### v0.2.5
+#### v0.6.0
 
 * Displaying help.
 
-  ![screenshot](./webstore-assets/v0.2.5/v0.2.5_help_screenshot_1280x800.png)
+  ![screenshot](./webstore-assets/v0.6.0/help_screenshot_v0.6.0_1280x800.png)
 
 * Hovering over the `Save screenshot` icon.
 
-  ![screenshot](./webstore-assets/v0.2.1/v0.2.1_save_screenshot_1280x800.png)
+  ![screenshot](./webstore-assets/v0.6.0/save_screenshot_v0.6.0_1280x800.png)
 
 * Hovering over the `Copy screenshot to clipboard` icon.
 
-  ![screenshot](./webstore-assets/v0.2.1/v0.2.1_copy_screenshot_1280x800.png)
+  ![screenshot](./webstore-assets/v0.6.0/copy_screenshot_v0.6.0_1280x800.png)
 
 * Hovering over the `Delete screenshot` icon.
 
-  ![screenshot](./webstore-assets/v0.2.1/v0.2.1_delete_screenshot_1280x800.png)
+  ![screenshot](./webstore-assets/v0.6.0/delete_screenshot_v0.6.0_1280x800.png)
 
 #### Older screenshots
 
