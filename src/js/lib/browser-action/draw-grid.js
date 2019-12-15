@@ -38,7 +38,7 @@ const drawGrid = function(page) {
     screenshot.createBlob().then(([_, urlToBlob]) => {
       onDeleteClick(screenshotEl, screenshot, page);
       onCopyClick(screenshotEl, screenshot);
-      const canvas = screenshot.canvas.createPreviewScreenshot(screenshot.image, 200, 150);
+      const canvas = screenshot.canvas.createPreviewScreenshot(screenshot.image, 175, 150);
       screenshotEl.querySelector('.image').prepend(canvas);
       screenshotEl.querySelector('.image').setAttribute('href', urlToBlob);
       screenshotEl.querySelector('.save').setAttribute('href', urlToBlob);
@@ -51,7 +51,7 @@ const drawGrid = function(page) {
     feather.replace();
   });
 
-  if(app.screenshots.length > 3) {
+  if(app.screenshots.length > (app.maxScreenshots / 2)) {
     grid.style.cssText = "min-height: 380px !important;";
   } else {
     grid.style.cssText = "min-height: 235px !important;";

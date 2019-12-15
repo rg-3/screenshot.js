@@ -1,5 +1,5 @@
 html {
-  width: 650px;
+  width: 736px;
 }
 
 .hidden {
@@ -10,7 +10,7 @@ html {
   margin: 0 auto;
   width: 450px;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 #header h2 {
@@ -46,7 +46,7 @@ html {
 .screenshot {
   float: left;
   height: 160px;
-  width: 200px;
+  width: 175px;
   margin-right: 5px;
   margin-bottom: 25px;
 }

@@ -20,7 +20,7 @@ const captureFail = (dataUrl) => {
 };
 
 export default function() {
-  this.max_screenshots = 6;
+  this.maxScreenshots = 8;
   this.screenshots = [];
   this.screenshotCount = 0;
 
@@ -59,7 +59,7 @@ export default function() {
     notify("You took a screenshot", 1500);
     this.screenshots.unshift(new Screenshot(this, dataUrl, screenshotOptions));
     this.screenshotCount += 1;
-    if(this.screenshots.length > this.max_screenshots) {
+    if(this.screenshots.length > this.maxScreenshots) {
       this.screenshots.pop().revokeBlob();
     }
   };

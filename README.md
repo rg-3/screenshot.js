@@ -12,7 +12,7 @@ A browser extension that takes screenshots.
   a key stroke  
   (`Ctrl + Shift + V` on PCs and  `Command + Shift + V` on Macs).
 
-* Stores and previews the last 6 screenshots in temporary browser memory  
+* Stores and previews the last 8 screenshots in temporary browser memory  
   (With the option to save them to disk, copy them to the clipboard and delete
    them from memory)
 
@@ -80,6 +80,10 @@ A browser extension that takes screenshots.
 MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
 
 ### ChangeLog
+
+__v0.6.0__
+
+* Store and preview up to 8 screenshots instead of 6.
 
 __v0.5.2__
 
