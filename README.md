@@ -16,8 +16,6 @@ A browser extension that takes screenshots.
   (With the option to save them to disk, copy them to the clipboard and delete
    them from memory)
 
-* Does not make network requests.
-
 ### Screenshots
 
 #### v0.6.0
