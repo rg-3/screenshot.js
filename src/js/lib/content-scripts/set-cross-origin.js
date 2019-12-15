@@ -21,21 +21,18 @@
 
   const videos = document.getElementsByTagName('video');
   const audios = document.getElementsByTagName('audio');
-  const setCrossOrigin = () => {
-    for(let i = 0; i < videos.length; i++) {
-      const video = videos[i];
-      if(isCrossOrigin(video)) {
-        video.crossOrigin = "anonymous";
-      }
-    }
-    for(let i = 0; i < audios.length; i++) {
-      const audio = audios[i];
-      if(isCrossOrigin(audio)) {
-        audio.crossOrigin = "anonymous";
+  const setCrossOrigin = (mediaEls) => {
+    for(let i = 0; i < mediaEls.length; i++) {
+      const el = mediaEls[i];
+      if(isCrossOrigin(el)) {
+        el.crossOrigin = "anonymous";
       }
     }
   };
-  setInterval(setCrossOrigin, 50);
+  setInterval(() => {
+    setCrossOrigin(videos)
+    setCrossOrigin(audios)
+  }, 50);
 
   const mutator = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
