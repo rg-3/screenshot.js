@@ -79,7 +79,7 @@ MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
 
 ### ChangeLog
 
-__v0.7.0__
+__Next version__
 
 * Change the tool tip on the `Delete` icon from "Delete screenshot" to
   "Delete screenshot from memory".
