@@ -79,7 +79,7 @@ MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
 
 ### ChangeLog
 
-__Next version__
+__v0.7.0__
 
 * Add much improved loading effect while waiting for a screenshot
   to become available.

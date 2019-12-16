@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Screenshot",
   "description": "A browser extension that takes screenshots.",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "background": {"page": "html/background.html"},
   "permissions": ["commands", "notifications", "activeTab", "webNavigation", "webRequest", "webRequestBlocking", "<all_urls>"],
   "browser_action": {
