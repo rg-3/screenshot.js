@@ -81,6 +81,9 @@ MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
 
 __Next version__
 
+* Add much improved loading effect while waiting for a screenshot
+  to become available.
+
 * Change the tool tip on the `Delete` icon from "Delete screenshot" to
   "Delete screenshot from memory".
 

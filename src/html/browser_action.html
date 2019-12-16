@@ -3,6 +3,7 @@
   <head>
     <title>Screenshot</title>
     <link rel="stylesheet" href="/css/index.css"></link>
+    <link rel="stylesheet" href="/css/loader.css"></link>
     <link rel="stylesheet" href="/css/colors.css"></link>
     <link rel="stylesheet" href="/css/tippy-themes/light-border.css"></link>
   </head>
@@ -26,8 +27,11 @@
     </div>
 
     <div class='screenshot screenshot-template hidden'>
+      <div class='loader-container'>
+        <strong>Please wait</strong>
+        <div class='loader'></div>
+      </div>
       <a class='image' target='_blank'>
-        <span class='loading-text'>Please wait...</a>
         <div class='action-bar hidden'>
           <a href='#' data-tippy-content='Save screenshot' class='save'>
             <i class='feather-16 green' data-feather='save'></i>

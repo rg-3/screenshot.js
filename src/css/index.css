@@ -79,3 +79,7 @@ html {
 .command-help:not(:last-child) {
   margin-bottom: 10px;
 }
+
+.loader-container {
+  margin-top: 50px;
+}

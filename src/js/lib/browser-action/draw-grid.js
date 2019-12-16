@@ -43,7 +43,7 @@ const drawGrid = function(page) {
       screenshotEl.querySelector('.image').setAttribute('href', urlToBlob);
       screenshotEl.querySelector('.save').setAttribute('href', urlToBlob);
       screenshotEl.querySelector('.save').setAttribute('download', screenshot.getFilename());
-      screenshotEl.querySelector('.loading-text').remove();
+      screenshotEl.querySelector('.loader-container').remove();
       screenshotEl.querySelectorAll('.hidden').forEach((screenshot) => screenshot.classList.remove('hidden'));
     });
     screenshotEl.classList.remove('hidden');
