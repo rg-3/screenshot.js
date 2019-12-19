@@ -83,3 +83,7 @@ html {
 .loader-container {
   margin-top: 50px;
 }
+
+#help-icon {
+  cursor: pointer;
+}

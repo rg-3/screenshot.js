@@ -81,6 +81,9 @@ MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
 
 __To be released__
 
+* Prevent a click of the help icon from jumping to the top of the browser
+  action's window when the browser action has a vertical scroll bar.
+
 * Calculate the width and height of a video using `videoWidth` and
  `videoHeight`. This avoids a video screenshot from being stretched
   beyond its natural size on some websites.
