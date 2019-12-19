@@ -79,6 +79,12 @@ MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
 
 ### ChangeLog
 
+__To be released__
+
+* Calculate the width and height of a video using `videoWidth` and
+ `videoHeight`. This avoids a video screenshot from being stretched
+  beyond its natural size on some websites.
+
 __v0.7.0__
 
 * Add much improved loading effect while waiting for a screenshot
