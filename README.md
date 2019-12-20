@@ -14,7 +14,15 @@ A browser extension that takes screenshots.
 
 * Stores and previews the last 8 screenshots in temporary browser memory  
   (With the option to save them to disk, copy them to the clipboard and delete
-   them from memory)
+   them from memory).
+
+* Allows user to select the number of screenshots stored in temporary browser memory on
+  the settings page.  
+  (The default is 8).
+
+* Allows user to select between capturing videos at their
+  original size or at their visible size on the settings page.   
+  (The default is "visible")
 
 ### Screenshots
 
@@ -54,6 +62,12 @@ A browser extension that takes screenshots.
 
       git clone https://github.com/rg-3/screenshot.js
 
+* Convert the SCSS files to CSS  
+  (This step requires the `scss` executable to be in `$PATH`):
+
+      cd screenshot.js
+      sh scripts/build.sh
+
 * In your browser, open `chrome://extensions`.
 
 * Enable the `Developer mode` checkbox.
@@ -65,9 +79,9 @@ A browser extension that takes screenshots.
 
 ### Credit
 
-  * Special thanks and credit to
+  * Thanks and credit to
     [Double-J Design](http://www.iconarchive.com/artist/double-j-design.html)
-    for providing the green camera icons.
+    for authoring the green camera icons.
 
 ### Similar projects
 
@@ -81,16 +95,40 @@ MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
 
 __To be released__
 
-* Prevent a click of the help icon from jumping to the top of the browser
-  action's window when the browser action has a vertical scroll bar.
+* Add a settings page that allows the user configure the extension.  
+  (The two options that can be configured are described below).
 
-* Calculate the width and height of a video using `videoWidth` and
- `videoHeight`. This avoids a video screenshot from being stretched
-  beyond its natural size on some websites.
+* Add the option to select the number of screenshots to stored
+  temporary browser memory (defaults to 8).
+
+* Add the option to capture a video at its original size or at its
+  visible size (defaults to visible).
+
+* Add includeHTML function (`src/js/browser-action/include-html.js`)
+
+  includeHTML replaces one or more html elements with the contents of one or
+  more `fetch()` requests. In the case of the extension, the HTML is served
+  from the file system meaning there's no network latency  and is pretty much
+  instantaneous. It supports template variables as well, and it allows
+  `browser_action.html` and `settings.html` to share blobs of HTML between
+  them. In the future it will become a separate project.
+
+* Add SCSS
+
+  * Add `src/scss`; contains the SCSS files that will be converted to CSS.
+
+  * Add `scripts/build.sh` to convert SCSS to CSS.
+
+  * This change introduces the need to "build" the extension,
+    I tried to keep the complexity and dependencies at the
+    bare minimum.
+
+* Prevent clicking the help icon from jumping to the top of the browser action's
+  window.
 
 __v0.7.0__
 
-* Add much improved loading effect while waiting for a screenshot
+* Add improved loading effect while waiting for a screenshot
   to become available.
 
 * Change the tool tip on the `Delete` icon from "Delete screenshot" to

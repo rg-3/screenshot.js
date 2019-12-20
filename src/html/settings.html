@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Screenshot</title>
+    <link rel="stylesheet" href="/css/settings.css"></link>
+    <link rel="stylesheet" href="/css/tippy-themes/light-border.css"></link>
+  </head>
+  <body>
+    <div id='container'>
+      <div data-include-html="/html/partials/header.html"></div>
+      <div id='body'>
+        <div>
+          <h5> General settings </h5>
+          Store the last <select id='maxScreenshots'>
+            <option value=8>8</option>
+            <option value=16>16</option>
+            <option value=24>24</option>
+            <option value=32>32</option>
+          </select> screenshots in memory
+        </div>
+        <br>
+        <div>
+          <h5> Video settings </h5>
+          Capture videos at their <select id='video-capture-size'>
+            <option value='visible'>visible</option>
+            <option value='original'>original</option>
+          </select> size
+        </div>
+      </div>
+      <div
+        data-include-html="/html/partials/footer.html"
+        data-variable-settings-icon-href="href=/html/browser_action.html"
+        data-variable-settings-icon-name="corner-down-left"
+        data-variable-settings-icon-title="Back to screenshots">
+      </div>
+    </div>
+    <div data-include-html="/html/partials/help-popover-content.html"></div>
+
+    <script src="/js/vendor/popper.min.js"></script>
+    <script src="/js/vendor/tippy.min.js"></script>
+    <script src="/js/vendor/feather.min.js"></script>
+    <script src="/js/settings.js" type='module'></script>
+  </body>
+</html>

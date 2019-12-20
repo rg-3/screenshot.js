@@ -20,6 +20,7 @@ const captureFail = (dataUrl) => {
 };
 
 export default function() {
+  this.videoCaptureSize = "visible";
   this.maxScreenshots = 8;
   this.screenshots = [];
   this.screenshotCount = 0;

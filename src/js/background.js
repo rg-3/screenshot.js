@@ -9,7 +9,7 @@ chrome.commands.onCommand.addListener((command) => {
       break;
     }
     case "capture-html5-video": {
-      app.runScript({file: "js/lib/content-scripts/capture-html5-video.js"})
+      app.runScript({file: `js/lib/content-scripts/capture-html5-video-${app.videoCaptureSize}.js`})
         .then(app.receiveScreenshot)
         .catch((err) => app.receiveScreenshot("no_video"));
       break;
