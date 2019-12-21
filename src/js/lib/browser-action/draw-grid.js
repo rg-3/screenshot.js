@@ -80,7 +80,7 @@ const drawGrid = function(page) {
     }
   });
 
-  tippy('span[data-tippy-content]', {
+  tippy('[data-tippy-content]', {
     placement: 'bottom',
     distance: 5,
     trigger: 'mouseenter',
