@@ -1,6 +1,16 @@
 @import "partials/base";
 
-#settings-grid {
-  min-height: 235px;
-  text-align: center;
+#body {
+  min-height: 310px !important;
+
+  .settings-group {
+    margin: 0 0 15px 0;
+  }
+  
+  .form-group {
+    select.form-input {
+      display: inline !important;
+      width: unset !important;
+    }
+  }
 }
