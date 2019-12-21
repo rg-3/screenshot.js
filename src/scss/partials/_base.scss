@@ -1,4 +1,5 @@
 @import "colors";
+@import "../../css/spectre.min.css";
 @import "../../css/tippy-themes/light-border.css";
 
 html {
@@ -7,10 +8,11 @@ html {
 
 #container {
   min-height: 300px;
+  margin-left: 10px;
 
   #header {
     width: 100%;
-    margin-bottom: 15px;
+    margin: 15px 0 15px 0;
     text-align: center;
 
     a {
@@ -42,6 +44,7 @@ html {
     margin: 0 0 5px 0;
     clear: both;
     #help-icon {
+      margin: 0 10px 5px 0;
       float: right;
       cursor: pointer;
     }
