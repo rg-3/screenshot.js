@@ -73,14 +73,16 @@ const drawGrid = function(page) {
     placement: 'bottom',
     multiple: true,
     arrow: false,
+    distance: 5,
     ignoreAttributes: true,
     onShow(tip) {
       setTimeout(tip.hide, 500);
     }
   });
 
-  tippy('a[data-tippy-content]', {
+  tippy('span[data-tippy-content]', {
     placement: 'bottom',
+    distance: 5,
     trigger: 'mouseenter',
     multiple: true,
     arrow: false
