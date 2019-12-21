@@ -83,9 +83,30 @@ A browser extension that takes screenshots.
     [Double-J Design](http://www.iconarchive.com/artist/double-j-design.html)
     for authoring the green camera icons.
 
-### Similar projects
+### Dependencies
 
-  * [Take webpage screenshots](https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg)
+  * **Extension dependencies**
+
+    An extension dependency is a dependency that's used while the extension
+    is running.
+
+    * Spectre.css  
+      A minimalist CSS framework.
+
+    * FeatherIcons  
+      Provides icons
+
+    * PopperJS, tippy.js  
+      Provides popovers and tooltips
+
+  * **Developer dependencies**
+
+    A developer dependency is a dependency that's used to develop / build the
+    extension.
+
+      * SCSS  
+        SCSS is a language that extends CSS with many useful features that make
+        styling pages easier and more maintainable. It is trans-piled to CSS.
 
 ### License
 
