@@ -1,15 +1,19 @@
 import rstl from "../../vendor/rstl.js";
 
-const getDocFragment = (node, html) => {
+const getTemplateVariables = (node) => {
   const vars = {};
-  const props = Object.keys(node.dataset);
-  props.forEach((prop) => {
+  Object.keys(node.dataset).forEach((prop) => {
     if(prop.startsWith('variable')) {
       let varName = prop.replace(/^variable/, '');
       varName = [varName[0].toLowerCase(), varName.slice(1, varName.length)].join('');
       vars[varName] = node.dataset[prop];
     }
   });
+  return vars;
+};
+
+const getDocFragment = (node, html) => {
+  const vars = getTemplateVariables(node);
   return document.createRange().createContextualFragment(rstl(html, vars));
 };
 

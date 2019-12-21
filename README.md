@@ -20,8 +20,8 @@ A browser extension that takes screenshots.
   the settings page.  
   (The default is 8).
 
-* Allows user to select between capturing videos at their
-  original size or at their visible size on the settings page.   
+* Allows user to select between capturing videos at their original size or at
+  their visible size on the settings page.   
   (The default is "visible")
 
 ### Screenshots
