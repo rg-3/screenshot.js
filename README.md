@@ -16,12 +16,11 @@ A browser extension that takes screenshots.
   (With the option to save them to disk, copy them to the clipboard and delete
    them from memory).
 
-* Allows user to select the number of screenshots stored in temporary browser memory on
-  the settings page.  
+* Allows user to select the number of screenshots stored in temporary browser memory.  
   (The default is 8).
 
 * Allows user to select between capturing videos at their original size or at
-  their visible size on the settings page.   
+  their visible size.   
   (The default is "visible")
 
 ### Screenshots
