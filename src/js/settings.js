@@ -15,14 +15,14 @@ chrome.runtime.getBackgroundPage((page) => {
   const app = page.app;
 
   /*
-     Allows user to switch between capturing a video at its original size or
+     Allows user to switch between capturing a video at its natural size or
      at its visible size.
   */
   const vSizeSelect = document.getElementById('video-capture-size');
-  setDefaultOption(vSizeSelect, app.videoCaptureType);
+  setDefaultOption(vSizeSelect, app.videoSize);
   vSizeSelect.addEventListener('change', (event) => {
     const option = event.target;
-    app.videoCaptureType = option.value;
+    app.videoSize = option.value;
   });
 
   /*

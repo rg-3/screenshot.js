@@ -19,7 +19,7 @@ A browser extension that takes screenshots.
 * Allows user to select the number of screenshots stored in temporary browser memory.  
   (The default is 8).
 
-* Allows user to select between capturing videos at their original size or at
+* Allows user to select between capturing videos at their natural size or at
   their visible size.   
   (The default is "visible")
 
@@ -121,7 +121,7 @@ __To be released__
 * Add the option to select the number of screenshots to stored
   temporary browser memory (defaults to 8).
 
-* Add the option to capture a video at its original size or at its
+* Add the option to capture a video at its natural size or at its
   visible size (defaults to visible).
 
 * Add includeHTML function (`src/js/browser-action/include-html.js`)

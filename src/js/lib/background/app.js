@@ -21,17 +21,17 @@ const captureFail = (dataUrl) => {
 };
 
 const getVideoWidthAlgorithm = (app) => {
-  if(app.videoCaptureType === "visible") {
+  if(app.videoSize === "visible") {
     return "return video.getBoundingClientRect().width"
-  } else if(app.videoCaptureType === "original"){
+  } else if(app.videoSize === "natural"){
     return "return video.videoWidth;"
   }
 };
 
 const getVideoHeightAlgorithm = (app) => {
-  if(app.videoCaptureType === "visible") {
+  if(app.videoSize === "visible") {
     return "return video.getBoundingClientRect().height;"
-  } else if(app.videoCaptureType === "original"){
+  } else if(app.videoSize === "natural"){
     return "return video.videoHeight;"
   }
 };
@@ -46,7 +46,7 @@ const setCaptureHTML5VideoTemplate = () => {
 setCaptureHTML5VideoTemplate();
 
 export default function() {
-  this.videoCaptureType = "visible";
+  this.videoSize = "visible";
   this.maxScreenshots = 8;
   this.screenshots = [];
   this.screenshotCount = 0;
@@ -92,8 +92,8 @@ export default function() {
   };
 
   this.getCaptureHTML5VideoCode = () => {
-    if(templateCache[this.videoCaptureType]) {
-      return templateCache[this.videoCaptureType];
+    if(templateCache[this.videoSize]) {
+      return templateCache[this.videoSize];
     } else if(!captureHTML5VideoTemplate) {
       return 'captureHTML5VideoTemplate_Not_Initialized';
     } else {
@@ -101,7 +101,7 @@ export default function() {
         widthAlgorithm:  getVideoWidthAlgorithm(this),
         heightAlgorithm: getVideoHeightAlgorithm(this)
       });
-      templateCache[this.videoCaptureType] = code;
+      templateCache[this.videoSize] = code;
       return code;
     }
   };
