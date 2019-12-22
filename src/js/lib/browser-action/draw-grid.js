@@ -51,10 +51,10 @@ const drawGrid = function(page) {
     feather.replace();
   });
 
-  if(app.screenshots.length > (app.maxScreenshots / 2)) {
+  if(app.screenshots.length > 4 && app.screenshots.length > (app.maxScreenshots / 2)) {
     grid.style.cssText = "min-height: 380px !important;";
   } else {
-    grid.style.cssText = "min-height: 275px !important;";
+    grid.style.cssText = "min-height: 235px !important;";
   }
 
   /* Redraw screenshots grid when screenshot is taken while browser_action.html
