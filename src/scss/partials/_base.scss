@@ -1,0 +1,77 @@
+@import "colors";
+@import "../../css/spectre.min.css";
+@import "../../css/tippy-themes/light-border.css";
+
+html {
+  width: 736px;
+}
+
+#container {
+  min-height: 350px;
+  margin-left: 10px;
+
+  #header {
+    width: 100%;
+    margin: 10px 0 10px 0;
+    text-align: center;
+
+    a {
+      color: #000;
+      text-decoration: none;
+      &:visited , &:active , &:hover {
+        text-decoration: none;
+      }
+    }
+
+    a#logo {
+      #heading-text {
+        font-size: 18px;
+        font-weight: bold;
+        vertical-align: top;
+      }
+    }
+    .icons-container {
+      float: left;
+      width: 45%;
+    }
+  }
+
+  #body {
+    min-height: 275px;
+    margin: 0 0 15px 0;
+  }
+
+  #footer {
+    margin: 0 0 5px 0;
+    clear: both;
+    #help-icon {
+      margin: 0 10px 0 0;
+      float: right;
+      cursor: pointer;
+    }
+  }
+}
+
+.tippy-popper {
+  .shortcut {
+    font-weight: bold;
+  }
+
+  .command-help:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.feather-16 {
+  width: 16px;
+  height: 16px;
+}
+
+.feather-20 {
+  width: 20px;
+  height: 20px;
+}

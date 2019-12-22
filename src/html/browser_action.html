@@ -2,63 +2,21 @@
 <html>
   <head>
     <title>Screenshot</title>
-    <link rel="stylesheet" href="/css/index.css"></link>
-    <link rel="stylesheet" href="/css/loader.css"></link>
-    <link rel="stylesheet" href="/css/colors.css"></link>
-    <link rel="stylesheet" href="/css/tippy-themes/light-border.css"></link>
+    <link rel="stylesheet" href="/css/browser-action.css"></link>
   </head>
   <body>
     <div id='container'>
-      <div id='header'>
-        <a target='_blank' href='https://github.com/rg-3/screenshot.js#readme'>
-          <h2>
-            <img src="/images/camera24.png">
-            <span id='heading-text'>Screenshot</a>
-          </h2>
-        </a>
-      </div>
-      <div id='screenshot-grid'>
-      </div>
-      <div id='help-container'>
-        <a id='help-icon' title="Help">
-          <i class='feather-20 green' data-feather='help-circle'></i>
-        </a>
-      </div>
+      <div data-include-html="/html/partials/header.html"></div>
+      <div id='body'></div>
+      <div
+      data-include-html="/html/partials/footer.html"
+      data-variable-settings-icon-name="sliders"
+      data-variable-settings-icon-title="Settings"
+      data-variable-settings-icon-href="href=/html/settings.html"></div>
     </div>
 
-    <div class='screenshot screenshot-template hidden'>
-      <div class='loader-container'>
-        <strong>Please wait</strong>
-        <div class='loader'></div>
-      </div>
-      <a class='image' target='_blank'>
-        <div class='action-bar hidden'>
-          <a href='#' data-tippy-content='Save screenshot' class='save'>
-            <i class='feather-16 green' data-feather='save'></i>
-          </a>
-          <a href='#' data-tippy-content='Copy screenshot to clipboard' class='copy'>
-            <i class='feather-16 blue' data-feather='copy'></i>
-          </a>
-          <a href='#' data-tippy-content='Delete screenshot from memory' class='delete'>
-            <i class='feather-16 red' data-feather="trash"></i>
-          </a>
-        </div>
-      </a>
-    </div>
-
-    <div id='popover-help-content' class='hidden'>
-      <div id='capture-visible-tab' class='command-help'>
-        <span class='shortcut'></span>
-        <br>
-        <span class='description'></a>
-      </div>
-
-      <div id='capture-html5-video' class='command-help'>
-        <span class='shortcut'></span>
-        <br>
-        <span class='description'></a>
-      </div>
-    </div>
+    <div data-include-html="/html/partials/help-popover-content.html"></div>
+    <div data-include-html="/html/partials/screenshot.html"></div>
 
     <script src="/js/vendor/popper.min.js"></script>
     <script src="/js/vendor/tippy.min.js"></script>

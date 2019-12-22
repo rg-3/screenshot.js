@@ -27,7 +27,7 @@ const onCopyClick = (screenshotEl, screenshot) => {
 const drawGrid = function(page) {
   const app = page.app;
   const count = app.screenshotCount;
-  const grid = document.getElementById('screenshot-grid');
+  const grid = document.getElementById('body');
 
   /* Reset the grid (drawGrid can be called multiple times) */
   grid.innerHTML = '';
@@ -54,7 +54,7 @@ const drawGrid = function(page) {
   if(app.screenshots.length > (app.maxScreenshots / 2)) {
     grid.style.cssText = "min-height: 380px !important;";
   } else {
-    grid.style.cssText = "min-height: 235px !important;";
+    grid.style.cssText = "min-height: 275px !important;";
   }
 
   /* Redraw screenshots grid when screenshot is taken while browser_action.html
@@ -73,14 +73,16 @@ const drawGrid = function(page) {
     placement: 'bottom',
     multiple: true,
     arrow: false,
+    distance: 5,
     ignoreAttributes: true,
     onShow(tip) {
       setTimeout(tip.hide, 500);
     }
   });
 
-  tippy('a[data-tippy-content]', {
+  tippy('[data-tippy-content]', {
     placement: 'bottom',
+    distance: 5,
     trigger: 'mouseenter',
     multiple: true,
     arrow: false

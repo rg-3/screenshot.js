@@ -1,0 +1,24 @@
+@import "partials/base";
+@import "../../css/loader.css";
+
+.screenshot {
+  float: left;
+  height: 160px;
+  width: 175px;
+  margin: 0 5px 35px 0;
+
+  .loader-container {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .action-bar {
+    position: relative;
+    top: 5px;
+    text-align: center;
+  }
+
+  .action-bar span {
+    cursor: pointer;
+  }
+}
