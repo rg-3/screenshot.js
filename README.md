@@ -16,12 +16,12 @@ A browser extension that takes screenshots.
   (With the option to save them to disk, copy them to the clipboard and delete
    them from memory).
 
-* Allows user to select the number of screenshots stored in temporary browser memory.  
+* Enables a user to select the number of screenshots stored in temporary browser memory.  
   (The default is 8).
 
-* Allows user to select between capturing videos at their natural size or at
+* Enables a user to select between capturing videos at their natural size or at
   their visible size.   
-  (The default is "visible")
+  (The default is visible size)
 
 ### Screenshots
 
@@ -122,7 +122,7 @@ __To be released__
 * Add a settings page that allows the user configure the extension.  
   (The two options that can be configured are described below).
 
-* Add the option to select the number of screenshots to stored
+* Add the option to select the number of screenshots to store in
   temporary browser memory (defaults to 8).
 
 * Add the option to capture a video at its natural size or at its
@@ -147,7 +147,7 @@ __To be released__
     I tried to keep the complexity and dependencies at the
     bare minimum.
 
-* Add Spectre, a minimalist CSS framework ~ 10kb
+* Add `Spectre.css`, a minimalist CSS framework ~ 10kb
 
 * Prevent clicking the help icon from jumping to the top of the browser action's
   window.

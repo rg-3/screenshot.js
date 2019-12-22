@@ -36,7 +36,7 @@ const getVideoHeightAlgorithm = (app) => {
   }
 };
 
-const templateCache = {};
+const codeCache = {};
 let captureHTML5VideoTemplate = null;
 const setCaptureHTML5VideoTemplate = () => {
   return fetch('/js/lib/content-scripts/capture-html5-video.js')
@@ -92,8 +92,8 @@ export default function() {
   };
 
   this.getCaptureHTML5VideoCode = () => {
-    if(templateCache[this.videoSize]) {
-      return templateCache[this.videoSize];
+    if(codeCache[this.videoSize]) {
+      return codeCache[this.videoSize];
     } else if(!captureHTML5VideoTemplate) {
       return 'captureHTML5VideoTemplate_Not_Initialized';
     } else {
@@ -101,7 +101,7 @@ export default function() {
         widthAlgorithm:  getVideoWidthAlgorithm(this),
         heightAlgorithm: getVideoHeightAlgorithm(this)
       });
-      templateCache[this.videoSize] = code;
+      codeCache[this.videoSize] = code;
       return code;
     }
   };
