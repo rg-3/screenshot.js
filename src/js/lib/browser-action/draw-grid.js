@@ -54,7 +54,7 @@ const drawGrid = function(page) {
   if(app.screenshots.length > 4 && app.screenshots.length > (app.maxScreenshots / 2)) {
     grid.style.cssText = "min-height: 380px !important;";
   } else {
-    grid.style.cssText = "min-height: 235px !important;";
+    grid.style.cssText = "min-height: 245px !important;";
   }
 
   /* Redraw screenshots grid when screenshot is taken while browser_action.html
