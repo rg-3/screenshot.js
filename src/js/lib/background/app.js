@@ -36,6 +36,7 @@ const getVideoHeightAlgorithm = (app) => {
   }
 };
 
+const templateCache = {};
 let captureHTML5VideoTemplate = null;
 const setCaptureHTML5VideoTemplate = () => {
   return fetch('/js/lib/content-scripts/capture-html5-video.js')
@@ -91,13 +92,18 @@ export default function() {
   };
 
   this.getCaptureHTML5VideoCode = () => {
-    if(!captureHTML5VideoTemplate) {
+    if(templateCache[this.videoCaptureSize]) {
+      return templateCache[this.videoCaptureSize];
+    } else if(!captureHTML5VideoTemplate) {
       return 'captureHTML5VideoTemplate_Not_Initialized';
+    } else {
+      const code = rstl(captureHTML5VideoTemplate, {
+        widthAlgorithm:  getVideoWidthAlgorithm(this),
+        heightAlgorithm: getVideoHeightAlgorithm(this)
+      });
+      templateCache[this.videoCaptureSize] = code;
+      return code;
     }
-    return rstl(captureHTML5VideoTemplate, {
-      widthAlgorithm:  getVideoWidthAlgorithm(this),
-      heightAlgorithm: getVideoHeightAlgorithm(this)
-    });
   };
 
   this.getKeyboardCommands = () => {
