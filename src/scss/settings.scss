@@ -1,16 +1,22 @@
 @import "partials/base";
 
-#body {
-  min-height: 310px !important;
+#container {
+  height: 245px;
 
-  .settings-group {
-    margin: 0 0 15px 0;
-  }
-  
-  .form-group {
-    select.form-input {
-      display: inline !important;
-      width: unset !important;
+  #body {
+    .settings-group {
+      margin: 0 0 15px 0;
     }
+
+    .form-group {
+      select.form-input {
+        display: inline !important;
+        width: unset !important;
+      }
+    }
+  }
+
+  #footer {
+    position: fixed !important;
   }
 }
