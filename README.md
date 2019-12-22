@@ -115,8 +115,9 @@ MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
 
 __To be released__
 
-* The settings and help icons are fixed in place and follow scroll when
-  there is more than 8 screenshots to browse through.
+* The settings and help icons are fixed in place, they follow scroll when
+  there is more than 8 screenshots to browse, and they've been positioned to
+  the center.
 
 * Add a settings page that allows the user configure the extension.  
   (The two options that can be configured are described below).
@@ -145,6 +146,8 @@ __To be released__
   * This change introduces the need to "build" the extension,
     I tried to keep the complexity and dependencies at the
     bare minimum.
+
+* Add Spectre, a minimalist CSS framework ~ 10kb
 
 * Prevent clicking the help icon from jumping to the top of the browser action's
   window.
