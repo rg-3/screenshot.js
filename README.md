@@ -73,12 +73,6 @@ A browser extension that takes screenshots.
 
 * Done!
 
-### Credit
-
-  * Thanks and credit to
-    [Double-J Design](http://www.iconarchive.com/artist/double-j-design.html)
-    for authoring the green camera icons.
-
 ### Dependencies
 
   * **Extension dependencies**
@@ -103,6 +97,12 @@ A browser extension that takes screenshots.
       * SCSS  
         SCSS is a language that extends CSS with many useful features that make
         styling pages easier and more maintainable. It is trans-piled to CSS.
+        
+### Credit
+
+  * Thanks and credit to
+    [Double-J Design](http://www.iconarchive.com/artist/double-j-design.html)
+    for authoring the green camera icons.
 
 ### License
 
