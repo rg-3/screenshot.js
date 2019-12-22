@@ -31,14 +31,13 @@ A browser extension that takes screenshots.
 
   ![screenshot](./webstore-assets/v0.8.0/copy_screenshot_v0.8.0_1280x800.png)
 
-* Settings page
-
-  ![screenshot](./webstore-assets/v0.8.0/settings_screenshot_v0.8.0_1280x800.png)
-
-* Showing help
+* Display help
 
   ![screenshot](./webstore-assets/v0.8.0/help_screenshot_v0.8.0_1280x800.png)
 
+* Settings page
+
+  ![screenshot](./webstore-assets/v0.8.0/settings_screenshot_v0.8.0_1280x800.png)
 
 #### Older screenshots
 
@@ -97,7 +96,7 @@ A browser extension that takes screenshots.
       * SCSS  
         SCSS is a language that extends CSS with many useful features that make
         styling pages easier and more maintainable. It is trans-piled to CSS.
-        
+
 ### Credit
 
   * Thanks and credit to
