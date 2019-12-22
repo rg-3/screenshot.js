@@ -16,8 +16,8 @@ chrome.commands.onCommand.addListener((command) => {
         app.runScript({code})
            .then(app.receiveScreenshot)
            .catch((err) => app.receiveScreenshot("no_video"));
-        break;
       }
+      break;
     }
   }
 });
