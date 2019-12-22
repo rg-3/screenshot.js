@@ -19,10 +19,10 @@ chrome.runtime.getBackgroundPage((page) => {
      at its visible size.
   */
   const vSizeSelect = document.getElementById('video-capture-size');
-  setDefaultOption(vSizeSelect, app.videoCaptureSize);
+  setDefaultOption(vSizeSelect, app.videoCaptureType);
   vSizeSelect.addEventListener('change', (event) => {
     const option = event.target;
-    app.videoCaptureSize = option.value;
+    app.videoCaptureType = option.value;
   });
 
   /*
