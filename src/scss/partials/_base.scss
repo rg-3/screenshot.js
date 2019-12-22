@@ -38,6 +38,12 @@ html {
   #body {
     min-height: 275px;
     margin: 0 0 15px 10px;
+
+    .loading {
+      position: relative;
+      left: 50%;
+      top: 130px;
+    }
   }
 
   #footer {
