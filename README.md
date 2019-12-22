@@ -27,15 +27,15 @@ A browser extension that takes screenshots.
 
 #### v0.8.0
 
-* Default page, hovering over the `Copy to clipboard` icon.
+* The default page.
 
   ![screenshot](./webstore-assets/v0.8.0/copy_screenshot_v0.8.0_1280x800.png)
 
-* Display help
+* The default page, with help shown.
 
   ![screenshot](./webstore-assets/v0.8.0/help_screenshot_v0.8.0_1280x800.png)
 
-* Settings page
+* The settings page, with a dropdown expanded.
 
   ![screenshot](./webstore-assets/v0.8.0/settings_screenshot_v0.8.0_1280x800.png)
 
