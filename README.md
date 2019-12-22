@@ -115,6 +115,9 @@ MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
 
 __To be released__
 
+* The settings and help icons are fixed in place and follow scroll when
+  there is more than 8 screenshots to browse through.
+
 * Add a settings page that allows the user configure the extension.  
   (The two options that can be configured are described below).
 
