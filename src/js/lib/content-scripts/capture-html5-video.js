@@ -2,11 +2,11 @@
   const videos  = Array.from(document.querySelectorAll('video'));
 
   const getWidth = (video) => {
-    return video.videoWidth;
+    {{widthAlgorithm}}
   };
 
   const getHeight = (video) => {
-    return video.videoHeight;
+    {{heightAlgorithm}}
   };
 
   const getDataUrl = (video) => {

@@ -1,5 +1,6 @@
 import Screenshot from './app/screenshot.js';
 import runScript from './app/run-script.js';
+import rstl from '../../vendor/rstl.js';
 
 const notify = (message, timeout)  => {
   chrome.notifications.create({
@@ -18,6 +19,30 @@ const captureFail = (dataUrl) => {
          dataUrl === "no_video" ||
          dataUrl === "no_suitable_videos"
 };
+
+const getVideoWidthAlgorithm = (app) => {
+  if(app.videoCaptureSize === "visible") {
+    return "return video.getBoundingClientRect().width"
+  } else if(app.videoCaptureSize === "original"){
+    return "return video.videoWidth;"
+  }
+};
+
+const getVideoHeightAlgorithm = (app) => {
+  if(app.videoCaptureSize === "visible") {
+    return "return video.getBoundingClientRect().height;"
+  } else if(app.videoCaptureSize === "original"){
+    return "return video.videoHeight;"
+  }
+};
+
+let captureHTML5VideoTemplate = null;
+const setCaptureHTML5VideoTemplate = () => {
+  return fetch('/js/lib/content-scripts/capture-html5-video.js')
+        .then(async (res) => captureHTML5VideoTemplate = await res.text())
+        .catch(setCaptureHTML5VideoTemplate)
+};
+setCaptureHTML5VideoTemplate();
 
 export default function() {
   this.videoCaptureSize = "visible";
@@ -65,11 +90,22 @@ export default function() {
     }
   };
 
+  this.getCaptureHTML5VideoCode = () => {
+    if(!captureHTML5VideoTemplate) {
+      return 'captureHTML5VideoTemplate_Not_Initialized';
+    }
+    return rstl(captureHTML5VideoTemplate, {
+      widthAlgorithm:  getVideoWidthAlgorithm(this),
+      heightAlgorithm: getVideoHeightAlgorithm(this)
+    });
+  };
+
   this.getKeyboardCommands = () => {
     return new Promise((resolve, reject) => chrome.commands.getAll(resolve));
   };
 
   this.runScript = runScript;
+  this.notify = notify;
 
   return this;
 }
