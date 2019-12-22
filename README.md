@@ -27,11 +27,11 @@ A browser extension that takes screenshots.
 
 #### v0.8.0
 
-* The default page.
+* The preview page.
 
   ![screenshot](./webstore-assets/v0.8.0/copy_screenshot_v0.8.0_1280x800.png)
 
-* The default page, with help shown.
+* The preview page, with help shown.
 
   ![screenshot](./webstore-assets/v0.8.0/help_screenshot_v0.8.0_1280x800.png)
 
