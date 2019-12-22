@@ -37,7 +37,7 @@ A browser extension that takes screenshots.
 
 * The settings page, with a dropdown expanded.
 
-  ![screenshot](./webstore-assets/v0.8.0/settings_screenshot_v0.8.0_1280x800.png)
+  ![screenshot](./webstore-assets/v0.8.0/settings_screenshot_v0.8.0_1280x800-1.png)
 
 #### Older screenshots
 
