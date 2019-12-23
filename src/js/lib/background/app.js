@@ -22,17 +22,17 @@ const captureFail = (dataUrl) => {
 
 const getVideoWidthAlgorithm = (app) => {
   if(app.videoSize === "visible") {
-    return "return video.getBoundingClientRect().width"
+    return "return video.getBoundingClientRect().width;";
   } else if(app.videoSize === "natural"){
-    return "return video.videoWidth;"
+    return "return video.videoWidth;";
   }
 };
 
 const getVideoHeightAlgorithm = (app) => {
   if(app.videoSize === "visible") {
-    return "return video.getBoundingClientRect().height;"
+    return "return video.getBoundingClientRect().height;";
   } else if(app.videoSize === "natural"){
-    return "return video.videoHeight;"
+    return "return video.videoHeight;";
   }
 };
 
