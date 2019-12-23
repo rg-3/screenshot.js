@@ -95,6 +95,17 @@ export default function() {
     if(codeCache[this.videoSize]) {
       return codeCache[this.videoSize];
     } else if(!captureHTML5VideoTemplate) {
+      /*
+         This should not happen, it means the fetch() call made in
+         setCaptureHTML5VideoTemplate function has failed or has not completed
+         yet. Since setCaptureHTML5VideoTemplate is making a request for a file
+         that is served from disk and belongs to the extension, its failure
+         would indicate something unusual has happened.
+
+         The handling of this error is.... weird. We literally show
+         'captureHTML5VideoTemplate_Not_Initialized' as a notification.
+         (See src/js/background.js)
+      */
       return 'captureHTML5VideoTemplate_Not_Initialized';
     } else {
       const code = rstl(captureHTML5VideoTemplate, {
