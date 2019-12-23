@@ -27,15 +27,16 @@ A browser extension that takes screenshots.
 
 #### v0.8.0
 
-* The preview page.
+* Shows you a view which lets you preview screenshots, and perform actions on
+  them (such as open, save, copy, and delete).
 
   ![screenshot](./webstore-assets/v0.8.0/copy_screenshot_v0.8.0_1280x800.png)
 
-* The preview page, with help shown.
+* Shows the instructions for how to use the extension.
 
   ![screenshot](./webstore-assets/v0.8.0/help_screenshot_v0.8.0_1280x800.png)
 
-* The settings page, with a dropdown expanded.
+* Shows the settings page, with a dropdown expanded.
 
   ![screenshot](./webstore-assets/v0.8.0/settings_screenshot_v0.8.0_1280x800-1.png)
 
