@@ -2,10 +2,9 @@ __To be released__
 
 * A loading spinner is shown until the screenshot grid begins to get drawn by
   the `grawGrid()` function. This change avoids a user seeing an empty white
-  page for a 1 or 2 seconds while the grid is waiting to be drawn, and HTML
-  blobs are waiting to be inserted by `includeHTML()`. Sometimes there's no
-  wait, it depends on multiple factors (performance of computer, number
-  of screenshots waiting to be processed, ...).
+  page for a 1 or 2 seconds while the grid is waiting to be drawn, which occurs
+  after HTML blobs are inserted by `includeHTML()`. Sometimes there's no wait,
+  it seems to depend on the number of screenshots waiting to be processed.
 
 * The settings and help icons are fixed in place, they follow scroll when
   there is more than 8 screenshots to browse, and they've been positioned to
