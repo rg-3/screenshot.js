@@ -47,9 +47,24 @@ A browser extension that takes screenshots.
 
 #### Web stores
 
-* [Google Chrome webstore](https://chrome.google.com/webstore/detail/screenshot/ehmcpclingghgidajkpodncclbginiak)
+* [Chrome webstore](https://chrome.google.com/webstore/detail/screenshot/ehmcpclingghgidajkpodncclbginiak)
 
-* Firefox ... Coming soon.
+  __NOTE__
+
+  Each time I push a new release of this extension to the Chrome Webstore it gets
+  flagged for manual review. The manual review process is slow relative to the
+  rate at which there are new versions of Screenshot.
+
+  To give you an idea, at the time of writing the current published version on
+  the webstore is `v0.2.4` while the current version of Screenshot is `v0.7.0`,
+  with `v0.8.0` almost complete.
+
+  I suggest checking how far behind the webstore version is before installing,
+  and to consider installing from source if it's outdated.
+
+* Firefox ...
+
+  Coming soon.
 
 #### From source
 
