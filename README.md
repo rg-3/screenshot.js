@@ -12,12 +12,12 @@ A browser extension that takes screenshots.
   a key stroke  
   (`Ctrl + Shift + V` on PCs and  `Command + Shift + V` on Macs).
 
-* Stores and previews the last 8 screenshots in temporary browser memory  
-  (With the option to save them to disk, copy them to the clipboard and delete
-   them from memory).
+* Stores and previews the last 4 screenshots in temporary browser memory  
+  (With the option to open them in a new tab, save them to disk, copy them to
+   the clipboard and delete them from memory).
 
 * Allows a user to select the number of screenshots stored in temporary browser memory.  
-  (The default is 8).
+  (The default is 4).
 
 * Allows a user to select between capturing videos at their natural size or at
   their visible size.   

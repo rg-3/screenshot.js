@@ -47,7 +47,7 @@ setCaptureHTML5VideoTemplate();
 
 export default function() {
   this.videoSize = "visible";
-  this.maxScreenshots = 8;
+  this.maxScreenshots = 4;
   this.screenshots = [];
   this.screenshotCount = 0;
 

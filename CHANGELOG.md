@@ -1,5 +1,8 @@
 __To be released__
 
+* Change the default number of screenshots stored in memory from 8 to 4.
+  See https://github.com/rg-3/screenshot.js/issues/3
+  
 * A loading spinner is shown until the screenshot grid begins to get drawn by
   the `grawGrid()` function. This change avoids a user seeing an empty white
   page for a 1 or 2 seconds while the grid is waiting to be drawn, which occurs
@@ -14,7 +17,7 @@ __To be released__
   (The two options that can be configured are described below).
 
 * Add the option to select the number of screenshots to store in
-  temporary browser memory (defaults to 8).
+  temporary browser memory (defaults to 4).
 
 * Add the option to capture a video at its natural size or at its
   visible size (defaults to visible).
