@@ -1,11 +1,11 @@
 __v0.8.0__
 
 * Change the default number of screenshots stored in memory from 8 to 4.
-  See https://github.com/rg-3/screenshot.js/issues/3
+  See https://github.com/rg-3/screenshot.js/issues/3 for more info.
 
 * A loading spinner is shown until the screenshot grid begins to get drawn by
   the `grawGrid()` function. This change avoids a user seeing an empty white
-  page for a 1 or 2 seconds while the grid is waiting to be drawn, which occurs
+  page for 1 or 2 seconds while the grid is waiting to be drawn, which occurs
   after HTML blobs are inserted by `includeHTML()`. Sometimes there's no wait,
   it seems to depend on the number of screenshots waiting to be processed.
 

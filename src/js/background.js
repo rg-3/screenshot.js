@@ -41,16 +41,15 @@ chrome.webRequest.onHeadersReceived.addListener(
       /* We're not interested in same-origin requests. */
       return;
     }
-    /* From this point we know this is a cross origin request for a media
+    /* From here we know this is a cross origin request for a media
        item (<audio> / <video>). We insert the access-control-allow-origin
-       header to allow canvas export access to the video from its 'origin', as
-       long the header has not already been set. The 'origin' will be the URL
-       of a tab.
+       header to allow canvas export access to the video from the window
+       that initiated the request.
 
-       This adds support for websites like DailyMail.co.uk who load videos from another
-       origin without setting the `Access-Control-Allow-Origin` header.
+       It adds support for websites like DailyMail.co.uk who load videos from
+       another origin without setting the `Access-Control-Allow-Origin` header.
        It must be set or the video won't play because `crossorigin="anonymous"`
-       is set by `src/js/content-scripts/set-cross-origin.js`.
+       has been by `src/js/content-scripts/set-cross-origin.js`.
     */
     const headers = details.responseHeaders;
     const header = headers.find((h) => h.name.toLowerCase() === 'access-control-allow-origin');

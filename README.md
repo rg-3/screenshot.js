@@ -27,16 +27,18 @@ A browser extension that takes screenshots.
 
 #### v0.8.0
 
-* Shows you a view that lets you preview screenshots, and perform actions on
-  them (such as open, save, copy, and delete).
+* Shows the view that lets you preview screenshots, and perform actions on
+  them.  
+  (Such as open, save, copy, and delete).
 
   ![screenshot](./webstore-assets/v0.8.0/copy_screenshot_v0.8.0_1280x800.png)
 
-* Shows the instructions for how to use the extension.
+* Shows the same view as the previous screenshot, with the instructions on how
+  to take screenshots visible.
 
   ![screenshot](./webstore-assets/v0.8.0/help_screenshot_v0.8.0_1280x800.png)
 
-* Shows the settings page, with a dropdown expanded.
+* Shows the settings view, with a drop down expanded.
 
   ![screenshot](./webstore-assets/v0.8.0/settings_screenshot_v0.8.0_1280x800-1.png)
 
@@ -52,16 +54,16 @@ A browser extension that takes screenshots.
 
   __Version of Screenshot on the Chrome Webstore could be outdated__
 
-  Every time I push a new release of Screenshot to the Chrome Webstore it gets
-  flagged for manual review. The manual review process is slow relative to the
+  Screenshot gets flagged for manual review each time it's published on the
+  Chrome Webstore. The manual review process is sometimes slow relative to the
   rate at which there are new versions of Screenshot.
 
-  To give you an idea, at the time of writing the current published version on
+  To get an idea, at the time of writing the current published version on
   the webstore is `v0.2.5` while the current version of Screenshot is `v0.7.0`,
   with `v0.8.0` almost complete.
 
-  I suggest checking how far behind the webstore version is before installing,
-  and to consider installing from source if it's outdated.
+  It's recommended to check how far behind the webstore version is before
+  installing, and to consider installing from source if it's outdated.
 
 * Firefox ...
 

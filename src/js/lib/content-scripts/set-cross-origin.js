@@ -1,8 +1,7 @@
 /*
-   Some sites like Instagram require 'crossOrigin = anonymous' to be set on its
-   <video> elements because Instagram loads video via another origin using CORS
-   for access control which makes the video "tainted" and unexportable unless
-   crossOrigin is set to "anonymous".
+   Sites like Instagram.com load video through a different origin using
+   CORS for access control which makes the video "tainted" and unexportable
+   unless `<HTMLVideoElement>.crossOrigin` is set to "anonymous".
 
    To set crossOrigin we poll as well as using MutationObserver to monitor changes
    to the DOM, since videos can be added to and removed from the DOM at any time.
