@@ -17,7 +17,7 @@ const getDocFragment = (node, html) => {
   return document.createRange().createContextualFragment(rstl(html, vars));
 };
 
-const render = (nodes, attr = 'data-include-html') => {
+const render = (nodes, attr = 'data-replacement-html') => {
   nodes = Array.from(nodes || document.querySelectorAll(`[${attr}]`));
   return Promise.all(nodes.map((node) => {
     const url = node.getAttribute(attr);
@@ -37,6 +37,6 @@ const render = (nodes, attr = 'data-include-html') => {
   }));
 }
 
-export default function(nodes, attr = 'data-include-html') {
+export default function(nodes, attr = 'data-replacement-html') {
   return render(nodes, attr);
 };
