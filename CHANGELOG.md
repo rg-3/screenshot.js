@@ -1,3 +1,8 @@
+__Next__
+
+* Numerous improvements to the README and inline documentation in the
+  source code.
+
 __v0.8.0__
 
 * Change the default number of screenshots stored in memory from 8 to 4.
