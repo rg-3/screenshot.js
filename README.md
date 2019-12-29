@@ -33,8 +33,8 @@ A browser extension that takes screenshots.
 
   ![screenshot](./webstore-assets/v0.8.0/copy_screenshot_v0.8.0_1280x800.png)
 
-* Shows the same view as the previous screenshot, with the instructions on how
-  to take screenshots visible.
+* Shows the same view as the previous screenshot, but with the instructions on
+  how to take screenshots visible.
 
   ![screenshot](./webstore-assets/v0.8.0/help_screenshot_v0.8.0_1280x800.png)
 
@@ -92,10 +92,9 @@ A browser extension that takes screenshots.
 
 ### Dependencies
 
-  * **Extension dependencies**
+  * **Runtime dependencies**
 
-    An extension dependency is a dependency that's used while the extension
-    is running.
+    A runtime dependency is a dependency that's used while the extension is running.
 
     * Spectre.css  
       A minimalist CSS framework.
@@ -106,10 +105,9 @@ A browser extension that takes screenshots.
     * PopperJS, tippy.js  
       Provides popovers and tooltips
 
-  * **Developer dependencies**
+  * **Development dependencies**
 
-    A developer dependency is a dependency that's used to develop / build the
-    extension.
+    A development dependency is a dependency that's used to develop the extension.
 
       * SCSS  
         SCSS is a language that extends CSS with many useful features that make
