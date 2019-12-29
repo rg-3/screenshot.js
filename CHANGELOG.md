@@ -1,5 +1,8 @@
 __Next__
 
+* Move the remaining CSS files in `src/css` to `src/scss`, and keep `src/css`
+  for the CSS files that are generated from `src/scss`.
+
 * Numerous improvements to the README and inline documentation in the
   source code.
 

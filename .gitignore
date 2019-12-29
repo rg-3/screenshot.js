@@ -1,3 +1,2 @@
 .sass-cache/
-src/css/browser-action.css
-src/css/settings.css
+src/css/*.css
