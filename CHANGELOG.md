@@ -3,8 +3,8 @@ __Next__
 * Change the maxScreenshots drop down options to:  
   4, 8, 12, 16, 20, 24, 28, 32.
 
-* Move the remaining CSS files in `src/css` to `src/scss`, and keep `src/css`
-  for the CSS files that are generated from `src/scss`.
+* Move the remaining CSS files in `src/css` to `src/scss`.  
+  Keep `src/css` for the CSS files that are generated from `src/scss`.
 
 * Numerous improvements to the README and inline documentation in the
   source code.
