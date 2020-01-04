@@ -125,6 +125,6 @@ Dependencies used to develop the extension:
 
 MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
 
-## CHANGELOG
+## Changelog
 
 [CHANGELOG.md](./CHANGELOG.md)
