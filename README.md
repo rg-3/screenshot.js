@@ -34,8 +34,8 @@ __v0.8.0__
 
   ![screenshot](./webstore-assets/v0.8.0/copy_screenshot_v0.8.0_1280x800.png)
 
-* The same view as previous, but with the instructions on how to take
-  screenshots visible.
+* The same view as previous, but with instructions on how to take screenshots
+  visible.
 
   ![screenshot](./webstore-assets/v0.8.0/help_screenshot_v0.8.0_1280x800.png)
 

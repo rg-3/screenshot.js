@@ -1,4 +1,4 @@
-import rstl from "../../vendor/rstl.js";
+import rstl from "../vendor/rstl.js";
 
 const getTemplateVariables = (node) => {
   const vars = {};

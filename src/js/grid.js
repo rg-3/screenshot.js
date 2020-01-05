@@ -1,7 +1,7 @@
-import drawGrid        from './lib/browser-action/draw-grid.js';
-import drawCommandHelp from './lib/browser-action/draw-command-help.js';
-import includeHTML     from './lib/browser-action/include-html.js';
-import tippyHelp       from './lib/browser-action/tippy-help.js';
+import drawGrid        from './browser-action/draw-grid.js';
+import drawCommandHelp from './browser-action/draw-command-help.js';
+import includeHTML     from './browser-action/include-html.js';
+import tippyHelp       from './browser-action/tippy-help.js';
 
 chrome.runtime.getBackgroundPage((page) => {
   const app = page.app;

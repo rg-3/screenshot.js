@@ -1,6 +1,6 @@
 import Screenshot from './app/screenshot.js';
 import runScript from './app/run-script.js';
-import rstl from '../../vendor/rstl.js';
+import rstl from '../vendor/rstl.js';
 
 const notify = (message, timeout)  => {
   chrome.notifications.create({
@@ -39,7 +39,7 @@ const getVideoHeightAlgorithm = (app) => {
 const codeCache = {};
 let captureHTML5VideoTemplate = null;
 const setCaptureHTML5VideoTemplate = () => {
-  return fetch('/js/lib/content-scripts/capture-html5-video.js')
+  return fetch('/js/content-scripts/capture-html5-video.js')
         .then(async (res) => captureHTML5VideoTemplate = await res.text())
         .catch(setCaptureHTML5VideoTemplate)
 };

@@ -4,9 +4,17 @@
   "description": "A browser extension that takes screenshots.",
   "version": "0.8.0",
   "background": {"page": "html/background.html"},
-  "permissions": ["commands", "notifications", "activeTab", "webNavigation", "webRequest", "webRequestBlocking", "<all_urls>"],
+  "permissions": [
+    "commands",
+    "notifications",
+    "activeTab",
+    "webNavigation",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
   "browser_action": {
-    "default_popup": "html/browser_action.html"
+    "default_popup": "/html/grid-page.html"
   },
   "icons": {
     "48":  "images/camera48.png",
@@ -17,7 +25,7 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["js/lib/content-scripts/set-cross-origin.js"],
+      "js": ["/js/content-scripts/set-cross-origin.js"],
       "run_at": "document_start"
     }
   ],

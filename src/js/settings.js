@@ -1,6 +1,6 @@
-import includeHTML from "./lib/browser-action/include-html.js";
-import tippyHelp from "./lib/browser-action/tippy-help.js";
-import drawCommandHelp from "./lib/browser-action/draw-command-help.js";
+import includeHTML from "./browser-action/include-html.js";
+import tippyHelp from "./browser-action/tippy-help.js";
+import drawCommandHelp from "./browser-action/draw-command-help.js";
 
 const setDefaultOption = (select, currentValue) => {
   for(let i = 0; i < select.options.length; i++) {

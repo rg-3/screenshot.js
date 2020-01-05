@@ -1,9 +1,9 @@
-import App from './lib/background/app.js';
+import App from './background/app.js';
 
 chrome.commands.onCommand.addListener((command) => {
   switch(command) {
     case "capture-visible-tab": {
-      app.runScript({file: "js/lib/content-scripts/detect-scrollbars.js"})
+      app.runScript({file: "js/content-scripts/detect-scrollbars.js"})
          .then((results) => chrome.tabs.captureVisibleTab({format: "png"}, (dataUrl) => app.receiveScreenshot(dataUrl, results[0])))
          .catch(() => chrome.tabs.captureVisibleTab({format: "png"}, app.receiveScreenshot));
       break;
