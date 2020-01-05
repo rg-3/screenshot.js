@@ -2,7 +2,7 @@ const removeWithFadeOut = (el, speed, page) => {
   const seconds = speed / 1000;
   el.style.cssText = `transition: opacity ${seconds}s ease; opacity: 0`;
   setTimeout(() => {
-    clearInterval(page.app.pollId);
+    clearInterval(gridPollId);
     drawGrid(page);
   }, speed);
 };
@@ -24,15 +24,17 @@ const onCopyClick = (screenshotEl, screenshot) => {
   });
 };
 
+let gridPollId = null;
+
 const drawGrid = function(page) {
   const app = page.app;
   const count = app.screenshotCount;
   const grid = document.getElementById('body');
 
-  /* Reset the grid (drawGrid can be called multiple times) */
+  /* Remove the previous grid */
   grid.innerHTML = '';
 
-  /* Draw screenshots grid */
+  /* Draw grid */
   app.screenshots.forEach(function(screenshot) {
     const screenshotEl = document.querySelector('.screenshot-template').cloneNode(true);
     screenshot.createBlob().then(([_, urlToBlob]) => {
@@ -57,11 +59,10 @@ const drawGrid = function(page) {
     grid.style.cssText = "min-height: 245px !important;";
   }
 
-  /* Redraw screenshots grid when screenshot is taken while browser_action.html
-     is open.*/
-  app.pollId = setInterval(() => {
+  /* Redraw the grid when a screenshot is taken while grid-page.html is open */
+  gridPollId = setInterval(() => {
     if(count < app.screenshotCount) {
-      clearInterval(app.pollId);
+      clearInterval(gridPollId);
       drawGrid(page);
     }
   }, 100);
