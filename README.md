@@ -6,7 +6,7 @@ planned for the future.
 
 ## Features
 
-With Screenshot.js, you can:
+With _Screenshot.js_, you can:
 
 * Take a screenshot of the visible area on the current tab using a keyboard shortcut  
   (`Ctrl + Shift + X` on PCs and  `Command + Shift + X` on Macs).
@@ -53,19 +53,20 @@ __Web stores__
 
 * [Chrome Webstore](https://chrome.google.com/webstore/detail/screenshot/ehmcpclingghgidajkpodncclbginiak)
 
-  __Version of Screenshot on the Chrome Webstore could be outdated__
+  __Version of Screenshot.js on the Chrome Webstore could be outdated__
 
-  Screenshot gets flagged for manual review each time it's published on the
+  Screenshot.js gets flagged for manual review each time it's published on the
   Chrome Webstore. The manual review process is sometimes slow relative to the
-  rate at which there are new versions of Screenshot.
+  rate at which there are new versions of Screenshot.js
 
-  To give you an idea of how far behind Screenshot can be: at the time of writing
-  the published version on the webstore is `v0.2.5` while the current version of
-  Screenshot is `v0.7.0`, with `v0.8.0` almost complete.
+  To give you an idea of how far behind Screenshot.js can be: At the time of
+  writing the published version on the webstore is `v0.2.5` while the current
+  version of Screenshot.js is `v0.7.0`, with `v0.8.0` almost complete.
 
   It's recommended to check how far behind the webstore version is before
   installing, and to consider installing from source if it's outdated. The
-  current version of Screenshot can be seen on the [releases page](https://github.com/rg-3/screenshot.js/releases).
+  current version of Screenshot.js can be seen on the
+  [releases page](https://github.com/rg-3/screenshot.js/releases).
 
 * Firefox ...
 
