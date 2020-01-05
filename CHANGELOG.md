@@ -1,6 +1,19 @@
 __Next__
 
-* Change the maxScreenshots drop down options to:  
+* Resort `src/html`, `src/js`, `src/css`:  
+
+  * The contents of `src/js/lib/` have been moved to `src/js/`.
+
+  * `browser_action.html` renamed to `grid-page.html`.
+
+  * `browser_action.css` renamed to `grid-page.css`.
+
+  * `settings.html` renamed to `settings-page.html`.
+
+  * `settings.css` renamed to `settings-page.css`.
+
+
+* Change the max screenshots drop down options to:  
   4, 8, 12, 16, 20, 24, 28, 32.
 
 * Move the remaining CSS files in `src/css` to `src/scss`.  
