@@ -8,7 +8,7 @@ planned for the future.
 
 With _Screenshot.js_, you can:
 
-* Take a screenshot of the visible area on the current tab using a keyboard shortcut  
+* Take a screenshot of the page on the current tab using a keyboard shortcut  
   (`Ctrl + Shift + X` on PCs and  `Command + Shift + X` on Macs).
 
 * Take a screenshot of the video being played on the current tab using a keyboard shortcut  

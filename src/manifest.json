@@ -35,7 +35,7 @@
         "default": "Ctrl + Shift + X",
         "mac": "Command + Shift + X"
       },
-      "description": "Takes a screenshot of the visible area on the current tab."
+      "description": "Takes a screenshot of the page on the current tab."
     },
     "capture-html5-video": {
       "suggested_key": {
