@@ -70,7 +70,7 @@ export default function() {
            */
            for(let i = 0; i < dataUrls.length; i++) {
              if(dataUrls[i] === "") {
-               notify("Fingerprint protection settings didn't allow a screenshot to be taken", 3000);
+               notify("Update device recognition settings to be more permissive in order to take a screenshot of the video on this page", 8000);
                return;
              }
            }

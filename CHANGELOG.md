@@ -1,5 +1,8 @@
 __Next__
 
+* Improve device recognition settings notification.  
+  See [#6](https://github.com/rg-3/screenshot.js/issues/6) for more info.
+
 * Resort `src/html`, `src/js`, `src/css`:  
 
   * The contents of `src/js/lib/` have been moved to `src/js/`.
