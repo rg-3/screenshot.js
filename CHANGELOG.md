@@ -1,5 +1,8 @@
 __Next__
 
+* Delete __all__ properties belonging to a Screenshot object after the objects
+  blob is revoked (using `revokeBlob()`). 
+
 * Improve device recognition settings notification.  
   See [#6](https://github.com/rg-3/screenshot.js/issues/6) for more info.
 

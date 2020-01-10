@@ -14,10 +14,11 @@ export default function(app, dataUrl, options = {}) {
   this.urlToBlob = null;
   this.blob = null;
 
-  /* Slots for HTMLImage object, its width & height. */
+  /* Slot for HTMLImage, its width and height. */
   this.image = null;
   this.width = null;
   this.height = null;
+
   this.timestamp = new Date();
   this.canvas = new Canvas(options);
 
@@ -36,17 +37,16 @@ export default function(app, dataUrl, options = {}) {
         this.id = this.urlToBlob.split('/').pop();
         return [this.blob, this.urlToBlob];
       });
-    })
+    });
   };
 
   this.revokeBlob = () => {
     if(this.urlToBlob) {
       URL.revokeObjectURL(this.urlToBlob);
-    }
-    this.id = null;
-    this.urlToBlob = null;
-    this.blob = null;
-    this.image = null;
+      for(let prop in this) {
+        if(this.hasOwnProperty(prop)) { delete(this[prop]); };
+      };
+    };
   };
 
   this.getFilename = () => {
