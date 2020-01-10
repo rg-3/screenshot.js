@@ -43,10 +43,6 @@ __v0.8.0__
 
   ![screenshot](./webstore-assets/v0.8.0/settings_screenshot_v0.8.0_1280x800-1.png)
 
-__Older screenshots__
-
-[Available in ./webstore-assets/](./webstore-assets/)
-
 ## Install
 
 __Web stores__
