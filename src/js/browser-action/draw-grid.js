@@ -1,3 +1,5 @@
+let gridPollId = null;
+
 const removeWithFadeOut = (el, speed, page) => {
   const seconds = speed / 1000;
   el.style.cssText = `transition: opacity ${seconds}s ease; opacity: 0`;
@@ -23,8 +25,6 @@ const onCopyClick = (screenshotEl, screenshot) => {
     navigator.clipboard.write([clipItem]);
   });
 };
-
-let gridPollId = null;
 
 const drawGrid = function(page) {
   const app = page.app;
