@@ -44,7 +44,7 @@ export default function(app, dataUrl, options = {}) {
     if(this.urlToBlob) {
       URL.revokeObjectURL(this.urlToBlob);
       for(let prop in this) {
-        if(this.hasOwnProperty(prop)) { delete(this[prop]); };
+        if(this.hasOwnProperty(prop)) { delete(this[prop]); }
       };
     };
   };

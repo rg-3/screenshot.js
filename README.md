@@ -27,21 +27,13 @@ With _Screenshot.js_, you can:
 
 ## Screenshots
 
-__v0.8.0__
+__v0.9.0)__
 
-* The view that previews screenshots, and lets you perform actions on them.  
-  (Such as open, save, copy, and delete).
 
-  ![screenshot](./webstore-assets/v0.8.0/copy_screenshot_v0.8.0_1280x800.png)
+![help screenshot](./webstore-assets/v0.9.0/help_screenshot_1280x800.png)
 
-* The same view as previous, but with instructions on how to take screenshots
-  visible.
 
-  ![screenshot](./webstore-assets/v0.8.0/help_screenshot_v0.8.0_1280x800.png)
-
-* The settings view, with a drop down expanded.
-
-  ![screenshot](./webstore-assets/v0.8.0/settings_screenshot_v0.8.0_1280x800-1.png)
+![settings screenshot](./webstore-assets/v0.9.0/settings_screenshot_1280x800.png)
 
 ## Install
 

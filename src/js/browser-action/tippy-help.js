@@ -4,7 +4,7 @@ export default function() {
     trigger: 'click',
     arrow: true,
     placement: 'top',
-    maxWidth: 450,
+    maxWidth: 390,
     content: () => {
       const el = document.getElementById('popover-help-content').cloneNode(true);
       el.classList.remove('hidden');
