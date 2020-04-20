@@ -18,7 +18,7 @@ chrome.runtime.getBackgroundPage((page) => {
      Allows user to switch between capturing a video at its natural size or
      at its visible size.
   */
-  const vSizeSelect = document.getElementById('video-capture-size');
+  const vSizeSelect = document.getElementById('video-size');
   setDefaultOption(vSizeSelect, app.videoSize);
   vSizeSelect.addEventListener('change', (event) => {
     const option = event.target;
@@ -29,7 +29,7 @@ chrome.runtime.getBackgroundPage((page) => {
     Allows  user to select the number of screenshots stored in temporary
     browser memory.
   */
-  const maxSelect = document.getElementById('maxScreenshots');
+  const maxSelect = document.getElementById('max-screenshots');
   setDefaultOption(maxSelect, app.maxScreenshots.toString())
   maxSelect.addEventListener('change', (event) => {
     const option = event.target;

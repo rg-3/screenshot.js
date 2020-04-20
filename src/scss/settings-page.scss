@@ -1,14 +1,15 @@
 @import "partials/base";
 
 #container {
-  height: 245px;
 
   #body {
     .settings-group {
-      margin: 0 0 15px 0;
+      margin: 0 0 0px 0;
     }
 
     .form-group {
+      margin: 0 0 10px 0;
+
       select.form-input {
         display: inline !important;
         width: unset !important;
@@ -17,6 +18,7 @@
   }
 
   #footer {
-    position: fixed !important;
+    position: fixed;
+    bottom: 0;
   }
 }

@@ -3,41 +3,15 @@
 @import "/scss/vendor/tippy-themes/light-border.css";
 
 html {
-  width: 736px;
+  width: 425px;
 }
 
 #container {
-  min-height: 350px;
-
-  #header {
-    width: 100%;
-    margin: 10px 0 10px 0;
-    text-align: center;
-
-    a {
-      color: #000;
-      text-decoration: none;
-      &:visited , &:active , &:hover {
-        text-decoration: none;
-      }
-    }
-
-    a#logo {
-      #heading-text {
-        font-size: 18px;
-        font-weight: bold;
-        vertical-align: top;
-      }
-    }
-    .icons-container {
-      float: left;
-      width: 45%;
-    }
-  }
+  min-height: 380px;
 
   #body {
-    min-height: 245px;
-    margin: 0 0 15px 10px;
+    min-height: inherit;
+    margin: 20px 20px 15px 30px;
 
     .loading {
       position: relative;
@@ -50,20 +24,38 @@ html {
     background-color: #FAF6F6;
     border-top: 1px solid #C0C0C0;
     clear: both;
-    position: sticky;
-    bottom: 0;
-    padding: 5px;
+    padding-top: 15px;
     height: 50px;
     width: 100%;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a#screenshot-js {
+      font-weight: bold;
+      float: left;
+
+      position: relative;
+      left: 5px;
+      bottom: 3px;
+
+      &:active, &:hover, &:visited {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+
     #nav-icon {
-      position: fixed;
-      left: 47%;
+      position: sticky;
+      left: 43%;
       bottom: 10px;
     }
+
     #help-icon {
-      position: fixed;
-      left: 51%;
-      bottom: 10px;
+      position: sticky;
+      left: 50%;
       cursor: pointer;
     }
   }
@@ -72,6 +64,10 @@ html {
 .tippy-popper {
   .shortcut {
     font-weight: bold;
+  }
+
+  .command-help {
+    font-size: 0.85em;
   }
 
   .command-help:not(:last-child) {
