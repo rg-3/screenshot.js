@@ -10,7 +10,7 @@ const runScriptOnFrames = (allFrames, options, resolve, reject) => {
     } else {
       responses.push(response);
     }
-    if (count === allFrames.length) {
+    if (count >= allFrames.length) {
       if (responses.length) {
         resolve(responses);
       } else {
