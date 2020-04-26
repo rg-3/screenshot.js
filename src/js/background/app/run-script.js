@@ -1,48 +1,57 @@
-const promise = (resolve, reject, options) => {
+const runScriptOnFrames = (allFrames, options, resolve, reject) => {
   const errors = [];
-  let responses = [];
-  let runCount = 0;
+  const responses = [];
+  let count = 0;
 
-  const runScriptOnFrame = (frame, allFrames) => {
+  const onScriptResponse = (response) => {
+    count++;
+    if(chrome.runtime.lastError) {
+      errors.push(chrome.runtime.lastError)
+    } else {
+      responses.push(response);
+    }
+    if(count === allFrames.length) {
+      if(responses.length > 0) {
+        resolve(responses);
+      } else {
+        reject(errors);
+      }
+    }
+  };
+
+  allFrames.forEach((frame) => {
     chrome.tabs.executeScript(
       frame.tabId,
       Object.assign({}, options, {frameId: frame.frameId}),
-      (response) => {
-        if(chrome.runtime.lastError) {
-          errors.push(chrome.runtime.lastError)
-        } else {
-          responses = responses.concat(response);
-        }
-        runCount += 1;
-        if(runCount === allFrames.length) {
-          if(responses.length > 0) {
-            resolve(responses);
-          } else {
-            reject(errors);
-          }
-        }
-      }
+      onScriptResponse
     );
-  };
-
-  chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
-    if(chrome.runtime.lastError) {
-      reject([chrome.runtime.lastError])
-    }
-    chrome.webNavigation.getAllFrames({tabId: tabs[0].id}, (frames) => {
-      if(chrome.runtime.lastError) {
-        reject([chrome.runtime.lastError])
-      }
-      frames.forEach((frame) => runScriptOnFrame(frame, frames));
-    });
   });
 };
 
 /*
-  Runs a script on all frames on the current tab, including frames that have
-  been added to the DOM after page load.
-*/
+  Runs a script on all frames on the current tab.
+  The 'options' argument is passed to `chrome.tabs.executeScript`.
 
+  Example:
+
+  import runScript from './background/app/run-script.js';
+  runScript({file: "some/file.js"})
+  .then((responses) => ...)
+  .catch((errors) => ...);
+
+*/
 export default function(options) {
-  return new Promise((resolve, reject) => promise(resolve, reject, options));
+  return new Promise((resolve, reject) => {
+    chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
+      if(chrome.runtime.lastError) {
+        reject([chrome.runtime.lastError])
+      }
+      chrome.webNavigation.getAllFrames({tabId: tabs[0].id}, (frames) => {
+        if(chrome.runtime.lastError) {
+          reject([chrome.runtime.lastError])
+        }
+        runScriptOnFrames(frames, options, resolve, reject);
+      });
+    });
+  });
 };
