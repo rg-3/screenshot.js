@@ -1,6 +1,5 @@
 import Screenshot from './app/screenshot.js';
 import runScript from './app/run-script.js';
-import rstl from '../vendor/rstl.js';
 
 const notify = (message, timeout)  => {
   chrome.notifications.create({

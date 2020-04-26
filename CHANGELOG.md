@@ -1,3 +1,8 @@
+__Next__
+
+* Add an updated copy of [`rstl.min.js`](https://github.com/rg-3/rstl.js), and
+  link to it through a `<script>` tag.
+
 __v0.9.0__
 
 * Halve the width of the extension along with other UI improvements.

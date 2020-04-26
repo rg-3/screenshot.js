@@ -1,5 +1,3 @@
-import rstl from "../vendor/rstl.js";
-
 const getTemplateVariables = (node) => {
   const vars = {};
   Object.keys(node.dataset).forEach((prop) => {
