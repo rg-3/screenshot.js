@@ -1,7 +1,7 @@
 ## Screenshot.js
 
 A browser extension that takes screenshots.  
-The extension works on all Chromium-derived browsers.
+The extension works on all Chromium-derived (eg Chrome) browsers.
 Firefox support is planned for the future.
 
 ## Features
@@ -42,25 +42,6 @@ __#2__
 __Web stores__
 
 * [Chrome Webstore](https://chrome.google.com/webstore/detail/screenshot/ehmcpclingghgidajkpodncclbginiak)
-
-  __Version of Screenshot.js on the Chrome Webstore could be outdated__
-
-  Screenshot.js gets flagged for manual review each time it's published on the
-  Chrome Webstore. The manual review process is sometimes slow relative to the
-  rate at which there are new versions of Screenshot.js
-
-  To give you an idea of how far behind Screenshot.js can be: At the time of
-  writing the published version on the webstore is `v0.2.5` while the current
-  version of Screenshot.js is `v0.7.0`, with `v0.8.0` almost complete.
-
-  It's recommended to check how far behind the webstore version is before
-  installing, and to consider installing from source if it's outdated. The
-  current version of Screenshot.js can be seen on the
-  [releases page](https://github.com/rg-3/screenshot.js/releases).
-
-* Firefox ...
-
-  Coming soon.
 
 __From source__
 
