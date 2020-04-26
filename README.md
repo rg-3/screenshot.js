@@ -1,8 +1,7 @@
 ## Screenshot.js
 
-A browser extension that takes screenshots.  
-The extension works on all Chromium-derived (eg Chrome) browsers.
-Firefox support is planned for the future.
+A browser extension that takes screenshots of web pages and of videos on web pages.  
+The extension works on all Chromium-derived (eg Chrome) browsers. Firefox support is planned for the future.
 
 ## Features
 
