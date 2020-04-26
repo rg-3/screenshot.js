@@ -5,13 +5,13 @@ const runScriptOnFrames = (allFrames, options, resolve, reject) => {
 
   const onScriptResponse = (response) => {
     count++;
-    if(chrome.runtime.lastError) {
+    if (chrome.runtime.lastError) {
       errors.push(chrome.runtime.lastError)
     } else {
       responses.push(response);
     }
-    if(count === allFrames.length) {
-      if(responses.length > 0) {
+    if (count === allFrames.length) {
+      if (responses.length) {
         resolve(responses);
       } else {
         reject(errors);
@@ -43,11 +43,11 @@ const runScriptOnFrames = (allFrames, options, resolve, reject) => {
 export default function(options) {
   return new Promise((resolve, reject) => {
     chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
-      if(chrome.runtime.lastError) {
+      if (chrome.runtime.lastError) {
         reject([chrome.runtime.lastError])
       }
       chrome.webNavigation.getAllFrames({tabId: tabs[0].id}, (frames) => {
-        if(chrome.runtime.lastError) {
+        if (chrome.runtime.lastError) {
           reject([chrome.runtime.lastError])
         }
         runScriptOnFrames(frames, options, resolve, reject);
