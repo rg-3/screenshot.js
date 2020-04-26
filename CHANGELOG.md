@@ -1,6 +1,6 @@
 __v0.9.0__
 
-* Halved width of the extension along with other UI improvements.
+* Halve the width of the extension along with other UI improvements.
 
 * Delete all properties belonging to a Screenshot object after the objects
   blob is revoked using `revokeBlob()`.
