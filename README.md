@@ -6,8 +6,6 @@ Firefox support is planned for the future.
 
 ## Features
 
-With _Screenshot.js_, you can:
-
 * Take a screenshot of the page on the current tab using a keyboard shortcut  
   (`Ctrl + Shift + X` on PCs and  `Command + Shift + X` on Macs).
 
@@ -16,14 +14,17 @@ With _Screenshot.js_, you can:
 
 * Store screenshots in temporary browser memory.
 
-* Open screenshots in a new tab, save them to disk, copy them to the clipboard  
-  and delete them from temporary browser memory.
+* Open screenshots in a new tab.
 
-* Select the number of screenshots stored in temporary browser memory.  
-  (Default is 4).
+* Save screenshots to disk.
 
-* Select between capturing videos at their natural size or at their visible size.   
-  (Default is visible size)
+* Copy screenshots to the clipboard.
+
+* Delete screenshots from temporary browser memory.
+
+* Choose the number of screenshots stored in temporary browser memory.
+
+* Choose between capturing videos at their natural size or at their visible size.
 
 ## Screenshots
 
