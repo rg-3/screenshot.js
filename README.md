@@ -27,11 +27,13 @@ With _Screenshot.js_, you can:
 
 ## Screenshots
 
-__v0.9.0)__
+__v0.9.0__
 
+__#1__
 
 ![help screenshot](./webstore-assets/v0.9.0/help_screenshot_1280x800.png)
 
+__#2__
 
 ![settings screenshot](./webstore-assets/v0.9.0/settings_screenshot_1280x800.png)
 
