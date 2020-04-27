@@ -8,7 +8,7 @@ const runScriptOnFrames = (allFrames, options, resolve, reject) => {
     if (chrome.runtime.lastError) {
       errors.push(chrome.runtime.lastError)
     } else {
-      responses.push(response);
+      responses.push(...response);
     }
     if (count >= allFrames.length) {
       if (responses.length) {
