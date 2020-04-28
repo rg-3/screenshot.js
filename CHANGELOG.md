@@ -1,5 +1,9 @@
 __Next__
 
+* Add `extraHeaders` to `opt_extraInfoSpec` in order to be able to
+  set the `access-control-allow-origin` header successfully. This
+  appears to have been required since Chrome 79.
+
 * Add an updated copy of [`rstl.min.js`](https://github.com/rg-3/rstl.js), and
   link to it through a `<script>` tag.
 

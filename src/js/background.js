@@ -59,7 +59,7 @@ chrome.webRequest.onHeadersReceived.addListener(
     return {responseHeaders: headers};
   },
   {urls: ["<all_urls>"], types: ["media"]},
-  ["blocking", "responseHeaders"]
+  ["blocking", "extraHeaders", "responseHeaders"]
 );
 
 /* Exports
