@@ -1,4 +1,4 @@
-__Next__
+__v0.9.3__
 
 * Add `extraHeaders` to `opt_extraInfoSpec` in order to be able to
   set the `access-control-allow-origin` header successfully. This
