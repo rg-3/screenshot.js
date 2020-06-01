@@ -1,3 +1,7 @@
+__v0.9.4__
+
+* Drop `.js` suffix from the README, and extension UI.
+
 __v0.9.3__
 
 * Add `extraHeaders` to `opt_extraInfoSpec` in order to be able to
