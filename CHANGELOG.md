@@ -1,6 +1,11 @@
+__v0.9.5 (unreleased)__
+
+* Change "Store the last X screenshots in temporary browser memory" to
+  "Store the last X screenshots" on the settings page.
+
 __v0.9.4__
 
-* Drop `.js` suffix from the README, and extension UI.
+* Drop `.js` suffix from the README and extension UI.
 
 __v0.9.3__
 
