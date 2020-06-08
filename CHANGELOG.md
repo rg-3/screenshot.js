@@ -1,5 +1,7 @@
 __v0.9.5 (unreleased)__
 
+* Move `LICENSE.txt` to `src/LICENSE.txt`.
+
 * Change "Store the last X screenshots in temporary browser memory" to
   "Store the last X screenshots" on the settings page.
 

@@ -95,7 +95,7 @@ Dependencies used to develop the extension:
 
 ## License
 
-MIT license. See [./LICENSE.txt](./LICENSE.txt) for details.
+MIT license. See [./src/LICENSE.txt](./src/LICENSE.txt) for details.
 
 ## Changelog
 
