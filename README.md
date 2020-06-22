@@ -1,6 +1,6 @@
 ## Screenshot
 
-A browser extension that takes screenshots of web pages and of videos on web pages.  
+A browser extension that takes screenshots of web pages and web videos.  
 The extension works on all Chromium-derived (eg Chrome) browsers. Firefox support is planned for the future.
 
 ## Features
