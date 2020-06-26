@@ -19,10 +19,10 @@ chrome.runtime.getBackgroundPage((page) => {
      at its visible size.
   */
   const vSizeSelect = document.getElementById('video-size');
-  setDefaultOption(vSizeSelect, app.videoSize);
+  setDefaultOption(vSizeSelect, app.settings.getItem('videoSize'));
   vSizeSelect.addEventListener('change', (event) => {
     const option = event.target;
-    app.videoSize = option.value;
+    app.settings.setItem('videoSize', option.value);
   });
 
   /*
@@ -30,7 +30,7 @@ chrome.runtime.getBackgroundPage((page) => {
     browser memory.
   */
   const maxSelect = document.getElementById('max-screenshots');
-  setDefaultOption(maxSelect, app.maxScreenshots.toString())
+  setDefaultOption(maxSelect, String(app.settings.getItem('maxScreenshots')));
   maxSelect.addEventListener('change', (event) => {
     const option = event.target;
     if(option.value < app.maxScreenshots) {
@@ -41,7 +41,7 @@ chrome.runtime.getBackgroundPage((page) => {
         }
       }
     }
-    app.maxScreenshots = Number(option.value);
+    app.settings.setItem('maxScreenshots', Number(option.value));
   });
 
   app.getKeyboardCommands().then((commands) => {

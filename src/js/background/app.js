@@ -1,4 +1,5 @@
 import Screenshot from './app/screenshot.js';
+import Settings from './app/settings.js';
 import runScript from './app/run-script.js';
 
 const notify = (message, timeout)  => {
@@ -45,8 +46,10 @@ const setCaptureHTML5VideoTemplate = () => {
 setCaptureHTML5VideoTemplate();
 
 export default function() {
-  this.videoSize = "visible";
-  this.maxScreenshots = 4;
+  this.localStorage = window.localStorage;
+  this.settings = new Settings(this);
+  this.videoSize = this.settings.getItem("videoSize");
+  this.maxScreenshots = this.settings.getItem("maxScreenshots");
   this.screenshots = [];
   this.screenshotCount = 0;
 
