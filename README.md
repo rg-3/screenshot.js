@@ -1,9 +1,23 @@
 ## Screenshot
 
-A browser extension that takes screenshots of web pages and web videos.  
-The extension works on all Chromium-derived (eg Chrome) browsers. Firefox support is planned for the future.
+**Table of contents**
 
-## Features
+* <a href="#introduction"> Introduction </a>
+* <a href="#features"> Features </a>
+* <a href='#install'>Install</a>
+  * <a href='#install-webstores'> Webstores </a>
+  * <a href='#install-fromsource'> From source </a>
+* <a href='#screenshots'>Screenshots</a>
+* <a href='#dependencies'>Dependencies</a>
+* <a href='#credit'>Credit</a>
+* <a href='#license'>License</a>
+
+## <a id='introduction'>Introduction</a>
+
+A browser extension that takes screenshots of web pages and web videos.  
+The extension works on all Chromium-derived (eg Chrome) browsers.
+
+## <a id='features'>Features</a>
 
 * Take a screenshot of the page on the current tab using a keyboard shortcut  
   (`Ctrl + Shift + X` on PCs and  `Command + Shift + X` on Macs).
@@ -11,41 +25,31 @@ The extension works on all Chromium-derived (eg Chrome) browsers. Firefox suppor
 * Take a screenshot of the video being played on the current tab using a keyboard shortcut  
   (`Ctrl + Shift + V` on PCs and  `Command + Shift + V` on Macs).
 
-* Store screenshots in temporary browser memory.
+* Open screenshots in a new tab, save screenshots to disk, and copy screenshots
+  to the clipboard.
+  
+* Easy to use, respects your privacy.
 
-* Open screenshots in a new tab.
+## <a id='screenshots'>Screenshots</a>
 
-* Save screenshots to disk.
-
-* Copy screenshots to the clipboard.
-
-* Delete screenshots from temporary browser memory.
-
-* Choose the number of screenshots stored in temporary browser memory.
-
-* Choose between capturing videos at their natural size or at their visible size.
-
-## Screenshots
-
-__v0.9.0__
-
-__#1__
+**1.**
 
 ![help screenshot](./webstore-assets/v0.9.0/help_screenshot_1280x800.png)
 
-__#2__
+**2.**
 
 ![settings screenshot](./webstore-assets/v0.9.0/settings_screenshot_1280x800.png)
 
-## Install
 
-__Web stores__
+## <a id='install'> Install </a>
+
+<a id='install-webstores'>**Webstores**</a>
 
 * [Chrome Webstore](https://chrome.google.com/webstore/detail/screenshot/ehmcpclingghgidajkpodncclbginiak)
 
-__From source__
+<a id='install-fromsource'>**From source**</a>
 
-* Grab a copy of the extension:
+* Clone a copy of the extension:
 
       git clone https://github.com/rg-3/screenshot.js
 
@@ -55,7 +59,7 @@ __From source__
       cd screenshot.js
       sh scripts/build.sh
 
-* In your browser, open `chrome://extensions`.
+* Open `chrome://extensions` in your browser.
 
 * Enable the `Developer mode` checkbox.
 
@@ -64,9 +68,9 @@ __From source__
 
 * Done.
 
-## Dependencies
+## <a id='dependencies'> Dependencies </a>
 
-__Runtime dependencies__
+**Runtime dependencies**
 
 Dependencies used while the extension is running:
 
@@ -79,7 +83,7 @@ Dependencies used while the extension is running:
 * PopperJS, tippy.js  
   Provides popovers and tooltips.
 
-__Development dependencies__
+**Development dependencies**
 
 Dependencies used to develop the extension:
 
@@ -87,16 +91,12 @@ Dependencies used to develop the extension:
     SCSS is a language that extends CSS with useful features that make
     styling pages easier and more maintainable. It is transpiled to CSS.
 
-## Credit
+## <a id='credit'>Credit</a>
 
   * Thanks and credit to
     [Double-J Design](http://www.iconarchive.com/artist/double-j-design.html)
     for authoring the green camera icons.
 
-## License
+## <a id='license'>License</a>
 
 MIT license. See [./src/LICENSE.txt](./src/LICENSE.txt) for details.
-
-## Changelog
-
-[CHANGELOG.md](./CHANGELOG.md)
