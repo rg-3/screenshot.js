@@ -1,4 +1,4 @@
-__v0.9.5 (unreleased)__
+__v0.10.0__
 
 * Settings: persist settings between browser restarts.
 
