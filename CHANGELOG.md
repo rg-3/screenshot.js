@@ -1,3 +1,7 @@
+__v0.10.1__
+
+* Fix error during read of settings.
+
 __v0.10.0__
 
 * Settings: persist settings between browser restarts.

@@ -7,7 +7,7 @@ export default function(app) {
   };
 
   const settings = localStorage.getItem('settings') ?
-                   JSON.parse(Object.assign({}, defaults, localStorage.getItem('settings'))) : Object.assign({}, defaults);
+                   Object.assign({}, defaults, JSON.parse(localStorage.getItem('settings'))) : Object.assign({}, defaults);
 
   this.getItem = (key) => {
     return settings[key];
