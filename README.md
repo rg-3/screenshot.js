@@ -4,10 +4,10 @@
 
 * <a href="#introduction"> Introduction </a>
 * <a href="#features"> Features </a>
+* <a href='#screenshots'>Screenshots</a>
 * <a href='#install'>Install</a>
   * <a href='#install-webstores'> Webstores </a>
   * <a href='#install-fromsource'> From source </a>
-* <a href='#screenshots'>Screenshots</a>
 * <a href='#dependencies'>Dependencies</a>
 * <a href='#credit'>Credit</a>
 * <a href='#license'>License</a>
@@ -27,7 +27,7 @@ The extension works on all Chromium-derived (eg Chrome) browsers.
 
 * Open screenshots in a new tab, save screenshots to disk, and copy screenshots
   to the clipboard.
-  
+
 * Easy to use, respects your privacy.
 
 ## <a id='screenshots'>Screenshots</a>
