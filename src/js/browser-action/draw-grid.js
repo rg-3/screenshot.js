@@ -27,9 +27,9 @@ const onCopyClick = (screenshotEl, screenshot) => {
 };
 
 const drawGrid = function(page) {
-  const app = page.app;
+  const app   = page.app;
   const count = app.screenshotCount;
-  const grid = document.getElementById('body');
+  const grid  = document.getElementById('body');
 
   /* Remove the previous grid */
   grid.innerHTML = '';
@@ -78,10 +78,11 @@ const drawGrid = function(page) {
   tippy('[data-tippy-content]', {
     placement: 'bottom',
     distance: 5,
+    flip: false,
     trigger: 'mouseenter',
     multiple: true,
     arrow: false
   });
 };
 
-export default drawGrid
+export default drawGrid;

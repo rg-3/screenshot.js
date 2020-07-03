@@ -10,8 +10,10 @@ html {
   min-height: 380px;
 
   #body {
+    height: 100%;
+    overflow: hidden;
     min-height: inherit;
-    margin: 20px 20px 15px 30px;
+    margin: 20px 20px 45px 30px;
 
     .loading {
       position: relative;
@@ -21,6 +23,8 @@ html {
   }
 
   #footer {
+    position: fixed;
+    bottom: 0;
     background-color: #FAF6F6;
     border-top: 1px solid #C0C0C0;
     clear: both;

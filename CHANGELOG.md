@@ -1,3 +1,7 @@
+__v0.10.2__
+
+* Improve UI and UX when there are more than 4 screenshots.
+
 __v0.10.1__
 
 * Fix error during read of settings.
