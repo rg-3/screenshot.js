@@ -1,5 +1,7 @@
 __HEAD__
 
+* Remove underline that appears after clicking save button.
+
 * Change default screenshot filename to `Screenshot X.png`, where X is the
   screenshot index number.
 

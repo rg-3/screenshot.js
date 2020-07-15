@@ -20,6 +20,13 @@
   .action-bar span {
     cursor: pointer;
   }
+
+  .action-bar a {
+    &:link { text-decoration: none; }
+    &:hover { text-decoration: none; }
+    &:visited { text-decoration: none; }
+    &:active { text-decoration: none; }
+  }
 }
 
 #footer {
