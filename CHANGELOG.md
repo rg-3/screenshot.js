@@ -1,4 +1,4 @@
-__HEAD__
+__v0.10.3__
 
 * Remove underline that appears after clicking save button.
 
