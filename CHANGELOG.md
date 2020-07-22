@@ -1,3 +1,7 @@
+__HEAD__
+
+* Update license year; `src/LICENSE.txt`.
+
 __v0.10.3__
 
 * Remove underline that appears after clicking save button.

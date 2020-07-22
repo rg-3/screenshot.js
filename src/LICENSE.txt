@@ -1,6 +1,6 @@
 MIT License
 
-Copyright 2019
+Copyright 2020
 Robert Gleeson
 https://github.com/rg-3/screenshot.js
 
