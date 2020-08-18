@@ -1,10 +1,11 @@
-## Screenshot
+<p align="center">
+  <img src="/webstore-assets/screenshot.png" alt="Screenshot logo">
+</p>
 
 **Table of contents**
 
 * <a href="#introduction"> Introduction </a>
 * <a href="#features"> Features </a>
-* <a href='#screenshots'>Screenshots</a>
 * <a href='#install'>Install</a>
   * <a href='#install-webstores'> Webstores </a>
   * <a href='#install-fromsource'> From source </a>
@@ -29,16 +30,6 @@ The extension works on all Chromium-derived (eg Chrome) browsers.
   to the clipboard.
 
 * Easy to use, respects your privacy.
-
-## <a id='screenshots'>Screenshots</a>
-
-**1.**
-
-![help screenshot](./webstore-assets/v0.9.0/help_screenshot_1280x800.png)
-
-**2.**
-
-![settings screenshot](./webstore-assets/v0.9.0/settings_screenshot_1280x800.png)
 
 
 ## <a id='install'> Install </a>
