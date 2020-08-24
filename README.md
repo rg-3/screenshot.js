@@ -10,20 +10,20 @@
   * <a href='#install-webstores'> Webstores </a>
   * <a href='#install-fromsource'> From source </a>
 * <a href='#dependencies'>Dependencies</a>
-* <a href='#credit'>Credit</a>
+* <a href='#thanks'>Thanks</a>
 * <a href='#license'>License</a>
 
 ## <a id='introduction'>Introduction</a>
 
-A browser extension that takes screenshots of web pages and web videos.  
+A browser extension that takes screenshots of web pages and web videos.
 The extension works on all Chromium-derived (eg Chrome) browsers.
 
 ## <a id='features'>Features</a>
 
-* Take a screenshot of the page on the current tab using a keyboard shortcut  
+* Take a screenshot of the page on the current tab using a keyboard shortcut
   (`Ctrl + Shift + X` on PCs and  `Command + Shift + X` on Macs).
 
-* Take a screenshot of the video being played on the current tab using a keyboard shortcut  
+* Take a screenshot of the video being played on the current tab using a keyboard shortcut
   (`Ctrl + Shift + V` on PCs and  `Command + Shift + V` on Macs).
 
 * Open screenshots in a new tab, save screenshots to disk, and copy screenshots
@@ -44,7 +44,7 @@ The extension works on all Chromium-derived (eg Chrome) browsers.
 
       git clone https://github.com/rg-3/screenshot.js
 
-* Convert the SCSS files to CSS  
+* Convert the SCSS files to CSS
   (This step requires the `scss` executable to be in `$PATH`):
 
       cd screenshot.js
@@ -65,26 +65,26 @@ The extension works on all Chromium-derived (eg Chrome) browsers.
 
 Dependencies used while the extension is running:
 
-* Spectre.css  
+* Spectre.css
   Minimalist CSS framework.
 
-* Feather Icons  
+* Feather Icons
   Provides icons.
 
-* PopperJS, tippy.js  
+* PopperJS, tippy.js
   Provides popovers and tooltips.
 
 **Development dependencies**
 
 Dependencies used to develop the extension:
 
-  * SCSS  
+  * SCSS
     SCSS is a language that extends CSS with useful features that make
     styling pages easier and more maintainable. It is transpiled to CSS.
 
-## <a id='credit'>Thanks</a>
+## <a id='thanks'>Thanks</a>
 
-Thanks to [Raj Dev](https://freeicons.io/profile/714) from [freeicons.io](https://www.freeicons.io) 
+Thanks to [Raj Dev](https://freeicons.io/profile/714) from [freeicons.io](https://www.freeicons.io)
 who authored the icons used by this extension.
 
 ## <a id='license'>License</a>
