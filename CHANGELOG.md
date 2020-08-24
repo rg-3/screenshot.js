@@ -1,5 +1,7 @@
 __HEAD__
 
+* Update extension icon.
+
 * Update license year; `src/LICENSE.txt`.
 
 __v0.10.3__

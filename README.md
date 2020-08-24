@@ -82,11 +82,10 @@ Dependencies used to develop the extension:
     SCSS is a language that extends CSS with useful features that make
     styling pages easier and more maintainable. It is transpiled to CSS.
 
-## <a id='credit'>Credit</a>
+## <a id='credit'>Thanks</a>
 
-  * Thanks and credit to
-    [Double-J Design](http://www.iconarchive.com/artist/double-j-design.html)
-    for authoring the green camera icons.
+Thanks to [Raj Dev](https://freeicons.io/profile/714) from [freeicons.io](https://www.freeicons.io) 
+who authored the icons used by this extension.
 
 ## <a id='license'>License</a>
 
