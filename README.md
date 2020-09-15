@@ -80,9 +80,8 @@ Dependencies used while the extension is running:
 
 Dependencies used to develop the extension:
 
-  * SCSS  
-    SCSS is a language that extends CSS with useful features that make
-    styling pages easier and more maintainable. It is transpiled to CSS.
+  * [Saas](https://www.sass-lang.com)  
+    Saas extends CSS with features that making writing CSS easier.
 
 ## <a id='thanks'>Thanks</a>
 
