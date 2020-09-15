@@ -10,7 +10,7 @@
 * <a href="#features"> Features </a>
 * <a href='#install'>Install</a>
   * <a href='#install-webstores'> Chrome Webstore </a>
-  * <a href='#install-fromsource'> From source </a>
+  * <a href='#install-fromsource'> Source install</a>
 * <a href='#dependencies'>Dependencies</a>
 * <a href='#thanks'>Thanks</a>
 * <a href='#license'>License</a>
@@ -40,7 +40,7 @@ The extension works on all Chromium-derived (eg Chrome) browsers.
 
 Screenshot is available for install via the [Chrome Webstore](https://chrome.google.com/webstore/detail/screenshot/ehmcpclingghgidajkpodncclbginiak).
 
-<a id='install-fromsource'>**From source**</a>
+<a id='install-fromsource'>**Source install**</a>
 
 * Clone a copy of the extension:
 
@@ -56,8 +56,8 @@ Screenshot is available for install via the [Chrome Webstore](https://chrome.goo
 
 * Enable the `Developer mode` checkbox.
 
-* Click the `Load unpacked extension` button and point it at the `src/`
-  directory in the cloned repository.
+* Click the `Load unpacked extension` button and point it at 
+  the `src/` directory in the cloned repository.
 
 * Done.
 
