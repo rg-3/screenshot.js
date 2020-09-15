@@ -17,7 +17,7 @@
 
 ## <a id='introduction'>Introduction</a>
 
-A browser extension that takes screenshots of web pages and web videos.  
+Screenshot is a browser extension that takes screenshots of web pages and web videos.  
 The extension works on all Chromium-derived (eg Chrome) browsers.
 
 ## <a id='features'>Features</a>
