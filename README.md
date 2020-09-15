@@ -9,7 +9,7 @@
 * <a href="#introduction"> Introduction </a>
 * <a href="#features"> Features </a>
 * <a href='#install'>Install</a>
-  * <a href='#install-webstores'> Webstores </a>
+  * <a href='#install-webstores'> Chrome Webstore </a>
   * <a href='#install-fromsource'> From source </a>
 * <a href='#dependencies'>Dependencies</a>
 * <a href='#thanks'>Thanks</a>
@@ -36,9 +36,9 @@ The extension works on all Chromium-derived (eg Chrome) browsers.
 
 ## <a id='install'> Install </a>
 
-<a id='install-webstores'>**Webstores**</a>
+<a id='install-webstores'>**Chrome Webstore**</a>
 
-* [Chrome Webstore](https://chrome.google.com/webstore/detail/screenshot/ehmcpclingghgidajkpodncclbginiak)
+Screenshot is available for install via the [Chrome Webstore](https://chrome.google.com/webstore/detail/screenshot/ehmcpclingghgidajkpodncclbginiak).
 
 <a id='install-fromsource'>**From source**</a>
 
