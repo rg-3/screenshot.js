@@ -81,7 +81,7 @@ Dependencies used while the extension is running:
 Dependencies used to develop the extension:
 
   * [Saas](https://www.sass-lang.com)  
-    Saas extends CSS with features that making writing CSS easier.
+    Saas extends CSS with features that make writing CSS easier.
 
 ## <a id='thanks'>Thanks</a>
 
