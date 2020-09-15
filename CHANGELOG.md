@@ -1,8 +1,12 @@
 __HEAD__
 
-* Update extension icon.
+* Change default font to Roboto.
 
-* Update license year; `src/LICENSE.txt`.
+* Add Roboto Regular and Roboto Bold fonts.
+
+* Add new extension icon sourced from [https://freeicons.io](freeicons.io)
+
+* Change license year in `src/LICENSE.txt`.
 
 __v0.10.3__
 

@@ -1,4 +1,5 @@
 @import "colors";
+@import "font_faces";
 @import "/scss/vendor/spectre.min.css";
 @import "/scss/vendor/tippy-themes/light-border.css";
 
@@ -7,6 +8,7 @@ html {
 }
 
 #container {
+  font-family: "Roboto Regular" !important;
   min-height: 380px;
 
   #body {
@@ -38,12 +40,12 @@ html {
     }
 
     a#screenshot-js {
-      font-weight: bold;
-      float: left;
+      font-family: "Roboto Bold" !important;
+      font-size: 16px;
 
       position: relative;
       left: 5px;
-      bottom: 3px;
+      bottom: 4px;
 
       &:active, &:hover, &:visited {
         color: inherit;
