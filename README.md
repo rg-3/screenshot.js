@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="/webstore-assets/screenshot.png" alt="Screenshot logo">
+  <img src="/src/images/camera128.png" alt="Screenshot logo">
+  <br>
+  <b>Screenshot</b>
 </p>
 
 **Table of contents**
