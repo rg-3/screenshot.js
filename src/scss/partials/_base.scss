@@ -7,6 +7,7 @@ html {
   width: 425px;
 }
 
+
 #container {
   font-family: "Roboto Regular" !important;
   min-height: 380px;
@@ -41,8 +42,7 @@ html {
 
     a#screenshot-js {
       font-family: "KronaOne Regular" !important;
-      font-size: 12px;
-      font-weight: bold;
+      font-size: 13px;
 
       position: relative;
       left: 5px;
@@ -69,12 +69,14 @@ html {
 }
 
 .tippy-popper {
+  font-family: "Roboto Regular";
+
   .shortcut {
     font-weight: bold;
   }
 
   .command-help {
-    font-size: 0.85em;
+    font-size: 12px;
   }
 
   .command-help:not(:last-child) {

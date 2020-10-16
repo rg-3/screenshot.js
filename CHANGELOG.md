@@ -1,10 +1,8 @@
-__HEAD__
+__v0.11.0__
 
 * Change logo font to KronaOne Regular.
 
-* Change default font to Roboto.
-
-* Add Roboto Regular and Roboto Bold fonts.
+* Change default font to Roboto Regular.
 
 * Add new extension icon sourced from [https://freeicons.io](freeicons.io)
 
