@@ -1,5 +1,7 @@
 __HEAD__
 
+* Change logo font to KronaOne Regular.
+
 * Change default font to Roboto.
 
 * Add Roboto Regular and Roboto Bold fonts.
