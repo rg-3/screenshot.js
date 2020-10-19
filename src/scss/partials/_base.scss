@@ -68,15 +68,15 @@ html {
   }
 }
 
+#popover-help-content {
+  width: 415px;
+}
+
 .tippy-popper {
   font-family: "Roboto Regular";
 
   .shortcut {
     font-weight: bold;
-  }
-
-  .command-help {
-    font-size: 12px;
   }
 
   .command-help:not(:last-child) {

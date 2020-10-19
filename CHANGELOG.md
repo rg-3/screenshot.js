@@ -1,4 +1,8 @@
-__v0.11.0__
+**master**
+
+* 
+
+**v0.11.0**
 
 * Change logo font to KronaOne Regular.
 
@@ -8,7 +12,7 @@ __v0.11.0__
 
 * Change license year in `src/LICENSE.txt`.
 
-__v0.10.3__
+**v0.10.3**
 
 * Remove underline that appears after clicking save button.
 
