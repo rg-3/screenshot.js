@@ -1,6 +1,6 @@
-**master**
+**v0.11.1**
 
-* 
+* Increase the width and font size of the help popover.
 
 **v0.11.0**
 
@@ -19,7 +19,7 @@
 * Change default screenshot filename to `Screenshot X.png`, where X is the
   screenshot index number.
 
-__v0.10.2__
+**v0.10.2**
 
 * Improve UI and UX when there are more than 4 screenshots.
 
