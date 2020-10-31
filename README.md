@@ -67,13 +67,13 @@ Screenshot is available for install via the [Chrome Webstore](https://chrome.goo
 
 Dependencies used while the extension is running:
 
-* Spectre.css  
-  Minimalist CSS framework.
+* [Spectre.css](https://picturepan2.github.io/spectre/)  
+  A Lightweight, Responsive and Modern CSS Framework.
 
-* Feather Icons  
+* [feathericons](https://feathericons.com/)  
   Provides icons.
 
-* PopperJS, tippy.js  
+* [Popper.js](https://popper.js.org/), [Tippy.js](https://atomiks.github.io/tippyjs/)  
   Provides popovers and tooltips.
 
 **Development dependencies**
@@ -81,7 +81,7 @@ Dependencies used while the extension is running:
 Dependencies used to develop the extension:
 
   * [Saas](https://www.sass-lang.com)  
-    Saas extends CSS with features that make writing CSS easier.
+    Saas extends CSS with useful features.
 
 ## <a id='thanks'>Thanks</a>
 

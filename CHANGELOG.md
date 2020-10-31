@@ -1,3 +1,7 @@
+**HEAD**
+
+* Upgrade Popper.js and Tippy.js
+
 **v0.11.1**
 
 * Increase the width and font size of the help popover.
