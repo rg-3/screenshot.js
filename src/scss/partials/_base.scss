@@ -68,12 +68,12 @@ html {
   }
 }
 
-#popover-help-content {
-  width: 415px;
+div[data-tippy-root] {
+  font-family: "Roboto Regular";
 }
 
-.tippy-popper {
-  font-family: "Roboto Regular";
+#popover-help-content {
+  width: 415px;
 
   .shortcut {
     font-weight: bold;
