@@ -1,5 +1,7 @@
 **HEAD**
 
+* Increase height between help icon and its popover
+
 * Upgrade Popper.js and Tippy.js
 
 **v0.11.1**
