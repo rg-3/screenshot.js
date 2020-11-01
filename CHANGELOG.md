@@ -1,4 +1,8 @@
-**HEAD**
+**HEAD** 
+
+* Nothing yet.
+
+**v0.11.2**
 
 * Remove arrow from help popover by using the `arrow` prop.
 
