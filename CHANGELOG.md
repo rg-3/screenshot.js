@@ -1,6 +1,8 @@
 **HEAD**
 
-* Increase height between help icon and its popover
+* Remove arrow from help popover by using the `arrow` prop.
+
+* Increase height between help icon and its popover by using the `offset` prop.
 
 * Upgrade Popper.js and Tippy.js
 
