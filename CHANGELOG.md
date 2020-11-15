@@ -1,4 +1,8 @@
-**HEAD** 
+**HEAD**
+
+* Nothing yet.
+
+**v0.11.3**
 
 * Align grid and settings page height when there's 4 screenshots 
   on the grid page.
