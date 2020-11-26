@@ -9,8 +9,8 @@
   but represented by the number 2000, which should be a large enough 
   number to give the feeling of infinity. 
   
-  Worth mentioning that performance could be a problem if there's not enough 
-  RAM to accomodate 2000 screenshots comfortably. 
+  Worth mentioning that performance could be a problem if there's not 
+  enough RAM to accomodate 2000 screenshots comfortably. 
 
 **v0.11.3**
 
