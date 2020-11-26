@@ -33,7 +33,7 @@ html {
     border-top: 1px solid #C0C0C0;
     clear: both;
     padding-top: 15px;
-    height: 50px;
+    height: 46px;
     width: 100%;
 
     a {
@@ -42,12 +42,12 @@ html {
     }
 
     a#screenshot-js {
-      font-family: "KronaOne Regular" !important;
-      font-size: 13px;
+      font-family: "NerkoOne Regular" !important;
+      font-size: 24px;
 
       position: relative;
       left: 5px;
-      bottom: 4px;
+      bottom: 9px;
 
       &:active, &:hover, &:visited {
         color: inherit;
@@ -56,14 +56,15 @@ html {
     }
 
     #nav-icon {
-      position: sticky;
-      left: 43%;
-      bottom: 10px;
+      position: fixed;
+      left: 185px;
+      bottom: 5px;
     }
 
     #help-icon {
-      position: sticky;
-      left: 50%;
+      position: fixed;
+      left: 215px;
+      bottom: 5px;
       cursor: pointer;
     }
   }

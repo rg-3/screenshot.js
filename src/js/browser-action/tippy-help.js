@@ -5,7 +5,7 @@ export default function() {
     arrow: true,
     placement: 'top',
     maxWidth: 420,
-    offset: [0, 10],
+    offset: [0, 5],
     arrow: false,
     content: () => {
       const el = document.getElementById('popover-help-content').cloneNode(true);

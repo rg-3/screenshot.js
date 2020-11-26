@@ -1,6 +1,8 @@
 **HEAD** 
 
-* Nothing yet.
+* Redesign the footer to have a smaller height.
+
+* Replace logo font KronaOne with NerkoOne.
 
 **v0.12.1**
 
