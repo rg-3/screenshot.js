@@ -1,5 +1,9 @@
 **HEAD**
 
+* Nothing yet.
+
+**v0.12.0**
+
 * Add "∞" (infinity) as an option in the dropdown used to determine 
   how many screenshots to store in memory. Infinity is not infinite
   but represented by the number 2000, which should be a large enough 
