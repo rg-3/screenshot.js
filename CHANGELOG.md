@@ -1,6 +1,10 @@
-**HEAD**
+**HEAD** 
 
 * Nothing yet.
+
+**v0.12.1**
+
+* Decrease infinity from 2000 to 999.
 
 **v0.12.0**
 
