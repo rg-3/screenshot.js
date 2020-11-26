@@ -1,4 +1,8 @@
-**HEAD** 
+**HEAD**
+
+* Nothing yet.
+
+**v0.13.0** 
 
 * Redesign the footer to have a smaller height.
 
