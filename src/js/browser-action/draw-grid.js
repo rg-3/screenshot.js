@@ -38,7 +38,7 @@ const drawGrid = function(page) {
   let index = app.screenshots.length;
   app.screenshots.forEach(function(screenshot) {
     const screenshotEl = document.querySelector('.screenshot-template').cloneNode(true);
-    screenshot.index = index;
+    const filename = `Screenshot ${index}.png`;
     screenshot.createBlob().then(([_, urlToBlob]) => {
       onDeleteClick(screenshotEl, screenshot, page);
       onCopyClick(screenshotEl, screenshot);
@@ -46,7 +46,7 @@ const drawGrid = function(page) {
       screenshotEl.querySelector('.image').prepend(canvas);
       screenshotEl.querySelector('.image').setAttribute('href', urlToBlob);
       screenshotEl.querySelector('.save').setAttribute('href', urlToBlob);
-      screenshotEl.querySelector('.save').setAttribute('download', screenshot.getFilename());
+      screenshotEl.querySelector('.save').setAttribute('download', filename);
       screenshotEl.querySelector('.loader-container').remove();
       screenshotEl.querySelectorAll('.hidden').forEach((screenshot) => screenshot.classList.remove('hidden'));
     });

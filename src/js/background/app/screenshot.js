@@ -52,11 +52,5 @@ export default function(app, dataUrl, options = {}) {
     };
   };
 
-  this.getFilename = () => {
-    if(this.id) {
-      return `Screenshot ${this.index}.png`
-    }
-  }
-
   return this;
 };
