@@ -1,5 +1,8 @@
 **HEAD**
 
+* Offer to save the most recent screenshot as 'Screenshot 4.png'
+  instead of 'Screnshot 1.png' - assuming there's four screenshots.
+
 * Nothing yet.
 
 **v0.13.0** 

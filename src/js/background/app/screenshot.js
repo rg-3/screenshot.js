@@ -19,6 +19,9 @@ export default function(app, dataUrl, options = {}) {
   this.width = null;
   this.height = null;
 
+  /* Records the index of a screenshot */
+  this.index = null;
+
   this.timestamp = new Date();
   this.canvas = new Canvas(options);
 
@@ -51,8 +54,7 @@ export default function(app, dataUrl, options = {}) {
 
   this.getFilename = () => {
     if(this.id) {
-      const index = app.screenshots.indexOf(this) + 1;
-      return `Screenshot ${index}.png`
+      return `Screenshot ${this.index}.png`
     }
   }
 

@@ -35,8 +35,10 @@ const drawGrid = function(page) {
   grid.innerHTML = '';
 
   /* Draw grid */
+  let index = app.screenshots.length;
   app.screenshots.forEach(function(screenshot) {
     const screenshotEl = document.querySelector('.screenshot-template').cloneNode(true);
+    screenshot.index = index;
     screenshot.createBlob().then(([_, urlToBlob]) => {
       onDeleteClick(screenshotEl, screenshot, page);
       onCopyClick(screenshotEl, screenshot);
@@ -51,6 +53,7 @@ const drawGrid = function(page) {
     screenshotEl.classList.remove('hidden');
     grid.appendChild(screenshotEl);
     feather.replace();
+    index -= 1;
   });
 
   /* Redraw the grid when a screenshot is taken while grid-page.html is open */
