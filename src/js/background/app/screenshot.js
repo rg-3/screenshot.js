@@ -19,9 +19,6 @@ export default function(app, dataUrl, options = {}) {
   this.width = null;
   this.height = null;
 
-  /* Records the index of a screenshot */
-  this.index = null;
-
   this.timestamp = new Date();
   this.canvas = new Canvas(options);
 
