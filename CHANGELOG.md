@@ -1,3 +1,11 @@
+**HEAD**
+
+* Nothing yet.
+
+**v0.13.2**
+
+* Re-implement getFilename on Screenshot objects in graw-grid.js
+
 **v0.13.1**
 
 * Offer to save the most recent screenshot as 'Screenshot 4.png'
