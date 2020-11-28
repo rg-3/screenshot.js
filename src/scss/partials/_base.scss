@@ -56,16 +56,22 @@ html {
     }
 
     #nav-icon {
+      filter: invert(10%) sepia(89%) saturate(6336%) hue-rotate(245deg) brightness(95%) contrast(150%);
       position: fixed;
       left: 185px;
-      bottom: 5px;
+      bottom: 3px;
     }
 
     #help-icon {
       position: fixed;
-      left: 215px;
-      bottom: 5px;
+      left: 220px;
+      bottom: 3px;
       cursor: pointer;
+    }
+
+    #help-icon img, #nav-icon img {
+      width: 24px;
+      height: 24px;
     }
   }
 }

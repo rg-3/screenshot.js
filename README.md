@@ -85,9 +85,17 @@ Dependencies used to develop the extension:
 
 ## <a id='thanks'>Thanks</a>
 
-Thanks to [Raj Dev](https://freeicons.io/profile/714) from [freeicons.io](https://www.freeicons.io)
-who authored the icons used by this extension.
+Thanks to the following [freeicons.io](https://freeicons.io) artists:
 
+* Thanks to [Raj Dev](https://freeicons.io/profile/714) who 
+  authored the camera icon and brain icons.
+
+* Thanks to [BECRIS](https://freeicons.io/profile/3484) who 
+  authored the back icon.
+
+* Thanks to [Free Preloaders](https://freeicons.io/profile/726) who 
+  authored the smiley icons.
+  
 ## <a id='license'>License</a>
 
 MIT license. See [./src/LICENSE.txt](./src/LICENSE.txt) for details.
