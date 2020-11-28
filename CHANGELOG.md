@@ -1,5 +1,9 @@
 **HEAD**
 
+* Nothing yet.
+
+**v0.14.2**
+
 * Reduce whitespace between footer and last two screenshots.
 
 * Change options for number of screenshots to store in memory to:
