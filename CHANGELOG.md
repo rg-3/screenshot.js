@@ -1,5 +1,7 @@
 **HEAD**
 
+* Reduce whitespace between footer and last two screenshots.
+
 * Change options for number of screenshots to store in memory to:
   4, 8, 16, 32, 64, 99, Infinity
 
