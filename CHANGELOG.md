@@ -1,9 +1,13 @@
 **HEAD**
 
+* Nothing yet.
+
+**v0.14.1**
+
 * Fix CSS bug that caused the UI to cut off the action icons 
   for the last two screenshots. This occurred when there was 
   8 or more screenshots.
-  
+
 **v0.14.0**
 
 * Redesign the navbar icons and in the process switch to a simpler
