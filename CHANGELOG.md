@@ -1,9 +1,13 @@
 **HEAD**
 
+* Nothing yet.
+
+**v0.14.0**
+
 * Redesign the navbar icons and in the process switch to a simpler
   implementation. We're not using feathericons for the navbar icons
   any longer.
-  
+
 **v0.13.2**
 
 * Re-implement getFilename on Screenshot objects in graw-grid.js
