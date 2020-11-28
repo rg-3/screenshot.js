@@ -27,7 +27,7 @@ html {
   }
 
   #footer {
-    position: fixed;
+    position: sticky;
     bottom: 0;
     background-color: #FAF6F6;
     border-top: 1px solid #C0C0C0;
@@ -45,9 +45,9 @@ html {
       font-family: "NerkoOne Regular" !important;
       font-size: 24px;
 
-      position: relative;
+      position: fixed;
       left: 5px;
-      bottom: 9px;
+      bottom: 2px;
 
       &:active, &:hover, &:visited {
         color: inherit;
