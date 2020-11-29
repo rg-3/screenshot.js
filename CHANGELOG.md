@@ -1,7 +1,12 @@
+## CHANGELOG
+
 **HEAD**
 
-* Fix bug(s) related to the the infinity option and the settings 
-  page.
+* Nothing yet.
+
+**v0.14.5**
+
+* Fix bug(s) related to the the infinity option and the settings page.
 
 **v0.14.4**
 
