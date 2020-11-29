@@ -3,10 +3,7 @@ let gridPollId = null;
 const removeWithFadeOut = (el, speed, page) => {
   const seconds = speed / 1000;
   el.style.cssText = `transition: opacity ${seconds}s ease; opacity: 0`;
-  setTimeout(() => {
-    clearInterval(gridPollId);
-    drawGrid(page);
-  }, speed);
+  setTimeout(() => el.remove(), speed);
 };
 
 const onDeleteClick = (screenshotEl, screenshot, page) => {

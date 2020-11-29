@@ -1,6 +1,7 @@
 **HEAD**
 
-* Nothing yet.
+* Drastically improve performance of the `Delete` operation 
+  by not redrawing the whole grid.
 
 **v0.14.4**
 
