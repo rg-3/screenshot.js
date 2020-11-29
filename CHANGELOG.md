@@ -2,6 +2,10 @@
 
 **HEAD**
 
+* Nothing yet.
+
+**v0.14.6**
+
 * Improve layout of `src/`.
 
 * Update `app.maxScreenshots` before potentially long operation on 
