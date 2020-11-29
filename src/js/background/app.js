@@ -88,7 +88,13 @@ export default function() {
     notify("You took a screenshot", 1500);
     this.screenshots.unshift(new Screenshot(this, dataUrl, screenshotOptions));
     this.screenshotCount += 1;
-    if(this.screenshots.length > this.maxScreenshots) {
+    if(this.maxScreenshots === 0) {
+      /*
+        For the Infinity option, represented by 0, we don't enforce a limit
+        on the size of the screenshots array.
+      */
+      return;
+    } else if(this.screenshots.length > this.maxScreenshots) {
       this.screenshots.pop().revokeBlob();
     }
   };
