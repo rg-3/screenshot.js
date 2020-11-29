@@ -5,7 +5,7 @@ import drawCommandHelp from "./browser-action/draw-command-help.js";
 const setDefaultOption = (select, currentValue) => {
   for(let i = 0; i < select.options.length; i++) {
     const option = select.options[i];
-    if(option.value === currentValue) {
+    if(option.value === String(currentValue)) {
       option.selected = true;
     }
   }
@@ -30,18 +30,18 @@ chrome.runtime.getBackgroundPage((page) => {
     browser memory.
   */
   const maxSelect = document.getElementById('max-screenshots');
-  setDefaultOption(maxSelect, String(app.settings.getItem('maxScreenshots')));
+  setDefaultOption(maxSelect, app.settings.getItem('maxScreenshots'));
   maxSelect.addEventListener('change', (event) => {
-    const option = event.target;
-    if(option.value < app.maxScreenshots) {
-      for(let i = option.value; i < app.maxScreenshots; i++) {
+    const option   = event.target;
+    const newMax   = Number(option.value);
+    const truncate = app.maxScreenshots === 0 || (newMax > 0 && newMax < app.maxScreenshots);
+    if(truncate) {
+      for(let i = newMax; i < app.screenshots.length; i++) {
         const screenshot = app.screenshots[i];
-        if(screenshot) {
-          chrome.runtime.sendMessage({action: 'remove-screenshot', removedId: screenshot.id});
-        }
+        chrome.runtime.sendMessage({action: 'remove-screenshot', removedId: screenshot.id});
       }
     }
-    app.settings.setItem('maxScreenshots', Number(option.value));
+    app.settings.setItem('maxScreenshots', newMax);
   });
 
   app.getKeyboardCommands().then((commands) => {

@@ -1,6 +1,7 @@
 **HEAD**
 
-* Nothing yet.
+* Fix bug(s) related to the the infinity option and the settings 
+  page.
 
 **v0.14.4**
 
