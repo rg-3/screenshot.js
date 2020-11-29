@@ -1,6 +1,6 @@
 **HEAD**
 
-* Nothing yet.
+* Fix alignment of Screenshot text.
 
 **v0.14.3**
 
