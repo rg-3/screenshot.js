@@ -1,5 +1,9 @@
 **HEAD**
 
+* Nothing yet.
+
+**v0.14.3**
+
 * Represent infinity with 0 and avoid enforcing a size limit 
   on the `screenshots` array when maxScreenshots is equal to 0.
 
