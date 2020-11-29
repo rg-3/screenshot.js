@@ -2,7 +2,8 @@
 
 **HEAD**
 
-* Nothing yet.
+* Update `app.maxScreenshots` before potentially long operation
+  on the setting page.
 
 **v0.14.5**
 

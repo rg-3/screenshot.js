@@ -35,13 +35,13 @@ chrome.runtime.getBackgroundPage((page) => {
     const option   = event.target;
     const newMax   = Number(option.value);
     const truncate = app.maxScreenshots === 0 || (newMax > 0 && newMax < app.maxScreenshots);
+    app.settings.setItem('maxScreenshots', newMax);
     if(truncate) {
       for(let i = newMax; i < app.screenshots.length; i++) {
         const screenshot = app.screenshots[i];
         chrome.runtime.sendMessage({action: 'remove-screenshot', removedId: screenshot.id});
       }
     }
-    app.settings.setItem('maxScreenshots', newMax);
   });
 
   app.getKeyboardCommands().then((commands) => {
