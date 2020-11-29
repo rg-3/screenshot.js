@@ -2,8 +2,10 @@
 
 **HEAD**
 
-* Update `app.maxScreenshots` before potentially long operation
-  on the setting page.
+* Improve layout of `src/`.
+
+* Update `app.maxScreenshots` before potentially long operation on 
+  the setting page.
 
 **v0.14.5**
 

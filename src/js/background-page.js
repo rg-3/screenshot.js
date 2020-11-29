@@ -1,4 +1,4 @@
-import App from './background/app.js';
+import App from './background-page/app.js';
 
 chrome.commands.onCommand.addListener((command) => {
   switch(command) {

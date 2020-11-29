@@ -3,7 +3,7 @@
   "name": "Screenshot",
   "description": "Takes screenshots of web pages and web videos.",
   "version": "0.14.5",
-  "background": {"page": "html/background.html"},
+  "background": {"page": "html/background-page.html"},
   "permissions": [
     "commands",
     "notifications",
