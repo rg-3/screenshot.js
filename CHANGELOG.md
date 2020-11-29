@@ -1,9 +1,11 @@
 **HEAD**
 
-* Drastically improve performance of the `Delete` operation 
-  by not redrawing the whole grid.
+* Nothing yet.
 
 **v0.14.4**
+
+* Drastically improve performance of the `Delete` operation 
+  by not redrawing the whole grid.
 
 * Fix alignment of Screenshot text.
 
