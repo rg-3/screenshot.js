@@ -4,6 +4,10 @@
 
 * Nothing yet.
 
+**v0.14.7**
+
+* Show Happy emoji by default.
+
 **v0.14.6**
 
 * Improve layout of `src/`.
