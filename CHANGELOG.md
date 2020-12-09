@@ -1,8 +1,12 @@
 ## CHANGELOG
 
-**HEAD**
+**Next**
 
 * Nothing yet.
+
+**v0.14.8**
+
+* Replace emoji used when help popover is open
 
 **v0.14.7**
 

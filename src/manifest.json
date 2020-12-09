@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Screenshot",
   "description": "Takes screenshots of web pages and web videos.",
-  "version": "0.14.7",
+  "version": "0.14.8",
   "background": {"page": "html/background-page.html"},
   "permissions": [
     "commands",
