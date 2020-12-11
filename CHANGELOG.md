@@ -4,6 +4,10 @@
 
 * Nothing yet.
 
+**v0.15.0**
+
+* End the emoji experiment.
+
 **v0.14.8**
 
 * Replace emoji used when help popover is open
