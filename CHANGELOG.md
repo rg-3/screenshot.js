@@ -4,6 +4,10 @@
 
 * Nothing yet.
 
+**v0.15.2**
+
+* New settings and help icons.
+
 **v0.15.1**
 
 * Update project description in `src/manifest.json`

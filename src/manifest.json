@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Screenshot",
   "description": "Screenshot is a Chrome extension that takes screenshots of web pages and web videos at the stroke of a keyboard shortcut.",
-  "version": "0.15.1",
+  "version": "0.15.2",
   "background": {"page": "html/background-page.html"},
   "permissions": [
     "commands",

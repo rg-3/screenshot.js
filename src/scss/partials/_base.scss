@@ -68,9 +68,18 @@ html {
       cursor: pointer;
     }
 
+
     #help-icon img, #nav-icon img {
       width: 24px;
       height: 24px;
+    }
+
+    #help-icon img {
+      filter: invert(13%) sepia(91%) saturate(7500%) hue-rotate(131deg) brightness(102%) contrast(108%);
+    }
+
+    #nav-icon img {
+      filter: invert(8%) sepia(96%) saturate(6570%) hue-rotate(244deg) brightness(105%) contrast(150%);
     }
   }
 }
