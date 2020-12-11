@@ -4,6 +4,10 @@
 
 * Nothing yet.
 
+**v0.15.1**
+
+* Update project description in `src/manifest.json`
+
 **v0.15.0**
 
 * End the emoji experiment.
