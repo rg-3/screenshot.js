@@ -2,7 +2,11 @@
 
 **Next**
 
-* Nothing yet.
+* Change all tippy-controlled content to use `light-border` theme.
+
+* Show tooltip when hovering over settings / help icons.
+
+* Replace footer icons.
 
 **v0.15.1**
 

@@ -1,5 +1,6 @@
 import includeHTML from "./browser-action/include-html.js";
 import tippyHelp from "./browser-action/tippy-help.js";
+import tippyFooter     from './browser-action/tippy-footer.js';
 import drawCommandHelp from "./browser-action/draw-command-help.js";
 
 const setDefaultOption = (select, currentValue) => {
@@ -48,6 +49,7 @@ chrome.runtime.getBackgroundPage((page) => {
     includeHTML().then((nodes) => {
       commands.forEach(drawCommandHelp);
       feather.replace();
+      tippyFooter();
       tippyHelp();
     });
   });

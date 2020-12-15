@@ -62,7 +62,8 @@ const drawGrid = function(page) {
   }, 100);
 
   /* Tooltips */
-  tippy('.copy', {
+  tippy('#body .copy', {
+    theme: 'light-border',
     content: 'Copied screenshot',
     trigger: 'click',
     placement: 'bottom',
@@ -75,7 +76,8 @@ const drawGrid = function(page) {
     }
   });
 
-  tippy('[data-tippy-content]', {
+  tippy('#body [data-tippy-content]', {
+    theme: 'light-border',
     placement: 'bottom',
     distance: 5,
     flip: false,

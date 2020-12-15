@@ -88,13 +88,16 @@ Dependencies used to develop the extension:
 Thanks to the following [freeicons.io](https://freeicons.io) artists:
 
 * Thanks to [Raj Dev](https://freeicons.io/profile/714) who 
-  authored the camera icon and brain icons.
+  authored the camera icon.
 
 * Thanks to [BECRIS](https://freeicons.io/profile/3484) who 
   authored the back icon.
 
-* Thanks to [Free Preloaders](https://freeicons.io/profile/726) who 
-  authored the smiley icons.
+* Thanks to [ColourCreatype](https://freeicons.io/profile/5790) who 
+  authored the settings icon.
+  
+ * Thanks to [Anu Rocks](https://freeicons.io/profile/730) who 
+  authored the help icon.
   
 ## <a id='license'>License</a>
 

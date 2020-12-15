@@ -40,6 +40,10 @@ html {
       text-decoration: none;
     }
 
+    .blue-svg {
+      filter: invert(7%) sepia(100%) saturate(7434%) hue-rotate(248deg) brightness(104%) contrast(138%);
+    }
+
     a#screenshot-js {
       font-family: "NerkoOne Regular" !important;
       font-size: 24px;
@@ -55,7 +59,6 @@ html {
     }
 
     #nav-icon {
-      filter: invert(10%) sepia(89%) saturate(6336%) hue-rotate(245deg) brightness(95%) contrast(150%);
       position: fixed;
       left: 185px;
       bottom: 3px;
