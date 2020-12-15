@@ -1,4 +1,7 @@
-export default function() {
+export default function(app) {
+  if(!app.showTooltips) {
+    return;
+  }
   tippy('#footer [data-tippy-content]', {
     theme: 'light-border',
     arrow: false,

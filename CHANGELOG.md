@@ -2,6 +2,9 @@
 
 **Next**
 
+* Add settings to control whether or not tooltips are shown on the 
+  settings and help icons.
+  
 * Change all tippy-controlled content to use `light-border` theme.
 
 * Show tooltip when hovering over settings / help icons.

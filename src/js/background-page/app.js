@@ -50,6 +50,7 @@ export default function() {
   this.settings = new Settings(this);
   this.videoSize = this.settings.getItem("videoSize");
   this.maxScreenshots = this.settings.getItem("maxScreenshots");
+  this.showTooltips = this.settings.getItem("showTooltips");
   this.screenshots = [];
   this.screenshotCount = 0;
 
