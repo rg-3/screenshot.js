@@ -1,5 +1,4 @@
 import includeHTML from "./browser-action/include-html.js";
-import tippyHelp from "./browser-action/tippy-help.js";
 import tippyFooter     from './browser-action/tippy-footer.js';
 import drawCommandHelp from "./browser-action/draw-command-help.js";
 
@@ -14,6 +13,14 @@ const setDefaultOption = (select, currentValue) => {
 
 chrome.runtime.getBackgroundPage((page) => {
   const app = page.app;
+
+  app.getKeyboardCommands().then((commands) => {
+    includeHTML().then((nodes) => {
+      commands.forEach(drawCommandHelp);
+      feather.replace();
+      tippyFooter(app);
+    });
+  });
 
   /*
      Control the size of a video screenshot.
@@ -54,14 +61,5 @@ chrome.runtime.getBackgroundPage((page) => {
   tooltipSelect.addEventListener('change', (event) => {
     const option = event.target;
     app.settings.setItem('showTooltips', Number(option.value));
-  });
-
-  app.getKeyboardCommands().then((commands) => {
-    includeHTML().then((nodes) => {
-      commands.forEach(drawCommandHelp);
-      feather.replace();
-      tippyFooter(app);
-      tippyHelp();
-    });
   });
 });

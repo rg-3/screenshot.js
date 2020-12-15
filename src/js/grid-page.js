@@ -1,7 +1,6 @@
 import drawGrid        from './browser-action/draw-grid.js';
 import drawCommandHelp from './browser-action/draw-command-help.js';
 import includeHTML     from './browser-action/include-html.js';
-import tippyHelp       from './browser-action/tippy-help.js';
 import tippyFooter     from './browser-action/tippy-footer.js';
 
 chrome.runtime.getBackgroundPage((page) => {
@@ -12,7 +11,6 @@ chrome.runtime.getBackgroundPage((page) => {
       commands.forEach(drawCommandHelp);
       feather.replace();
       tippyFooter(app);
-      tippyHelp();
     });
   });
 });
