@@ -3,11 +3,28 @@
 @import "/scss/vendor/spectre.min.css";
 @import "/scss/vendor/tippy-themes/light-border.css";
 
+:root {
+  --green: #4D953A;
+  --blue: #0000FF;
+  --red: #FF0000;
+}
+
+.green {
+  filter: invert(43%) sepia(65%) saturate(441%) hue-rotate(62deg) brightness(101%) contrast(87%);
+}
+
+.blue {
+  filter: invert(8%) sepia(95%) saturate(7420%) hue-rotate(249deg) brightness(101%) contrast(144%);
+}
+
+.red {
+  filter: invert(21%) sepia(94%) saturate(7199%) hue-rotate(349deg) brightness(89%) contrast(96%);
+}
+
 html {
   width: 425px;
   height: 455px;
 }
-
 
 #container {
   font-family: "Roboto Regular" !important;
@@ -96,14 +113,4 @@ div[data-tippy-root] {
 
 .hidden {
   display: none;
-}
-
-.feather-16 {
-  width: 16px;
-  height: 16px;
-}
-
-.feather-20 {
-  width: 20px;
-  height: 20px;
 }

@@ -9,7 +9,6 @@ chrome.runtime.getBackgroundPage((page) => {
     includeHTML().then((nodes) => {
       drawGrid(page);
       commands.forEach(drawCommandHelp);
-      feather.replace();
       tippyFooter(app);
     });
   });

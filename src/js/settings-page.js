@@ -17,7 +17,6 @@ chrome.runtime.getBackgroundPage((page) => {
   app.getKeyboardCommands().then((commands) => {
     includeHTML().then((nodes) => {
       commands.forEach(drawCommandHelp);
-      feather.replace();
       tippyFooter(app);
     });
   });

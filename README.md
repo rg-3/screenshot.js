@@ -70,9 +70,6 @@ Dependencies used while the extension is running:
 * [Spectre.css](https://picturepan2.github.io/spectre/)  
   A Lightweight, Responsive and Modern CSS Framework.
 
-* [feathericons](https://feathericons.com/)  
-  Provides icons.
-
 * [Popper.js](https://popper.js.org/), [Tippy.js](https://atomiks.github.io/tippyjs/)  
   Provides popovers and tooltips.
 

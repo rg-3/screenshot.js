@@ -49,7 +49,6 @@ const drawGrid = function(page) {
     });
     screenshotEl.classList.remove('hidden');
     grid.appendChild(screenshotEl);
-    feather.replace();
     index -= 1;
   });
 

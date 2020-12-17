@@ -2,7 +2,8 @@
 
 **Next**
 
-* Nothing yet.
+* Replace `feather.min.js` with the use of the `<img>` tag and SVGs.
+
 
 **v0.16.0**
 
