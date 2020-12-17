@@ -2,8 +2,13 @@
 
 **Next**
 
-* Replace `feather.min.js` with the use of the `<img>` tag and SVGs.
+* Nothing yet.
 
+**v0.16.1**
+
+* Add spacing between the action bar icons
+
+* Replace `feather.min.js` with the use of the `<img>` tag and SVGs.
 
 **v0.16.0**
 

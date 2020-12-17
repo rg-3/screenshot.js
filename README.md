@@ -85,7 +85,8 @@ Dependencies used to develop the extension:
 Thanks to the following [freeicons.io](https://freeicons.io) artists:
 
 * Thanks to [Raj Dev](https://freeicons.io/profile/714) who 
-  authored the camera icon.
+  authored the camera icon, the save icon, the copy icon and 
+  the delete icon.
 
 * Thanks to [BECRIS](https://freeicons.io/profile/3484) who 
   authored the back icon.

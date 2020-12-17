@@ -13,15 +13,14 @@
   }
 
   .action-bar {
-    position: relative;
+    margin: 0 auto;
+    width: 100px;
     text-align: center;
   }
 
-  .action-bar span {
-    cursor: pointer;
-  }
-
   .action-bar a {
+    cursor: pointer;
+    margin: 0 0 0 2.5px;
     &:link { text-decoration: none; }
     &:hover { text-decoration: none; }
     &:visited { text-decoration: none; }
