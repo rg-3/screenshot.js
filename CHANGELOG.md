@@ -2,7 +2,7 @@
 
 **Next**
 
-* Nothing yet.
+* tooltips: `Delete screenshot from memory` => `Delete screenshot`.
 
 **v0.16.1**
 
