@@ -1,6 +1,9 @@
-## CHANGELOG
+# CHANGELOG
 
-**Next**
+## next
+
+* spectre.css: remove use of deprecated -webkit-details-marker for 
+  marker, and update to v0.5.9.
 
 * footer: do not highlight the footer images upon selection.
 
