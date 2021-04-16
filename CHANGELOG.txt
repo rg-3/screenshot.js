@@ -2,6 +2,8 @@
 
 ## next
 
+* Play a sound effect when taking a screenshot.
+
 * spectre.css: remove use of deprecated -webkit-details-marker for 
   marker, and update to v0.5.9.
 

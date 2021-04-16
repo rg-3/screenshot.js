@@ -2,17 +2,6 @@ import Screenshot from './app/screenshot.js';
 import Settings from './app/settings.js';
 import runScript from './app/run-script.js';
 
-const notify = (message, timeout)  => {
-  chrome.notifications.create({
-    iconUrl: "/images/camera48.png",
-    type: "basic",
-    title: "Screenshot",
-    message: message
-  }, (notifID) => {
-    setTimeout(() => chrome.notifications.clear(notifID), timeout);
-  });
-};
-
 const captureFail = (dataUrl) => {
   return !dataUrl ||
          dataUrl === "" ||
@@ -34,6 +23,14 @@ const getVideoHeightAlgorithm = (app) => {
   } else if(app.videoSize === "natural"){
     return "return video.videoHeight;";
   }
+};
+
+const playSound = () => {
+  const audio = document.createElement('audio');
+  const source = document.createElement('source');
+  source.setAttribute('src', '/audio/soundeffect.mp3');
+  audio.appendChild(source);
+  audio.play();
 };
 
 const codeCache = {};
@@ -73,11 +70,11 @@ export default function() {
            */
            for(let i = 0; i < dataUrls.length; i++) {
              if(dataUrls[i] === "") {
-               notify("Update device recognition settings to be more permissive in order to take a screenshot of the video on this page", 8000);
+               this.notify("Update device recognition settings to be more permissive in order to take a screenshot of the video on this page", 8000);
                return;
              }
            }
-           notify("A playing video wasn't found", 1500);
+           this.notify("A playing video wasn't found", 1500);
          }
       } else {
         this.createScreenshot(dataUrls[i], screenshotOptions);
@@ -86,7 +83,7 @@ export default function() {
   };
 
   this.createScreenshot = (dataUrl, screenshotOptions) => {
-    notify("You took a screenshot", 1500);
+    this.notify("You took a screenshot", 1500).then(playSound);
     this.screenshots.unshift(new Screenshot(this, dataUrl, screenshotOptions));
     this.screenshotCount += 1;
     if(this.maxScreenshots === 0) {
@@ -130,8 +127,21 @@ export default function() {
     return new Promise((resolve, reject) => chrome.commands.getAll(resolve));
   };
 
+  this.notify = (message, timeout)  => {
+    return new Promise((resolve, reject) => {
+      chrome.notifications.create({
+        iconUrl: "/images/camera48.png",
+        type: "basic",
+        title: "Screenshot",
+        message: message
+      }, (notifID) => {
+        setTimeout(() => chrome.notifications.clear(notifID), timeout);
+        resolve();
+      });
+    });
+  };
+
   this.runScript = runScript;
-  this.notify = notify;
 
   return this;
 }
