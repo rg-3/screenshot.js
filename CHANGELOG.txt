@@ -2,9 +2,13 @@
 
 ## next
 
+* Decrease font size to 15px on settings page
+
+* Add a setting to toggle notification sound on or off.
+
 * Play a sound effect when taking a screenshot.
 
-* spectre.css: remove use of deprecated -webkit-details-marker for 
+* spectre.css: remove use of deprecated -webkit-details-marker for
   marker, and update to v0.5.9.
 
 * footer: do not highlight the footer images upon selection.
@@ -21,7 +25,7 @@
 
 **v0.16.0**
 
-* Add settings to control whether or not tooltips are shown on the 
+* Add settings to control whether or not tooltips are shown on the
   settings and help icons.
 
 * Change all tippy-controlled content to use `light-border` theme.
@@ -50,7 +54,7 @@
 
 * Improve layout of `src/`.
 
-* Update `app.maxScreenshots` before potentially long operation on 
+* Update `app.maxScreenshots` before potentially long operation on
   the setting page.
 
 **v0.14.5**
@@ -59,14 +63,14 @@
 
 **v0.14.4**
 
-* Drastically improve performance of the `Delete` operation 
+* Drastically improve performance of the `Delete` operation
   by not redrawing the whole grid.
 
 * Fix alignment of Screenshot text.
 
 **v0.14.3**
 
-* Represent infinity with 0 and avoid enforcing a size limit 
+* Represent infinity with 0 and avoid enforcing a size limit
   on the `screenshots` array when maxScreenshots is equal to 0.
 
 **v0.14.2**
@@ -78,8 +82,8 @@
 
 **v0.14.1**
 
-* Fix CSS bug that caused the UI to cut off the action icons 
-  for the last two screenshots. This occurred when there was 
+* Fix CSS bug that caused the UI to cut off the action icons
+  for the last two screenshots. This occurred when there was
   8 or more screenshots.
 
 **v0.14.0**
@@ -97,7 +101,7 @@
 * Offer to save the most recent screenshot as 'Screenshot 4.png'
   instead of 'Screnshot 1.png' - assuming there's four screenshots.
 
-**v0.13.0** 
+**v0.13.0**
 
 * Redesign the footer to have a smaller height.
 
@@ -109,17 +113,17 @@
 
 **v0.12.0**
 
-* Add "∞" (infinity) as an option in the dropdown used to determine 
+* Add "∞" (infinity) as an option in the dropdown used to determine
   how many screenshots to store in memory. Infinity is not infinite
-  but represented by the number 2000, which should be a large enough 
-  number to give the feeling of infinity. 
-  
-  Worth mentioning that performance could be a problem if there's not 
-  enough RAM to accomodate 2000 screenshots comfortably. 
+  but represented by the number 2000, which should be a large enough
+  number to give the feeling of infinity.
+
+  Worth mentioning that performance could be a problem if there's not
+  enough RAM to accomodate 2000 screenshots comfortably.
 
 **v0.11.3**
 
-* Align grid and settings page height when there's 4 screenshots 
+* Align grid and settings page height when there's 4 screenshots
   on the grid page.
 
 **v0.11.2**
@@ -188,10 +192,10 @@ __v0.9.0__
 * Delete all properties belonging to a Screenshot object after the objects
   blob is revoked using `revokeBlob()`.
 
-* Improve device recognition settings notification.  
+* Improve device recognition settings notification.
   See [#6](https://github.com/rg-3/screenshot.js/issues/6) for more info.
 
-* Resort `src/html`, `src/js`, `src/css`:  
+* Resort `src/html`, `src/js`, `src/css`:
 
   * The contents of `src/js/lib/` have been moved to `src/js/`.
 
@@ -204,10 +208,10 @@ __v0.9.0__
   * `settings.css` renamed to `settings-page.css`.
 
 
-* Change the max screenshots drop down options to:  
+* Change the max screenshots drop down options to:
   4, 8, 12, 16, 20, 24, 28, 32.
 
-* Move the remaining CSS files in `src/css` to `src/scss`.  
+* Move the remaining CSS files in `src/css` to `src/scss`.
   Keep `src/css` for the CSS files that are generated from `src/scss`.
 
 * Numerous improvements to the README and inline documentation in the
@@ -228,7 +232,7 @@ __v0.8.0__
   there is more than 8 screenshots to browse, and they've been positioned to
   the center.
 
-* Add a settings page that allows the user configure the extension.  
+* Add a settings page that allows the user configure the extension.
   (The two options that can be configured are described below).
 
 * Add the option to select the number of screenshots to store in
@@ -284,13 +288,13 @@ __v0.5.1__
 
 __v0.5.0__
 
-* Improve the display of notifications.  
+* Improve the display of notifications.
   (By switching to generated notification IDs)
 
 * On the Brave browser, when a screenshot of a video can't be captured because
   Brave is blocking all possible device recognition attempts or all possible
   cross-origin device recognition attempts, the extension will notify the user
-  that's why a screenshot can't be captured.  
+  that's why a screenshot can't be captured.
 
 * Add support for taking a screenshot of a playing video loaded through an
   iframe.
@@ -311,7 +315,7 @@ __v0.4.0__
 
 * Remove horizontal scrollbar from screenshots of the visible tab.
 
-* Restore the quality of visible tab screenshots.  
+* Restore the quality of visible tab screenshots.
   (Bad quality screenshots were introduced in v0.3.0)
 
 __v0.3.1__
@@ -333,7 +337,7 @@ __v0.2.5__
 
 __v0.2.4__
 
-* Don't take screenshots of videos that are visible and paused  
+* Don't take screenshots of videos that are visible and paused
   (A video must be either visible and playing, or just playing to be captured).
 
 __v0.2.3__
@@ -373,7 +377,7 @@ __v0.2.0__
 * Change default `capture-visible-tab` shortcut from `Ctrl + Shift + K` to
   `Ctrl + Shift + X`.
 
-* Add ability to take a screenshot of the video on the current tab.  
+* Add ability to take a screenshot of the video on the current tab.
   (Works on YouTube, etc).
 
 * Insert `Press <shortcut> to take a screenshot` text after reading what
