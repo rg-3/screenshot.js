@@ -2,6 +2,8 @@
 
 ## next
 
+* Add arrow to the help popover
+
 * Decrease font size to 15px on settings page
 
 * Add a setting to toggle notification sound on or off.

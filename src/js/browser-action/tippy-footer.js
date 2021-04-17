@@ -4,8 +4,8 @@ export default function(app) {
     trigger: 'click',
     placement: 'top',
     maxWidth: 420,
-    offset: [0, 5],
-    arrow: false,
+    offset: [0, 10],
+    arrow: true,
     ignoreAttributes: true,
     content: () => {
       const el = document.getElementById('popover-help-content').cloneNode(true);
