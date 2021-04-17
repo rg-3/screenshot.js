@@ -32,7 +32,7 @@ The extension works on all Chromium-derived (eg Chrome) browsers.
 * Open screenshots in a new tab, save screenshots to disk, and copy screenshots
   to the clipboard.
 
-* Easy to use, respects your privacy.
+* Easy to use and doesn't intrude on your privacy.
 
 
 ## <a id='preview'>Preview</a>
