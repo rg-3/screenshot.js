@@ -8,6 +8,7 @@
 
 * <a href="#introduction"> Introduction </a>
 * <a href="#features"> Features </a>
+* <a href="#preview"> Preview </a>
 * <a href='#install'>Install</a>
   * <a href='#install-webstores'> Chrome Webstore </a>
   * <a href='#install-fromsource'> Source install</a>
@@ -33,6 +34,12 @@ The extension works on all Chromium-derived (eg Chrome) browsers.
 
 * Easy to use, respects your privacy.
 
+
+## <a id='preview'>Preview</a>
+
+<p align="center">
+  <img src="/webstore-assets/readme-screenshot.png">
+</p>
 
 ## <a id='install'> Install </a>
 
