@@ -25,7 +25,8 @@ const getVideoHeightAlgorithm = (app) => {
   }
 };
 
-const playSound = () => {
+const playSound = (app) => {
+  if (app.settings.getItem('playSound') === 0) { return; }
   const audio = document.createElement('audio');
   const source = document.createElement('source');
   source.setAttribute('src', '/audio/soundeffect.mp3');
@@ -83,7 +84,7 @@ export default function() {
   };
 
   this.createScreenshot = (dataUrl, screenshotOptions) => {
-    this.notify("You took a screenshot", 1500).then(playSound);
+    this.notify("You took a screenshot", 1500).then(() => playSound(this));
     this.screenshots.unshift(new Screenshot(this, dataUrl, screenshotOptions));
     this.screenshotCount += 1;
     if(this.maxScreenshots === 0) {

@@ -4,7 +4,8 @@ export default function(app) {
   const defaults = {
     maxScreenshots: 4,
     videoSize: "visible",
-    showTooltips: 1
+    showTooltips: 1,
+    playSound: 1
   };
 
   const settings = localStorage.getItem('settings') ?

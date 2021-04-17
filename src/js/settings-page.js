@@ -61,4 +61,15 @@ chrome.runtime.getBackgroundPage((page) => {
     const option = event.target;
     app.settings.setItem('showTooltips', Number(option.value));
   });
+
+    /*
+      Control whether or not a sound is played when a screenshot is taken.
+      Possible values: 1 (show), 0 (hide)
+    */
+    const playSoundSelect = document.getElementById('play-sound');
+    setDefaultOption(playSoundSelect, app.settings.getItem('playSound'));
+    playSoundSelect.addEventListener('change', (event) => {
+      const option = event.target;
+      app.settings.setItem('playSound', Number(option.value));
+    });
 });
