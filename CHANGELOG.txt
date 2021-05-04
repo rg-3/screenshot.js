@@ -2,6 +2,8 @@
 
 ## next
 
+* Add new help icon
+
 * Add arrow to the help popover
 
 * Decrease font size to 15px on settings page

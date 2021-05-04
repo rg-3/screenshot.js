@@ -101,8 +101,8 @@ Thanks to the following [freeicons.io](https://freeicons.io) artists:
 * Thanks to [ColourCreatype](https://freeicons.io/profile/5790) who 
   authored the settings icon.
   
- * Thanks to [Anu Rocks](https://freeicons.io/profile/730) who 
-  authored the help icon.
+ * Thanks to <a href="https://freeicons.io/profile/726">Free Preloaders</a> for the help icon.
+                                
   
 ## <a id='license'>License</a>
 
