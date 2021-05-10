@@ -1,8 +1,12 @@
 # CHANGELOG
 
-**Next**
+**next**
 
 * Nothing so far.
+
+**v0.17.1**
+
+* Add shorter package description for acceptance on Chrome webstore.
 
 **v0.17.0**
 
