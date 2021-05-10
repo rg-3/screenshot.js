@@ -1,6 +1,10 @@
 # CHANGELOG
 
-## next
+**Next**
+
+* Nothing so far.
+
+**v0.17.0**
 
 * Add new help icon
 
