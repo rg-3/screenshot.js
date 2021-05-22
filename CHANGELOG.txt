@@ -2,7 +2,11 @@
 
 **next**
 
-* Nothing so far.
+* Add `yarn run linter`.
+
+* Add `package.json`.
+
+* Add [semistandard](https://github.com/standard/semistandard).
 
 **v0.17.1**
 

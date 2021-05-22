@@ -11,29 +11,29 @@ const onDeleteClick = (screenshotEl, screenshot, page) => {
   el.addEventListener('click', (event) => {
     event.preventDefault();
     removeWithFadeOut(screenshotEl, 500, page);
-    chrome.runtime.sendMessage({action: 'remove-screenshot', removedId: screenshot.id});
+    chrome.runtime.sendMessage({ action: 'remove-screenshot', removedId: screenshot.id });
   });
 };
 
 const onCopyClick = (screenshotEl, screenshot) => {
   const el = screenshotEl.querySelector('.copy');
   el.addEventListener('click', (event) => {
-    const clipItem = new ClipboardItem({"image/png": screenshot.blob});
+    const clipItem = new ClipboardItem({ 'image/png': screenshot.blob });
     navigator.clipboard.write([clipItem]);
   });
 };
 
-const drawGrid = function(page) {
-  const app   = page.app;
+const drawGrid = function (page) {
+  const app = page.app;
   const count = app.screenshotCount;
-  const grid  = document.getElementById('body');
+  const grid = document.getElementById('body');
 
   /* Remove the previous grid */
   grid.innerHTML = '';
 
   /* Draw grid */
   let index = app.screenshots.length;
-  app.screenshots.forEach(function(screenshot) {
+  app.screenshots.forEach(function (screenshot) {
     const screenshotEl = document.querySelector('.screenshot-template').cloneNode(true);
     const filename = `Screenshot ${index}.png`;
     screenshot.createBlob().then(([_, urlToBlob]) => {
@@ -54,7 +54,7 @@ const drawGrid = function(page) {
 
   /* Redraw the grid when a screenshot is taken while grid-page.html is open */
   gridPollId = setInterval(() => {
-    if(count < app.screenshotCount) {
+    if (count < app.screenshotCount) {
       clearInterval(gridPollId);
       drawGrid(page);
     }
@@ -70,7 +70,7 @@ const drawGrid = function(page) {
     arrow: false,
     distance: 5,
     ignoreAttributes: true,
-    onShow(tip) {
+    onShow (tip) {
       setTimeout(tip.hide, 500);
     }
   });

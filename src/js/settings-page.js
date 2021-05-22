@@ -1,11 +1,11 @@
-import includeHTML from "./browser-action/include-html.js";
-import tippyFooter     from './browser-action/tippy-footer.js';
-import drawCommandHelp from "./browser-action/draw-command-help.js";
+import includeHTML from './browser-action/include-html.js';
+import tippyFooter from './browser-action/tippy-footer.js';
+import drawCommandHelp from './browser-action/draw-command-help.js';
 
 const setDefaultOption = (select, currentValue) => {
-  for(let i = 0; i < select.options.length; i++) {
+  for (let i = 0; i < select.options.length; i++) {
     const option = select.options[i];
-    if(option.value === String(currentValue)) {
+    if (option.value === String(currentValue)) {
       option.selected = true;
     }
   }
@@ -39,14 +39,14 @@ chrome.runtime.getBackgroundPage((page) => {
   const maxSelect = document.getElementById('max-screenshots');
   setDefaultOption(maxSelect, app.settings.getItem('maxScreenshots'));
   maxSelect.addEventListener('change', (event) => {
-    const option   = event.target;
-    const newMax   = Number(option.value);
+    const option = event.target;
+    const newMax = Number(option.value);
     const truncate = app.maxScreenshots === 0 || (newMax > 0 && newMax < app.maxScreenshots);
     app.settings.setItem('maxScreenshots', newMax);
-    if(truncate) {
-      for(let i = newMax; i < app.screenshots.length; i++) {
+    if (truncate) {
+      for (let i = newMax; i < app.screenshots.length; i++) {
         const screenshot = app.screenshots[i];
-        chrome.runtime.sendMessage({action: 'remove-screenshot', removedId: screenshot.id});
+        chrome.runtime.sendMessage({ action: 'remove-screenshot', removedId: screenshot.id });
       }
     }
   });
@@ -62,14 +62,14 @@ chrome.runtime.getBackgroundPage((page) => {
     app.settings.setItem('showTooltips', Number(option.value));
   });
 
-    /*
+  /*
       Control whether or not a sound is played when a screenshot is taken.
       Possible values: 1 (show), 0 (hide)
     */
-    const playSoundSelect = document.getElementById('play-sound');
-    setDefaultOption(playSoundSelect, app.settings.getItem('playSound'));
-    playSoundSelect.addEventListener('change', (event) => {
-      const option = event.target;
-      app.settings.setItem('playSound', Number(option.value));
-    });
+  const playSoundSelect = document.getElementById('play-sound');
+  setDefaultOption(playSoundSelect, app.settings.getItem('playSound'));
+  playSoundSelect.addEventListener('change', (event) => {
+    const option = event.target;
+    app.settings.setItem('playSound', Number(option.value));
+  });
 });

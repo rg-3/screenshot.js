@@ -6,7 +6,7 @@ const runScriptOnFrames = (allFrames, options, resolve, reject) => {
   const onScriptResponse = (response) => {
     count++;
     if (chrome.runtime.lastError) {
-      errors.push(chrome.runtime.lastError)
+      errors.push(chrome.runtime.lastError);
     } else {
       responses.push(...response);
     }
@@ -14,7 +14,7 @@ const runScriptOnFrames = (allFrames, options, resolve, reject) => {
       if (responses.length) {
         resolve(responses);
       } else {
-        reject(errors);
+        reject(new Error(`${errors.join(',')}`));
       }
     }
   };
@@ -22,7 +22,7 @@ const runScriptOnFrames = (allFrames, options, resolve, reject) => {
   allFrames.forEach((frame) => {
     chrome.tabs.executeScript(
       frame.tabId,
-      Object.assign({}, options, {frameId: frame.frameId}),
+      Object.assign({}, options, { frameId: frame.frameId }),
       onScriptResponse
     );
   });
@@ -40,18 +40,18 @@ const runScriptOnFrames = (allFrames, options, resolve, reject) => {
   .catch((errors) => ...);
 
 */
-export default function(options) {
+export default function (options) {
   return new Promise((resolve, reject) => {
-    chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       if (chrome.runtime.lastError) {
-        reject([chrome.runtime.lastError])
+        reject(chrome.runtime.lastError);
       }
-      chrome.webNavigation.getAllFrames({tabId: tabs[0].id}, (frames) => {
+      chrome.webNavigation.getAllFrames({ tabId: tabs[0].id }, (frames) => {
         if (chrome.runtime.lastError) {
-          reject([chrome.runtime.lastError])
+          reject(chrome.runtime.lastError);
         }
         runScriptOnFrames(frames, options, resolve, reject);
       });
     });
   });
-};
+}

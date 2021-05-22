@@ -6,9 +6,9 @@ const createHTMLImage = (url) => {
     image.onload = () => resolve(image);
     image.src = url;
   });
-}
+};
 
-export default function(app, dataUrl, options = {}) {
+export default function (app, dataUrl, options = {}) {
   /* Blob-related properties */
   this.id = null;
   this.urlToBlob = null;
@@ -23,12 +23,12 @@ export default function(app, dataUrl, options = {}) {
   this.canvas = new Canvas(options);
 
   this.createBlob = () => {
-    if(this.blob && this.urlToBlob) {
+    if (this.blob && this.urlToBlob) {
       return new Promise((resolve, reject) => resolve([this.blob, this.urlToBlob]));
     }
     return createHTMLImage(dataUrl).then((image) => {
       const canvas = this.canvas.createScreenshot(image, image.width, image.height);
-      return canvas.convertToBlob({type: "image/png"}).then((blob) => {
+      return canvas.convertToBlob({ type: 'image/png' }).then((blob) => {
         this.image = image;
         this.width = image.width;
         this.height = image.height;
@@ -41,13 +41,13 @@ export default function(app, dataUrl, options = {}) {
   };
 
   this.revokeBlob = () => {
-    if(this.urlToBlob) {
+    if (this.urlToBlob) {
       URL.revokeObjectURL(this.urlToBlob);
-      for(let prop in this) {
-        if(this.hasOwnProperty(prop)) { delete(this[prop]); }
-      };
-    };
+      for (const prop in this) {
+        if (Object.prototype.hasOwnProperty.call(this, prop)) { delete (this[prop]); }
+      }
+    }
   };
 
   return this;
-};
+}

@@ -1,4 +1,4 @@
-export default function(app) {
+export default function (app) {
   tippy('#footer #help-icon', {
     theme: 'light-border',
     trigger: 'click',
@@ -14,7 +14,7 @@ export default function(app) {
     }
   });
 
-  if(app.showTooltips) {
+  if (app.showTooltips) {
     tippy('#footer [data-tippy-content]', {
       theme: 'light-border',
       arrow: false,

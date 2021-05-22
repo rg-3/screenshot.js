@@ -13,6 +13,7 @@
   * <a href='#install-webstores'> Chrome Webstore </a>
   * <a href='#install-fromsource'> Source install</a>
 * <a href='#dependencies'>Dependencies</a>
+* <a href='#development'>Development</a>
 * <a href='#thanks'>Thanks</a>
 * <a href='#license'>License</a>
 
@@ -86,6 +87,25 @@ Dependencies used to develop the extension:
 
   * [Saas](https://www.sass-lang.com)  
     Saas extends CSS with useful features.
+
+## <a id='development'>Development</a>
+
+This project doesn't use build tools like webpack or rollup. Avoiding those tools 
+is a personal experiment of mine to see how extension development works without them. 
+There's no build step outside compiling `scss` files to `css` files with the `scss` 
+executable. 
+
+However [node.js](https://nodejs.org/) and [yarn](https://yarnpkg.com/) are used to 
+run the [semistandard](https://github.com/standard/semistandard) linter across the 
+javascript source files. In order to run the linter, you can do as follows:
+
+* First step, install the dependencies:
+
+      yarn
+
+* Then run the linter:
+
+      yarn run linter
 
 ## <a id='thanks'>Thanks</a>
 

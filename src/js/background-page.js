@@ -1,21 +1,21 @@
 import App from './background-page/app.js';
 
 chrome.commands.onCommand.addListener((command) => {
-  switch(command) {
-    case "capture-visible-tab": {
-      app.runScript({file: "js/content-scripts/detect-scrollbars.js"})
-         .then((results) => chrome.tabs.captureVisibleTab({format: "png"}, (dataUrl) => app.receiveScreenshot(dataUrl, results[0])))
-         .catch(() => chrome.tabs.captureVisibleTab({format: "png"}, app.receiveScreenshot));
+  switch (command) {
+    case 'capture-visible-tab': {
+      app.runScript({ file: 'js/content-scripts/detect-scrollbars.js' })
+        .then((results) => chrome.tabs.captureVisibleTab({ format: 'png' }, (dataUrl) => app.receiveScreenshot(dataUrl, results[0])))
+        .catch(() => chrome.tabs.captureVisibleTab({ format: 'png' }, app.receiveScreenshot));
       break;
     }
-    case "capture-html5-video": {
+    case 'capture-html5-video': {
       const code = app.getCaptureHTML5VideoCode();
-      if(code === "captureHTML5VideoTemplate_Not_Initialized") {
+      if (code === 'captureHTML5VideoTemplate_Not_Initialized') {
         app.notify(code); /* Shouldn't happen */
       } else {
-        app.runScript({code})
-           .then(app.receiveScreenshot)
-           .catch((err) => app.receiveScreenshot("no_video"));
+        app.runScript({ code })
+          .then(app.receiveScreenshot)
+          .catch((_err) => app.receiveScreenshot('no_video'));
       }
       break;
     }
@@ -24,9 +24,9 @@ chrome.commands.onCommand.addListener((command) => {
 
 chrome.runtime.onMessage.addListener((message) => {
   const screenshots = app.screenshots;
-  if(message.action === 'remove-screenshot') {
+  if (message.action === 'remove-screenshot') {
     screenshots.forEach((screenshot) => {
-      if(message.removedId === screenshot.id) {
+      if (message.removedId === screenshot.id) {
         const index = screenshots.indexOf(screenshot);
         screenshot.revokeBlob();
         screenshots.splice(index, 1);
@@ -37,7 +37,7 @@ chrome.runtime.onMessage.addListener((message) => {
 
 chrome.webRequest.onHeadersReceived.addListener(
   (details) => {
-    if(new URL(details.initiator).origin === new URL(details.url).origin) {
+    if (new URL(details.initiator).origin === new URL(details.url).origin) {
       /* We're not interested in same-origin requests. */
       return;
     }
@@ -53,13 +53,13 @@ chrome.webRequest.onHeadersReceived.addListener(
     */
     const headers = details.responseHeaders;
     const header = headers.find((h) => h.name.toLowerCase() === 'access-control-allow-origin');
-    if(!header) {
-      headers.push({name: 'access-control-allow-origin', value: '*'});
+    if (!header) {
+      headers.push({ name: 'access-control-allow-origin', value: '*' });
     }
-    return {responseHeaders: headers};
+    return { responseHeaders: headers };
   },
-  {urls: ["<all_urls>"], types: ["media"]},
-  ["blocking", "extraHeaders", "responseHeaders"]
+  { urls: ['<all_urls>'], types: ['media'] },
+  ['blocking', 'extraHeaders', 'responseHeaders']
 );
 
 /* Exports

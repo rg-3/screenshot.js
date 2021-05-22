@@ -1,2 +1,5 @@
 .sass-cache/
 src/css/*.css
+node_modules/
+*.log
+*.lock

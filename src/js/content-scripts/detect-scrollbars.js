@@ -1,6 +1,6 @@
-(function() {
+(function () {
   return {
-    hasVerticalScrollbar:   window.innerWidth > document.documentElement.clientWidth,
+    hasVerticalScrollbar: window.innerWidth > document.documentElement.clientWidth,
     hasHorizontalScrollbar: document.documentElement.scrollWidth > document.documentElement.clientWidth
   };
 })();

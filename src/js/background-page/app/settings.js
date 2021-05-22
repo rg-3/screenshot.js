@@ -1,15 +1,22 @@
-export default function(app) {
-  const {localStorage} = app;
+
+export default function (app) {
+  const { localStorage } = app;
 
   const defaults = {
     maxScreenshots: 4,
-    videoSize: "visible",
+    videoSize: 'visible',
     showTooltips: 1,
     playSound: 1
   };
 
-  const settings = localStorage.getItem('settings') ?
-                   Object.assign({}, defaults, JSON.parse(localStorage.getItem('settings'))) : Object.assign({}, defaults);
+  const settings = (function () {
+    const storedSettings = localStorage.getItem('settings');
+    if (storedSettings) {
+      return Object.assign({}, defaults, storedSettings);
+    } else {
+      return Object.assign({}, defaults);
+    }
+  })();
 
   this.getItem = (key) => {
     return settings[key];
