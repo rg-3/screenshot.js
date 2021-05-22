@@ -2,6 +2,8 @@
 
 **next**
 
+* Add font licenses
+
 * Add `yarn run linter`.
 
 * Add `package.json`.
