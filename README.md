@@ -33,8 +33,6 @@ The extension can take screenshots of web pages and web videos.
 * Open screenshots in a new tab, save screenshots to disk, and copy screenshots
   to the clipboard.
 
-* Easy to use and doesn't intrude on your privacy.
-
 
 ## <a id='preview'>Preview</a>
 
