@@ -36,12 +36,12 @@ const drawGrid = function (page) {
   app.screenshots.forEach(function (screenshot) {
     const screenshotEl = document.querySelector('.screenshot-template').cloneNode(true);
     const filename = `Screenshot ${index}.png`;
-    screenshot.createBlob().then(([_, urlToBlob]) => {
+    screenshot.createBlob().then(([_, blobID, urlToBlob]) => {
       onDeleteClick(screenshotEl, screenshot, page);
       onCopyClick(screenshotEl, screenshot);
       const canvas = screenshot.canvas.createPreviewScreenshot(screenshot.image, 175, 150);
       screenshotEl.querySelector('.image').prepend(canvas);
-      screenshotEl.querySelector('.image').setAttribute('href', urlToBlob);
+      screenshotEl.querySelector('.image').setAttribute('href', app.getSlideshowURL(screenshot));
       screenshotEl.querySelector('.save').setAttribute('href', urlToBlob);
       screenshotEl.querySelector('.save').setAttribute('download', filename);
       screenshotEl.querySelector('.loader-container').remove();

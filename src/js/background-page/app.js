@@ -142,6 +142,27 @@ export default function () {
     });
   };
 
+  this.getSlideshowURL = (screenshot) => {
+    let path = '/html/slideshow-page.html?';
+    path += `id=${screenshot.id}`;
+    path += `&blobUrl=${screenshot.urlToBlob}`;
+    return chrome.extension.getURL(path);
+  };
+
+  this.nextSlideshowURL = (screenshotId) => {
+    const screenshots = this.screenshots.slice().reverse();
+    let index = screenshots.findIndex((screenshot) => screenshot.id === screenshotId);
+    if (index + 1 >= screenshots.length) { index = -1; }
+    return this.getSlideshowURL(screenshots[index + 1]);
+  };
+
+  this.prevSlideshowURL = (screenshotId) => {
+    const screenshots = this.screenshots.slice().reverse();
+    let index = screenshots.findIndex((screenshot) => screenshot.id === screenshotId);
+    if (index === 0) { index = screenshots.length; }
+    return this.getSlideshowURL(screenshots[index - 1]);
+  };
+
   this.runScript = runScript;
 
   return this;

@@ -120,7 +120,8 @@ Thanks to the following [freeicons.io](https://freeicons.io) artists:
   authored the settings icon.
   
  * Thanks to <a href="https://freeicons.io/profile/726">Free Preloaders</a> for the help icon.
-                                
+
+ * Thanks to [Anu Rocks](https://freeicons.io/profile/730) who authored the help icon on the slideshow page.                     
   
 ## <a id='license'>License</a>
 

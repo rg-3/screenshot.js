@@ -24,7 +24,7 @@ export default function (app, dataUrl, options = {}) {
 
   this.createBlob = () => {
     if (this.blob && this.urlToBlob) {
-      return new Promise((resolve, reject) => resolve([this.blob, this.urlToBlob]));
+      return new Promise((resolve, reject) => resolve([this.blob, this.id, this.urlToBlob]));
     }
     return createHTMLImage(dataUrl).then((image) => {
       const canvas = this.canvas.createScreenshot(image, image.width, image.height);
@@ -35,7 +35,7 @@ export default function (app, dataUrl, options = {}) {
         this.blob = blob;
         this.urlToBlob = URL.createObjectURL(blob);
         this.id = this.urlToBlob.split('/').pop();
-        return [this.blob, this.urlToBlob];
+        return [this.blob, this.id, this.urlToBlob];
       });
     });
   };

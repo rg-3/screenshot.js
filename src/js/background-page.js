@@ -22,15 +22,26 @@ chrome.commands.onCommand.addListener((command) => {
   }
 });
 
-chrome.runtime.onMessage.addListener((message) => {
-  const screenshots = app.screenshots;
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.action === 'remove-screenshot') {
+    const screenshots = app.screenshots;
     screenshots.forEach((screenshot) => {
       if (message.removedId === screenshot.id) {
         const index = screenshots.indexOf(screenshot);
         screenshot.revokeBlob();
         screenshots.splice(index, 1);
       }
+    });
+  } else if (message.action === 'slideshow/next') {
+    sendResponse(app.nextSlideshowURL(message.screenshotId));
+  } else if (message.action === 'slideshow/prev') {
+    sendResponse(app.prevSlideshowURL(message.screenshotId));
+  } else if (message.action === 'slideshow/totals') {
+    const { screenshotId } = message;
+    const screenshots = app.screenshots.slice().reverse();
+    sendResponse({
+      screenshotIndex: screenshots.findIndex((screenshot) => screenshot.id === screenshotId) + 1,
+      screenshotTotal: screenshots.length
     });
   }
 });

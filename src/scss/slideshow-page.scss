@@ -1,0 +1,29 @@
+@import "partials/base";
+
+#container {
+  margin: 2.5% 0 0 0;
+  h3 {
+    font-family: "NerkoOne Regular";
+  }
+
+  #screenshot {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  #summary {
+    margin: 0 0 20px 0;
+
+    img {
+      width: 20px;
+      height: 20px;
+      vertical-align: text-bottom;
+      cursor: pointer;
+    }
+  }
+}
+
+#popover-help-content {
+  padding: 5px;
+  width: 350px;
+}
