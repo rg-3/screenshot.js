@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+  <title>Screenshot: Slideshow</title>
+  <link rel="stylesheet" href="/css/slideshow-page.css"></link>
+</head>
+<body>
+  <div id="container" class="container">
+    <div class='columns'>
+      <div class='column col-12 text-center'>
+        <img src="/images/camera48.png"></img>
+        <h3>Screenshot</h3>
+      </div>
+    </div>
+
+    <section id='summary' class="columns">
+      <div class='column col-12 text-center'>
+        Screenshot <span id='screenshot-index'></span> from a total of
+        <span id='screenshot-total'></span> screenshots.
+        <img id='help-icon' src="/images/help.svg">
+      </div>
+      <div id='popover-help-content' class='hidden'>
+        Press the right arrow key to navigate forward.
+        <br>
+        Press the left arrow key to navigate backward.
+      </div>
+    </section>
+
+    <div class="columns">
+      <div class='column col-12 text-center'>
+        <img id='screenshot'></img>
+      </div>
+    </div>
+  </div>
+
+  <a id='prev' class='hidden' href='#'></a>
+  <a id='next' class='hidden' href='#'>q</a>
+  <script src="/js/vendor/popper.min.js"></script>
+  <script src="/js/vendor/tippy.min.js"></script>
+  <script src="/js/slideshow-page.js"></script>
+</body>
+</html>
