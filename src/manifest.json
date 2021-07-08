@@ -3,7 +3,7 @@
   "name": "Screenshot",
   "description": "Screenshot is an extension for Chromium-derived (eg Chrome) browsers. The extension can take screenshots of web pages and web videos",
   "version": "0.17.1",
-  "background": {"page": "html/background-page.html"},
+  "background": {"page": "html/background.html"},
   "permissions": [
     "commands",
     "notifications",
@@ -14,7 +14,7 @@
     "<all_urls>"
   ],
   "browser_action": {
-    "default_popup": "/html/grid-page.html"
+    "default_popup": "/html/grid.html"
   },
   "icons": {
     "48":  "images/camera48.png",

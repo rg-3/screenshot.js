@@ -52,7 +52,7 @@ const drawGrid = function (page) {
     index -= 1;
   });
 
-  /* Redraw the grid when a screenshot is taken while grid-page.html is open */
+  /* Redraw the grid when a screenshot is taken while grid.html is open */
   gridPollId = setInterval(() => {
     if (count < app.screenshotCount) {
       clearInterval(gridPollId);
