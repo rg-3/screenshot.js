@@ -12,7 +12,7 @@ export default function (app) {
   const settings = (function () {
     const storedSettings = localStorage.getItem('settings');
     if (storedSettings) {
-      return Object.assign({}, defaults, storedSettings);
+      return Object.assign({}, defaults, JSON.parse(storedSettings));
     } else {
       return Object.assign({}, defaults);
     }

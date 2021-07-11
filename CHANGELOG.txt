@@ -2,6 +2,8 @@
 
 **next**
 
+* Fix bug where settings weren't parsed as JSON
+
 * Add font licenses
 
 * Add `yarn run linter`.
