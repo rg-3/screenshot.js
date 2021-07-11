@@ -2,7 +2,9 @@
 
 **next**
 
-* Fix bug where settings weren't parsed as JSON
+* Fix a bug where settings weren't parsed as JSON
+
+* Set settings asynchronously with chrome.runtime.sendMessage(..)
 
 * Add font licenses
 

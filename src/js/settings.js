@@ -29,7 +29,11 @@ chrome.runtime.getBackgroundPage((page) => {
   setDefaultOption(vSizeSelect, app.settings.getItem('videoSize'));
   vSizeSelect.addEventListener('change', (event) => {
     const option = event.target;
-    app.settings.setItem('videoSize', option.value);
+    chrome.runtime.sendMessage({
+      action: 'set-setting',
+      setting: 'videoSize',
+      value: option.value
+    });
   });
 
   /*
@@ -42,7 +46,11 @@ chrome.runtime.getBackgroundPage((page) => {
     const option = event.target;
     const newMax = Number(option.value);
     const truncate = app.maxScreenshots === 0 || (newMax > 0 && newMax < app.maxScreenshots);
-    app.settings.setItem('maxScreenshots', newMax);
+    chrome.runtime.sendMessage({
+      action: 'set-setting',
+      setting: 'maxScreenshots',
+      value: newMax
+    });
     if (truncate) {
       for (let i = newMax; i < app.screenshots.length; i++) {
         const screenshot = app.screenshots[i];
@@ -59,7 +67,11 @@ chrome.runtime.getBackgroundPage((page) => {
   setDefaultOption(tooltipSelect, app.settings.getItem('showTooltips'));
   tooltipSelect.addEventListener('change', (event) => {
     const option = event.target;
-    app.settings.setItem('showTooltips', Number(option.value));
+    chrome.runtime.sendMessage({
+      action: 'set-setting',
+      setting: 'showTooltips',
+      value: Number(option.value)
+    });
   });
 
   /*
@@ -70,6 +82,10 @@ chrome.runtime.getBackgroundPage((page) => {
   setDefaultOption(playSoundSelect, app.settings.getItem('playSound'));
   playSoundSelect.addEventListener('change', (event) => {
     const option = event.target;
-    app.settings.setItem('playSound', Number(option.value));
+    chrome.runtime.sendMessage({
+      action: 'set-setting',
+      setting: 'playSound',
+      value: Number(option.value)
+    });
   });
 });
