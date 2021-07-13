@@ -25,67 +25,78 @@ chrome.runtime.getBackgroundPage((page) => {
      Control the size of a video screenshot.
      Possible values: 'visible', 'natural'.
   */
-  const vSizeSelect = document.getElementById('video-size');
-  setDefaultOption(vSizeSelect, app.settings.getItem('videoSize'));
-  vSizeSelect.addEventListener('change', (event) => {
-    const option = event.target;
-    chrome.runtime.sendMessage({
-      action: 'set-setting',
-      setting: 'videoSize',
-      value: option.value
+  (function () {
+    const el = document.getElementById('video-size');
+    setDefaultOption(el, app.settings.getItem('videoSize'));
+    el.addEventListener('change', (event) => {
+      const option = event.target;
+      chrome.runtime.sendMessage({
+        action: 'set-setting',
+        setting: 'videoSize',
+        value: option.value
+      });
     });
-  });
+  })();
 
   /*
     Control the number of screenshots stored in memory.
     Possible values: 4, 8, 16, 32, 64, 99, Infinity
   */
-  const maxSelect = document.getElementById('max-screenshots');
-  setDefaultOption(maxSelect, app.settings.getItem('maxScreenshots'));
-  maxSelect.addEventListener('change', (event) => {
-    const option = event.target;
-    const newMax = Number(option.value);
-    const truncate = app.maxScreenshots === 0 || (newMax > 0 && newMax < app.maxScreenshots);
-    chrome.runtime.sendMessage({
-      action: 'set-setting',
-      setting: 'maxScreenshots',
-      value: newMax
-    });
-    if (truncate) {
-      for (let i = newMax; i < app.screenshots.length; i++) {
-        const screenshot = app.screenshots[i];
-        chrome.runtime.sendMessage({ action: 'remove-screenshot', removedId: screenshot.id });
+  (function () {
+    const el = document.getElementById('max-screenshots');
+    setDefaultOption(el, app.settings.getItem('maxScreenshots'));
+    el.addEventListener('change', (event) => {
+      const option = event.target;
+      const newMax = Number(option.value);
+      const truncate = app.maxScreenshots === 0 || (newMax > 0 && newMax < app.maxScreenshots);
+      chrome.runtime.sendMessage({
+        action: 'set-setting',
+        setting: 'maxScreenshots',
+        value: newMax
+      });
+      if (truncate) {
+        for (let i = newMax; i < app.screenshots.length; i++) {
+          const screenshot = app.screenshots[i];
+          chrome.runtime.sendMessage({
+            action: 'remove-screenshot',
+            removedId: screenshot.id
+          });
+        }
       }
-    }
-  });
+    });
+  })();
 
   /*
     Control whether or not tooltips are shown on the settings and help icons.
     Possible values: 1 (show), 0 (hide)
   */
-  const tooltipSelect = document.getElementById('show-tooltips');
-  setDefaultOption(tooltipSelect, app.settings.getItem('showTooltips'));
-  tooltipSelect.addEventListener('change', (event) => {
-    const option = event.target;
-    chrome.runtime.sendMessage({
-      action: 'set-setting',
-      setting: 'showTooltips',
-      value: Number(option.value)
+  (function () {
+    const el = document.getElementById('show-tooltips');
+    setDefaultOption(el, app.settings.getItem('showTooltips'));
+    el.addEventListener('change', (event) => {
+      const option = event.target;
+      chrome.runtime.sendMessage({
+        action: 'set-setting',
+        setting: 'showTooltips',
+        value: Number(option.value)
+      });
     });
-  });
+  })();
 
   /*
       Control whether or not a sound is played when a screenshot is taken.
       Possible values: 1 (show), 0 (hide)
     */
-  const playSoundSelect = document.getElementById('play-sound');
-  setDefaultOption(playSoundSelect, app.settings.getItem('playSound'));
-  playSoundSelect.addEventListener('change', (event) => {
-    const option = event.target;
-    chrome.runtime.sendMessage({
-      action: 'set-setting',
-      setting: 'playSound',
-      value: Number(option.value)
+  (function () {
+    const el = document.getElementById('play-sound');
+    setDefaultOption(el, app.settings.getItem('playSound'));
+    el.addEventListener('change', (event) => {
+      const option = event.target;
+      chrome.runtime.sendMessage({
+        action: 'set-setting',
+        setting: 'playSound',
+        value: Number(option.value)
+      });
     });
-  });
+  })();
 });
