@@ -1,6 +1,8 @@
 # CHANGELOG
 
-**next**
+__CURRENT__
+
+* Break from loop earlier when removing a single screenshot
 
 * Implement a more efficient truncate operation
 
@@ -10,17 +12,17 @@
 
 * Add font licenses
 
-* Add `yarn run linter`
+* Add "yarn run linter"
 
-* Add `package.json`
+* Add "package.json"
 
 * Add [semistandard](https://github.com/standard/semistandard).
 
-**v0.17.1**
+__v0.17.1__
 
 * Add shorter package description for acceptance on Chrome webstore
 
-**v0.17.0**
+__v0.17.0__
 
 * Add new help icon
 
@@ -37,105 +39,105 @@
 
 * footer: do not highlight the footer images upon selection.
 
-**v0.16.2**
+__v0.16.2__
 
-* tooltips: `Delete screenshot from memory` => `Delete screenshot`
+* tooltips: "Delete screenshot from memory" => "Delete screenshot"
 
-**v0.16.1**
+__v0.16.1__
 
 * Add spacing between the action bar icons
 
-* Replace `feather.min.js` with the use of the `<img>` tag and SVGs
+* Replace "feather.min.js" with the use of the "<img>" tag and SVGs
 
-**v0.16.0**
+__v0.16.0__
 
 * Add settings to control whether or not tooltips are shown on the
   settings and help icons
 
-* Change all tippy-controlled content to use `light-border` theme
+* Change all tippy-controlled content to use "light-border" theme
 
 * Show tooltip when hovering over settings / help icons.
 
 * Replace footer icons.
 
-**v0.15.1**
+__v0.15.1__
 
-* Update project description in `src/manifest.json`
+* Update project description in "src/manifest.json"
 
-**v0.15.0**
+__v0.15.0__
 
 * End the emoji experiment.
 
-**v0.14.8**
+__v0.14.8__
 
 * Replace emoji used when help popover is open
 
-**v0.14.7**
+__v0.14.7__
 
 * Show Happy emoji by default.
 
-**v0.14.6**
+__v0.14.6__
 
-* Improve layout of `src/`.
+* Improve layout of "src/".
 
-* Update `app.maxScreenshots` before potentially long operation on
+* Update "app.maxScreenshots" before potentially long operation on
   the setting page.
 
-**v0.14.5**
+__v0.14.5__
 
 * Fix bug(s) related to the the infinity option and the settings page.
 
-**v0.14.4**
+__v0.14.4__
 
-* Drastically improve performance of the `Delete` operation
+* Drastically improve performance of the "Delete" operation
   by not redrawing the whole grid.
 
 * Fix alignment of Screenshot text.
 
-**v0.14.3**
+__v0.14.3__
 
 * Represent infinity with 0 and avoid enforcing a size limit
-  on the `screenshots` array when maxScreenshots is equal to 0.
+  on the "screenshots" array when maxScreenshots is equal to 0.
 
-**v0.14.2**
+__v0.14.2__
 
 * Reduce whitespace between footer and last two screenshots.
 
 * Change options for number of screenshots to store in memory to:
   4, 8, 16, 32, 64, 99, Infinity
 
-**v0.14.1**
+__v0.14.1__
 
 * Fix CSS bug that caused the UI to cut off the action icons
   for the last two screenshots. This occurred when there was
   8 or more screenshots.
 
-**v0.14.0**
+__v0.14.0__
 
 * Redesign the navbar icons and in the process switch to a simpler
   implementation. We're not using feathericons for the navbar icons
   any longer.
 
-**v0.13.2**
+__v0.13.2__
 
 * Re-implement getFilename on Screenshot objects in graw-grid.js
 
-**v0.13.1**
+__v0.13.1__
 
 * Offer to save the most recent screenshot as 'Screenshot 4.png'
   instead of 'Screnshot 1.png' - assuming there's four screenshots.
 
-**v0.13.0**
+__v0.13.0__
 
 * Redesign the footer to have a smaller height.
 
 * Replace logo font KronaOne with NerkoOne.
 
-**v0.12.1**
+__v0.12.1__
 
 * Decrease infinity from 2000 to 999.
 
-**v0.12.0**
+__v0.12.0__
 
 * Add "∞" (infinity) as an option in the dropdown used to determine
   how many screenshots to store in memory. Infinity is not infinite
@@ -145,24 +147,24 @@
   Worth mentioning that performance could be a problem if there's not
   enough RAM to accomodate 2000 screenshots comfortably.
 
-**v0.11.3**
+__v0.11.3__
 
 * Align grid and settings page height when there's 4 screenshots
   on the grid page.
 
-**v0.11.2**
+__v0.11.2__
 
-* Remove arrow from help popover by using the `arrow` prop.
+* Remove arrow from help popover by using the "arrow" prop.
 
-* Increase height between help icon and its popover by using the `offset` prop.
+* Increase height between help icon and its popover by using the "offset" prop.
 
 * Upgrade Popper.js and Tippy.js
 
-**v0.11.1**
+__v0.11.1__
 
 * Increase the width and font size of the help popover.
 
-**v0.11.0**
+__v0.11.0__
 
 * Change logo font to KronaOne Regular.
 
@@ -170,16 +172,16 @@
 
 * Add new extension icon sourced from [https://freeicons.io](freeicons.io)
 
-* Change license year in `src/LICENSE.txt`.
+* Change license year in "src/LICENSE.txt".
 
-**v0.10.3**
+__v0.10.3__
 
 * Remove underline that appears after clicking save button.
 
-* Change default screenshot filename to `Screenshot X.png`, where X is the
+* Change default screenshot filename to "Screenshot X.png", where X is the
   screenshot index number.
 
-**v0.10.2**
+__v0.10.2__
 
 * Improve UI and UX when there are more than 4 screenshots.
 
@@ -191,52 +193,52 @@ __v0.10.0__
 
 * Settings: persist settings between browser restarts.
 
-* Move `LICENSE.txt` to `src/LICENSE.txt`.
+* Move "LICENSE.txt" to "src/LICENSE.txt".
 
 * Change "Store the last X screenshots in temporary browser memory" to
   "Store the last X screenshots" on the settings page.
 
 __v0.9.4__
 
-* Drop `.js` suffix from the README and extension UI.
+* Drop ".js" suffix from the README and extension UI.
 
 __v0.9.3__
 
-* Add `extraHeaders` to `opt_extraInfoSpec` in order to be able to
-  set the `access-control-allow-origin` header successfully. This
+* Add "extraHeaders" to "opt_extraInfoSpec" in order to be able to
+  set the "access-control-allow-origin" header successfully. This
   appears to have been required since Chrome 79.
 
-* Add an updated copy of [`rstl.min.js`](https://github.com/0xleaf/rstl.js), and
-  link to it through a `<script>` tag.
+* Add an updated copy of ["rstl.min.js"](https://github.com/0xleaf/rstl.js), and
+  link to it through a "<script>" tag.
 
 __v0.9.0__
 
 * Halve the width of the extension along with other UI improvements.
 
 * Delete all properties belonging to a Screenshot object after the objects
-  blob is revoked using `revokeBlob()`.
+  blob is revoked using "revokeBlob()".
 
 * Improve device recognition settings notification.
   See [#6](https://github.com/0xleaf/screenshot.js/issues/6) for more info.
 
-* Resort `src/html`, `src/js`, `src/css`:
+* Resort "src/html", "src/js", "src/css":
 
-  * The contents of `src/js/lib/` have been moved to `src/js/`.
+  * The contents of "src/js/lib/" have been moved to "src/js/".
 
-  * `browser_action.html` renamed to `grid-page.html`.
+  * "browser_action.html" renamed to "grid-page.html".
 
-  * `browser_action.css` renamed to `grid-page.css`.
+  * "browser_action.css" renamed to "grid-page.css".
 
-  * `settings.html` renamed to `settings-page.html`.
+  * "settings.html" renamed to "settings-page.html".
 
-  * `settings.css` renamed to `settings-page.css`.
+  * "settings.css" renamed to "settings-page.css".
 
 
 * Change the max screenshots drop down options to:
   4, 8, 12, 16, 20, 24, 28, 32.
 
-* Move the remaining CSS files in `src/css` to `src/scss`.
-  Keep `src/css` for the CSS files that are generated from `src/scss`.
+* Move the remaining CSS files in "src/css" to "src/scss".
+  Keep "src/css" for the CSS files that are generated from "src/scss".
 
 * Numerous improvements to the README and inline documentation in the
   source code.
@@ -247,9 +249,9 @@ __v0.8.0__
   See https://github.com/0xleaf/screenshot.js/issues/3 for more info.
 
 * A loading spinner is shown until the screenshot grid begins to get drawn by
-  the `grawGrid()` function. This change avoids a user seeing an empty white
+  the "grawGrid()" function. This change avoids a user seeing an empty white
   page for 1 or 2 seconds while the grid is waiting to be drawn, which occurs
-  after HTML blobs are inserted by `includeHTML()`. Sometimes there's no wait,
+  after HTML blobs are inserted by "includeHTML()". Sometimes there's no wait,
   it seems to depend on the number of screenshots waiting to be processed.
 
 * The settings and help icons are fixed in place, they follow scroll when
@@ -265,26 +267,26 @@ __v0.8.0__
 * Add the option to capture a video at its natural size or at its
   visible size (defaults to visible).
 
-* Add includeHTML function (`src/js/browser-action/include-html.js`)
+* Add includeHTML function ("src/js/browser-action/include-html.js")
 
   includeHTML replaces one or more html elements with the contents of one or
-  more `fetch()` requests. In the case of the extension, the HTML is served
+  more "fetch()" requests. In the case of the extension, the HTML is served
   from the file system meaning there's no network latency  and is pretty much
   instantaneous. It supports template variables as well, and it allows
-  `browser_action.html` and `settings.html` to share blobs of HTML between
+  "browser_action.html" and "settings.html" to share blobs of HTML between
   them. In the future it will become a separate project.
 
 * Add SCSS
 
-  * Add `src/scss`; contains the SCSS files that will be converted to CSS.
+  * Add "src/scss"; contains the SCSS files that will be converted to CSS.
 
-  * Add `scripts/build.sh` to convert SCSS to CSS.
+  * Add "scripts/build.sh" to convert SCSS to CSS.
 
   * This change introduces the need to "build" the extension,
     I tried to keep the complexity and dependencies at the
     bare minimum.
 
-* Add `Spectre.css`, a minimalist CSS framework ~ 10kb
+* Add "Spectre.css", a minimalist CSS framework ~ 10kb
 
 * Prevent clicking the help icon from jumping to the top of the browser action's
   window.
@@ -294,7 +296,7 @@ __v0.7.0__
 * Add improved loading effect while waiting for a screenshot
   to become available.
 
-* Change the tool tip on the `Delete` icon from "Delete screenshot" to
+* Change the tool tip on the "Delete" icon from "Delete screenshot" to
   "Delete screenshot from memory".
 
 __v0.6.0__
@@ -307,8 +309,8 @@ __v0.5.2__
 
 __v0.5.1__
 
-* Update `background.js` to push onto `headers` instead of
- `details.responseHeaders` (typo fix).
+* Update "background.js" to push onto "headers" instead of
+ "details.responseHeaders" (typo fix).
 
 __v0.5.0__
 
@@ -323,11 +325,11 @@ __v0.5.0__
 * Add support for taking a screenshot of a playing video loaded through an
   iframe.
 
-*  Add support for taking a screenshot of a playing video on websites like `dailymail.co.uk`.
+*  Add support for taking a screenshot of a playing video on websites like "dailymail.co.uk".
    The daily mail website loads video from another origin without setting the
-   `Access-Control-Allow-Origin` header. It must be set to `*` or the video
-   won't play because `crossorigin="anonymous"` has been set by
-   `src/js/content-scripts/set-cross-origin.js`, which was introduced for Instagram support.
+   "Access-Control-Allow-Origin" header. It must be set to "*" or the video
+   won't play because "crossorigin="anonymous"" has been set by
+   "src/js/content-scripts/set-cross-origin.js", which was introduced for Instagram support.
 
 * Add support for taking a screenshot of a playing video on sites like Instagram.
   Instagram delivers video through another origin using CORS access controls,
@@ -351,7 +353,7 @@ __v0.3.0__
 * Remove vertical scroll bar from screenshots of the visible tab.
 
 * Display a failure message when a video screenshot is attempted on a
-  protected page that extensions can't inject code into (eg `chrome://*` pages).
+  protected page that extensions can't inject code into (eg "chrome://*" pages).
   Prior to this a user wouldn't get a response.
 
 __v0.2.5__
@@ -377,7 +379,7 @@ __v0.2.3__
 
 __v0.2.2__
 
-* In `browser_action.html`, load JavaScript at the end of the document to let
+* In "browser_action.html", load JavaScript at the end of the document to let
  the browser parse the HTML first.
 
 __v0.2.1__
@@ -388,8 +390,8 @@ __v0.2.1__
 
 * Fix bug where screenshot previews had the bottom part cut off.
 
-* Fix bug where icon tooltips for screenshots 4 to 6 would have `top` placement
-  instead of `bottom` placement.
+* Fix bug where icon tooltips for screenshots 4 to 6 would have "top" placement
+  instead of "bottom" placement.
 
 __v0.2.0__
 
@@ -398,12 +400,12 @@ __v0.2.0__
 
 * Remove arrow from tooltips and popovers.
 
-* Change default `capture-visible-tab` shortcut from `Ctrl + Shift + K` to
-  `Ctrl + Shift + X`.
+* Change default "capture-visible-tab" shortcut from "Ctrl + Shift + K" to
+  "Ctrl + Shift + X".
 
 * Add ability to take a screenshot of the video on the current tab.
   (Works on YouTube, etc).
 
-* Insert `Press <shortcut> to take a screenshot` text after reading what
-  shortcut the `capture-visible-tab` keyboard command is bound to (it can be changed
-  to a custom shortcut by the user via the `chrome://extensions/shortcuts` page)
+* Insert "Press <shortcut> to take a screenshot" text after reading what
+  shortcut the "capture-visible-tab" keyboard command is bound to (it can be changed
+  to a custom shortcut by the user via the "chrome://extensions/shortcuts" page)
