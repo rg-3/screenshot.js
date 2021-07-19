@@ -2,21 +2,23 @@
 
 **next**
 
+* Implement a more efficient truncate operation
+
 * Fix a bug where settings weren't parsed as JSON
 
 * Set settings asynchronously with chrome.runtime.sendMessage(..)
 
 * Add font licenses
 
-* Add `yarn run linter`.
+* Add `yarn run linter`
 
-* Add `package.json`.
+* Add `package.json`
 
 * Add [semistandard](https://github.com/standard/semistandard).
 
 **v0.17.1**
 
-* Add shorter package description for acceptance on Chrome webstore.
+* Add shorter package description for acceptance on Chrome webstore
 
 **v0.17.0**
 
@@ -37,20 +39,20 @@
 
 **v0.16.2**
 
-* tooltips: `Delete screenshot from memory` => `Delete screenshot`.
+* tooltips: `Delete screenshot from memory` => `Delete screenshot`
 
 **v0.16.1**
 
 * Add spacing between the action bar icons
 
-* Replace `feather.min.js` with the use of the `<img>` tag and SVGs.
+* Replace `feather.min.js` with the use of the `<img>` tag and SVGs
 
 **v0.16.0**
 
 * Add settings to control whether or not tooltips are shown on the
-  settings and help icons.
+  settings and help icons
 
-* Change all tippy-controlled content to use `light-border` theme.
+* Change all tippy-controlled content to use `light-border` theme
 
 * Show tooltip when hovering over settings / help icons.
 
