@@ -55,13 +55,10 @@ chrome.runtime.getBackgroundPage((page) => {
         value: newMax
       });
       if (truncate) {
-        for (let i = newMax; i < app.screenshots.length; i++) {
-          const screenshot = app.screenshots[i];
-          chrome.runtime.sendMessage({
-            action: 'remove-screenshot',
-            removedId: screenshot.id
-          });
-        }
+        chrome.runtime.sendMessage({
+          action: 'truncate-screenshots',
+          newMax
+        });
       }
     });
   })();

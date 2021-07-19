@@ -32,6 +32,12 @@ chrome.runtime.onMessage.addListener((message) => {
         screenshots.splice(index, 1);
       }
     });
+  } else if (message.action === 'truncate-screenshots') {
+    for (let index = screenshots.length - 1; index >= message.newMax; index--) {
+      const screenshot = screenshots[index];
+      screenshot.revokeBlob();
+      screenshots.splice(index, 1);
+    }
   } else if (message.action === 'set-setting') {
     app.settings.setItem(message.setting, message.value);
   }
