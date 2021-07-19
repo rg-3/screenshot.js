@@ -44,7 +44,7 @@ The extension can take screenshots of web pages and web videos.
 
 <a id='install-webstores'>**Chrome Webstore**</a>
 
-Screenshot is available for install via the [Chrome Webstore](https://chrome.google.com/webstore/detail/screenshot/ehmcpclingghgidajkpodncclbginiak).
+Coming soon..
 
 <a id='install-fromsource'>**Source install**</a>
 
