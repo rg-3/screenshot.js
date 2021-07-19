@@ -25,13 +25,14 @@ chrome.commands.onCommand.addListener((command) => {
 chrome.runtime.onMessage.addListener((message) => {
   const screenshots = app.screenshots;
   if (message.action === 'remove-screenshot') {
-    screenshots.forEach((screenshot) => {
+    for (let index = 0; index < screenshots.length; index++) {
+      const screenshot = screenshots[index];
       if (message.removedId === screenshot.id) {
-        const index = screenshots.indexOf(screenshot);
         screenshot.revokeBlob();
         screenshots.splice(index, 1);
+        break;
       }
-    });
+    }
   } else if (message.action === 'truncate-screenshots') {
     for (let index = screenshots.length - 1; index >= message.newMax; index--) {
       const screenshot = screenshots[index];
