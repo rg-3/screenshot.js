@@ -202,7 +202,7 @@ __v0.9.3__
   set the `access-control-allow-origin` header successfully. This
   appears to have been required since Chrome 79.
 
-* Add an updated copy of [`rstl.min.js`](https://github.com/rg-3/rstl.js), and
+* Add an updated copy of [`rstl.min.js`](https://github.com/0xleaf/rstl.js), and
   link to it through a `<script>` tag.
 
 __v0.9.0__
@@ -213,7 +213,7 @@ __v0.9.0__
   blob is revoked using `revokeBlob()`.
 
 * Improve device recognition settings notification.
-  See [#6](https://github.com/rg-3/screenshot.js/issues/6) for more info.
+  See [#6](https://github.com/0xleaf/screenshot.js/issues/6) for more info.
 
 * Resort `src/html`, `src/js`, `src/css`:
 
@@ -240,7 +240,7 @@ __v0.9.0__
 __v0.8.0__
 
 * Change the default number of screenshots stored in memory from 8 to 4.
-  See https://github.com/rg-3/screenshot.js/issues/3 for more info.
+  See https://github.com/0xleaf/screenshot.js/issues/3 for more info.
 
 * A loading spinner is shown until the screenshot grid begins to get drawn by
   the `grawGrid()` function. This change avoids a user seeing an empty white

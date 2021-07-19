@@ -50,7 +50,7 @@ Screenshot is available for install via the [Chrome Webstore](https://chrome.goo
 
 * Clone a copy of the extension:
 
-      git clone https://github.com/rg-3/screenshot.js
+      git clone https://github.com/0xleaf/screenshot.js
 
 * Convert the SCSS files to CSS
   (This step requires the `scss` executable to be in `$PATH`):

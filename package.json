@@ -1,7 +1,7 @@
 {
   "name": "screenshot.js",
   "version": "0.17.1",
-  "repository": "git@github.com:rg-3/screenshot.js.git",
+  "repository": "git@github.com:0xleaf/screenshot.js.git",
   "author": "rg <1aab@protonmail.com>",
   "license": "MIT",
   "devDependencies": {
